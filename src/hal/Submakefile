@@ -1,0 +1,24 @@
+INCLUDES += hal
+
+../include/%.h: ./hal/%.h
+	cp $^ $@
+
+HALLIBSRCS := hal/hal_lib.c $(ULAPISRCS)
+$(call TOOBJSDEPS, $(HALLIBSRCS)): EXTRAFLAGS += -fPIC $(ULAPI_CFLAGS)
+USERSRCS += $(HALLIBSRCS)
+ifeq ($(BUILD_SYS),uspace)
+HALLIB_LIBS := -pthread -lrt
+else
+HALLIB_LIBS := -lrt
+endif
+
+HALLIB := ../lib/libhalcore.so
+
+$(HALLIB).0: $(call TOOBJS, $(HALLIBSRCS))
+	$(ECHO) Creating shared library $(notdir $@)
+	@mkdir -p ../lib
+	@rm -f $@
+	$(Q)$(CC) $(LDFLAGS) -Wl,-soname,$(notdir $@) -shared -o $@ $^ $(HALLIB_LIBS) $(ULAPI_LDFLAGS)
+
+TARGETS += $(HALLIB) ../lib/libhalcore.so.0
+PYTARGETS += $(HALMODULE)
