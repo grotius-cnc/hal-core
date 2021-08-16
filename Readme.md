@@ -1,15 +1,15 @@
-# In topdir:
+In topdir:
 
-sudo apt-get install git
+    sudo apt-get install git
 
-# Linuxcnc old libs from buster repository:
+Linuxcnc old libs from buster repository:
 
     wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/libreadline5_5.2+dfsg-3+b13_amd64.deb
     wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/libreadline-gplv2-dev_5.2+dfsg-3+b13_amd64.deb
     dpkg -i libreadline5_5.2+dfsg-3+b13_amd64.deb
     dpkg -i libreadline-gplv2-dev_5.2+dfsg-3+b13_amd64.deb
 
-# Update sources to get dependencies:
+Update sources to get dependencies:
 
     cat <<EOF > /etc/apt/sources.list
     deb http://ftp.de.debian.org/debian bullseye main contrib non-free
@@ -19,7 +19,7 @@ sudo apt-get install git
     EOF
     apt-get update
 
-# Install dependencies from bullseye and sid repository, not all of this is needed anymore, we can filter out dep's in future.
+Install dependencies from bullseye and sid repository, not all of this is needed anymore, we can filter out dep's in future.
 
     sudo apt-get -y install debhelper libudev-dev tcl8.6-dev tk8.6-dev libtk-img bwidget tclx8.4 asciidoc \
     dblatex docbook-xsl dvipng graphviz groff source-highlight w3c-linkchecker xsltproc \
@@ -31,23 +31,28 @@ sudo apt-get install git
     gstreamer1.0-python3-plugin-loader python3-intelhex libncurses-dev libtinfo-dev python3-tk \
     python3-xlib pyqt5-dev-tools qttools5-dev-tools intltool \
 
-# Install hal-core:
+Install hal-core:
+
     $ cd src
     $ ./configure 
     $ make -j2
     $ sudo make setuid
 
-# Start app, in topdir:
+Start app, in topdir:
+
     $ cd scripts && . ./rip-environment && cd ..
 
-# Load halcomponent:
+Load halcomponent:
+
     $ cd bin 
     $ halcmd loadrt yourcomponent 
 
-# Clean hal:
+Clean hal:
+
     $ cd bin && halrun -U 
 
-# If any problems occur try:
+If any problems occur try:
+
     $ sudo chown user -R rtapi_app
     $ sudo chown user -R linuxcnc_module_helper
     $ sudo chmod 777 rtapi_app
