@@ -1,4 +1,4 @@
-Hal_core is stripped down hal environment of Liuxcnc.
+Hal_core is stripped down hal environment of Linuxcnc.
 The installed size is approx 9.4 MiB (9828577 B).
 
 A hal environment can be used as platform to run realtime applications like motion controllers, robots, cnc-machines etc.
