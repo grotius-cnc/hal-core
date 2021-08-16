@@ -5,7 +5,7 @@ A hal environment can be used as platform to run realtime applications like moti
 
 Install guide:
 
-    https://github.com/grotius-cnc/hal_core/blob/main/src/readme.md
+  https://github.com/grotius-cnc/hal_core/blob/main/src/readme.md
 
 To startup the hal environment:
 
