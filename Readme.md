@@ -19,4 +19,11 @@ To test if hal is working:
     
 ![hal_working](https://user-images.githubusercontent.com/44880102/129553575-bca46124-055e-47be-980e-ba4062991ffc.jpg)
 
+
+To compile and install custom components. (realtime kernel modules) visit : 
+https://github.com/grotius-cnc/hal_core/tree/main/src/hal/components
+
+A runtest to load hal and insert components, visit :
+
+
     
