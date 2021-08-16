@@ -7,4 +7,4 @@ Usage :
 To clean :
 
     Remove .so files from /bin/ *.so , /lib *.so, /rtlib *.so, /tcl *.so
-    Remove contents of /src/objects/ *
+    Remove contents of /src/objects/ *.o 
