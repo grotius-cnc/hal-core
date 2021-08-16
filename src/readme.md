@@ -6,5 +6,5 @@ Usage :
     
 To clean :
 
-    Remove .so files from /bin , /lib 
+    Remove .so files from /bin , /lib , /rtlib
     Remove contents of /src/objects/ *
