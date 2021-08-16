@@ -1,13 +1,13 @@
 Install:
 
+    $ ./clean.sh
     $ ./configure
     $ make -j2
     $ sudo make setuid
     
 To clean install:
 
-    Remove .so files from /bin/ *.so , /lib *.so, /rtlib *.so, /tcl *.so
-    Remove contents of /src/objects/ *.o 
+    $ ./clean.sh
     
     
 If app refuses to insert kernel module try:
