@@ -1,4 +1,6 @@
-To install visit /hal_core/src/readme.md
+To install visit 
+
+    /hal_core/src/readme.md
 
 To startup the hal environment:
 
