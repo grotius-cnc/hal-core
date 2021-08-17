@@ -1,5 +1,5 @@
 Hal_core is a stripped down hal environment.
-The installed size is approx 9.4 MiB (9828577 B).
+The installed size is approx 6.8 MiB 
 
 A hal environment can be used as platform to run realtime applications like motion controllers, robots, cnc-machines etc.
 
