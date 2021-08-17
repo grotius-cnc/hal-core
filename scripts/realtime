@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # ../scripts/realtime.  Generated from realtime.in by configure. 
-# on Tue Aug 17 06:44:47 EDT 2021
+# on Tue Aug 17 15:12:17 EDT 2021
 #
 
 export LANG=C
@@ -56,8 +56,8 @@ CheckConfig(){
 	echo "Missing rtapi.conf.  Check your installation." 1>&2
 	exit 1
     fi
-    INSMOD="/opt/hal-core/bin/linuxcnc_module_helper insert"
-    RMMOD="/opt/hal-core/bin/linuxcnc_module_helper remove"
+    INSMOD="/opt/hal-core/bin/module_helper insert"
+    RMMOD="/opt/hal-core/bin/module_helper remove"
     LSMOD=""
     FUSER="/usr/bin/fuser"
 
