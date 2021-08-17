@@ -6,46 +6,7 @@ HALCMDSRCS += hal/utils/halcmd_completion.c
 endif
 USERSRCS += $(sort $(HALCMDSRCS) $(HALSHSRCS))
 
-$(call TOOBJSDEPS, $(HALSHSRCS)) : EXTRAFLAGS = -fPIC
-$(call TOOBJSDEPS, hal/utils/halsh.c) : EXTRAFLAGS += $(TCL_CFLAGS)
-../tcl/hal.so: $(call TOOBJS, $(HALSHSRCS)) ../lib/libhalcore.so.0
-	$(ECHO) Linking $(notdir $@)
-	$(Q)$(CC) $(LDFLAGS) -shared $^  $(TCL_LIBS) -o $@
-TARGETS += ../tcl/hal.so
-
 ../bin/halcmd: $(call TOOBJS, $(HALCMDSRCS)) ../lib/libhalcore.so.0 
 	$(ECHO) Linking $(notdir $@)
 	$(Q)$(CC) $(LDFLAGS) -o $@ $^ $(READLINE_LIBS)
 TARGETS += ../bin/halcmd
-
-ifneq ($(GTK_VERSION),)
-
-HALSCOPESRCS := \
-    hal/utils/scope.c \
-    hal/utils/scope_horiz.c \
-    hal/utils/scope_vert.c \
-    hal/utils/scope_trig.c \
-    hal/utils/scope_disp.c \
-    hal/utils/scope_files.c \
-    hal/utils/miscgtk.c
-
-USERSRCS += $(HALSCOPESRCS)
-
-../bin/halscope: $(call TOOBJS, $(HALSCOPESRCS)) ../lib/libhalcore.so.0
-	$(ECHO) Linking $(notdir $@)
-	$(Q)$(CC) $(LDFLAGS) -o $@ $^ $(GTK_LIBS) -lm
-TARGETS += ../bin/halscope
-
-HALGTKSRCS := \
-    hal/utils/scope.c \
-    hal/utils/scope_horiz.c \
-    hal/utils/scope_vert.c \
-    hal/utils/scope_trig.c \
-    hal/utils/scope_disp.c \
-    hal/utils/scope_files.c \
-    hal/utils/meter.c \
-    hal/utils/miscgtk.c
-$(call TOOBJSDEPS, $(HALGTKSRCS)) : EXTRAFLAGS = $(GTK_CFLAGS)
-$(call TOOBJS, $(HALGTKSRCS)): Makefile.inc
-endif
-

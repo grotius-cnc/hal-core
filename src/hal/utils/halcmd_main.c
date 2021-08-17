@@ -172,22 +172,7 @@ int main(int argc, char **argv)
                 break;
 #ifndef NO_INI
 	    case 'i':
-		/* -i = allow reading 'setp' values from an ini file */
-		if (halcmd_inifile == NULL) {
-		    /* it's the first -i (ignore repeats) */
-                    /* there is a following arg, and it's not an option */
-                    filename = optarg;
-                    halcmd_inifile = fopen(filename, "r");
-                    if (halcmd_inifile == NULL) {
-                        fprintf(stderr,
-                            "Could not open ini file '%s'\n",
-                            filename);
-                        exit(-1);
-                    }
-                    /* make sure file is closed on exec() */
-                    fd = fileno(halcmd_inifile);
-                    fcntl(fd, F_SETFD, FD_CLOEXEC);
-		}
+
 		break;
 #endif /* NO_INI */
 	    case '?':
@@ -239,10 +224,7 @@ int main(int argc, char **argv)
     /* HAL init is OK, let's process the command(s) */
     if (srcfile == NULL) {
 #ifndef NO_INI
-        if(halcmd_inifile) {
-            fprintf(stderr, "-i may only be used together with -f\n");
-            errorcount++;
-        }
+
 #endif
         if(errorcount == 0 && argc > optind) {
             halcmd_set_filename("<commandline>");

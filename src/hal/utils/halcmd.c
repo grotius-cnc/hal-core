@@ -45,8 +45,7 @@
 #include "config.h"
 
 #ifndef NO_INI
-#include "inifile.h"		/* iniFind() from libnml */
-FILE *halcmd_inifile = NULL;
+
 #endif
 
 #include <stdio.h>
