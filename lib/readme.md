@@ -1,21 +1,13 @@
 In this area libhalcore.so is present.
 
-Source files of libhalcore.so :
+This library is produced by :
 
-	hal_core/src/hal/hal_lib.c
-	hal_core/src/hal/hal.h
-	hal_core/src/hal/hal_priv.h
+Creating shared library libhalcore.so.0
+gcc -L/opt/hal-core/lib -Wl,-rpath,/opt/hal-core/lib   -Wl,-soname,libhalcore.so.0 -shared -o ../lib/libhalcore.so.0 objects/hal/hal_lib.o objects/rtapi/uspace_ulapi.o -pthread -lrt 
+Linking halcmd
+gcc -L/opt/hal-core/lib -Wl,-rpath,/opt/hal-core/lib   -o ../bin/halcmd objects/hal/utils/halcmd.o objects/hal/utils/halcmd_commands.o objects/hal/utils/halcmd_main.o objects/hal/utils/halcmd_completion.o ../lib/libhalcore.so.0 -lreadline
+ln -sf libhalcore.so.0 ../lib/libhalcore.so
+You now need to run 'sudo make setuid' in order to run in place with access to hardware.
+make: Leaving directory '/opt/hal-core/src'
+user@debian10:/opt/hal-core/src$ 
 
-libhalcore.so is used by the gcc make command, for example linking the library:
-
-    -lhalcore
-    
-    
-    
-A gcc implementation example can be found :
-https://github.com/grotius-cnc/hal_core/blob/main/src/hal/components/test/compile_test.sh
-    
-When writing hal components in c or c++ user can use functions from the halcore library.
-More info at 
-	
-	hal_core/src/hal/hal_lib.c
