@@ -1,7 +1,16 @@
 Hal_core is a stripped down hal environment.
-The installed size is approx 6.8 MiB 
+The installed size is approx 6.8Mib
 
-A hal environment can be used as platform to run realtime applications like motion controllers, robots, cnc-machines etc.
+This repository is compiled (amd64) in the following dir : /opt/hal_core/
+
+A hal environment can be used as platform to run realtime applications like 
+
+	motion controllers 
+	robots
+	cnc-machines 
+	parport, ethercat applications
+	research and development 
+	scientific projects
 
 Install guide:
 
