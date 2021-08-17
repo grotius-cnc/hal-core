@@ -1,38 +1,38 @@
 #                                                     -*-makefile-gmake-*-
 #
 # Makefile.inc.  Generated from Makefile.inc.in by configure. 
-# on Mon Aug 16 06:23:31 EDT 2021
+# on Tue Aug 17 06:44:47 EDT 2021
 #
 
 
 # Directories
 #############
 
-prefix=/home/user/Desktop/hal-core
+prefix=/opt/hal-core
 exec_prefix=${prefix}
 
-EMC2_HOME=/home/user/Desktop/hal-core
-LIB_DIR=/home/user/Desktop/hal-core/lib
+EMC2_HOME=/opt/hal-core
+LIB_DIR=/opt/hal-core/lib
 
 #used for install stuff
 #but have them here as reference
 #build system only uses EMC2_RTLIB_DIR when creating rtapi.conf
-EMC2_BIN_DIR=/home/user/Desktop/hal-core/bin
-EMC2_TCL_DIR=/home/user/Desktop/hal-core/tcl
-EMC2_HELP_DIR=/home/user/Desktop/hal-core/docs/help
-EMC2_RTLIB_DIR=/home/user/Desktop/hal-core/rtlib
+EMC2_BIN_DIR=/opt/hal-core/bin
+EMC2_TCL_DIR=/opt/hal-core/tcl
+EMC2_HELP_DIR=/opt/hal-core/docs/help
+EMC2_RTLIB_DIR=/opt/hal-core/rtlib
 EMC2_CONFIG_DIR=@EMC2_CONFIG_DIR@
 EMC2_USER_CONFIG_DIR=~/emc2/configs
 EMC2_SYSTEM_CONFIG_DIR=/usr/local/etc/emc2/configs
-EMC2_NCFILES_DIR=/home/user/Desktop/hal-core/nc_files
-REALTIME=/home/user/Desktop/hal-core/scripts/realtime
-EMC2_IMAGEDIR=/home/user/Desktop/hal-core
+EMC2_NCFILES_DIR=/opt/hal-core/nc_files
+REALTIME=/opt/hal-core/scripts/realtime
+EMC2_IMAGEDIR=/opt/hal-core
 
 
 MODULE_EXT=.so # module extension, used when insmod'ing
 
 # used for building
-RTDIR     = /home/user/Desktop/hal-core/src
+RTDIR     = /opt/hal-core/src
 RTARCH    = x86_64
 ULAPI_CFLAGS = 
 ULAPI_LDFLAGS = 
@@ -51,8 +51,8 @@ libdir = ${exec_prefix}/lib
 infodir = ${datarootdir}/info
 mandir = ${datarootdir}/man
 includedir = ${prefix}/include
-moduledir = /home/user/Desktop/hal-core/lib/linuxcnc/modules
-rip_moduledir = /home/user/Desktop/hal-core/rtlib
+moduledir = /opt/hal-core/lib/linuxcnc/modules
+rip_moduledir = /opt/hal-core/rtlib
 kernelvers = 
 
 # i18n variables:
@@ -77,13 +77,13 @@ RTPREFIX = uspace
 RTAI = 
 RTFLAGS = -DUSPACE 
 KERNELDIR = 
-RTFLAGS := -I. -I/home/user/Desktop/hal-core/src/include $(RTFLAGS) -DRTAPI -D_GNU_SOURCE -Drealtime
+RTFLAGS := -I. -I/opt/hal-core/src/include $(RTFLAGS) -DRTAPI -D_GNU_SOURCE -Drealtime
 USE_RTLIBM = @USE_RTLIBM@
 USE_LIBM = @USE_LIBM@
 USE_STUBS = @USE_STUBS@
 MATHINC = @MATHINC@
 MATHLIB = @MATHLIB@
-ULFLAGS = -Wall -g -I. -I/home/user/Desktop/hal-core/src/include -DULAPI -D_GNU_SOURCE -Os -DLOCALE_DIR=\"$(localedir)\" -DPACKAGE=\"$(package)\"
+ULFLAGS = -Wall -g -I. -I/opt/hal-core/src/include -DULAPI -D_GNU_SOURCE -Os -DLOCALE_DIR=\"$(localedir)\" -DPACKAGE=\"$(package)\"
 MODULE_EXT = .so
 BUILD_SYS = uspace
 CC = gcc
@@ -137,7 +137,7 @@ BUILD_DOCS_HTML =
 LYX = @LYX@
 PYTHON = /usr/bin/python3
 TCLSH = /usr/bin/tclsh8.6
-EMC2_TCL_LIB_DIR = /home/user/Desktop/hal-core/tcl
+EMC2_TCL_LIB_DIR = /opt/hal-core/tcl
 A2X_LATEX_ENCODING = 
 
 HAVE_LIBMODBUS3   = yes

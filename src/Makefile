@@ -107,7 +107,6 @@ GENERATED_MANPAGES :=
 
 ######################## Here you can easy remove items from compiling :
 SUBDIRS := \
-    libnml/inifile \
     rtapi \
     hal/utils \
     hal \
@@ -205,9 +204,8 @@ config.h: config.h.in config.status
 	@./config.status -q --header=$@
 
 INFILES = \
-    ../scripts/linuxcnc ../scripts/realtime \
-	../scripts/linuxcnc_info \
-	../scripts/haltcl ../scripts/rtapi.conf Makefile.inc Makefile.modinc \
+    ../scripts/realtime \
+	../scripts/rtapi.conf Makefile.inc Makefile.modinc \
 
 $(INFILES): %: %.in config.status
 	@./config.status --file=$@
@@ -341,9 +339,6 @@ ifneq ($(BUILD_SYS),uspace)
 obj-$(CONFIG_RTAPI) += rtapi.o
 rtapi-objs := rtapi/$(RTPREFIX)_rtapi.o
 endif
-
-obj-m += scope_rt.o
-scope_rt-objs := hal/utils/scope_rt.o $(MATHSTUB)
 
 obj-m += hal_lib.o
 hal_lib-objs := hal/hal_lib.o $(MATHSTUB)

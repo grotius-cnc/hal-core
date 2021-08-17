@@ -9808,8 +9808,6 @@ ac_config_files="$ac_config_files ../scripts/halrun"
 
 ac_config_files="$ac_config_files ../scripts/rip-environment"
 
-ac_config_files="$ac_config_files ../scripts/haltcl"
-
 ac_config_files="$ac_config_files ../scripts/realtime"
 
 ac_config_files="$ac_config_files Makefile.inc"

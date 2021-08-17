@@ -28,40 +28,40 @@
 
 
 /* Directory for binaries */
-#define EMC2_BIN_DIR "/home/user/Desktop/hal-core/bin"
+#define EMC2_BIN_DIR "/opt/hal-core/bin"
 
 /* Directory for configuration files */
 #define EMC2_CONFIG_DIR ""
 
 /* Default nml file */
-#define EMC2_DEFAULT_NMLFILE "/home/user/Desktop/hal-core/configs/common/linuxcnc.nml"
+#define EMC2_DEFAULT_NMLFILE "/opt/hal-core/configs/common/linuxcnc.nml"
 
 /* Default nml file */
-#define EMC2_DEFAULT_TOOLTABLE "/home/user/Desktop/hal-core/configs/sim/sim.tbl"
+#define EMC2_DEFAULT_TOOLTABLE "/opt/hal-core/configs/sim/sim.tbl"
 
 /* Directory for help files */
-#define EMC2_HELP_DIR "/home/user/Desktop/hal-core/docs/help"
+#define EMC2_HELP_DIR "/opt/hal-core/docs/help"
 
 /* Prefix or RIP directory */
-#define EMC2_HOME "/home/user/Desktop/hal-core"
+#define EMC2_HOME "/opt/hal-core"
 
 /* Directory for images */
-#define EMC2_IMAGE_DIR "/home/user/Desktop/hal-core"
+#define EMC2_IMAGE_DIR "/opt/hal-core"
 
 /* Directory for tcl translation files */
-#define EMC2_LANG_DIR "/home/user/Desktop/hal-core/src/objects"
+#define EMC2_LANG_DIR "/opt/hal-core/src/objects"
 
 /* Directory for nc files */
-#define EMC2_NCFILES_DIR "/home/user/Desktop/hal-core/nc_files"
+#define EMC2_NCFILES_DIR "/opt/hal-core/nc_files"
 
 /* Directory for po/mo translation files */
-#define EMC2_PO_DIR "/home/user/Desktop/hal-core/share/locale"
+#define EMC2_PO_DIR "/opt/hal-core/share/locale"
 
 /* Directory of realtime system */
-#define EMC2_RTLIB_DIR "/home/user/Desktop/hal-core/rtlib"
+#define EMC2_RTLIB_DIR "/opt/hal-core/rtlib"
 
 /* Directory for tcl scripts */
-#define EMC2_TCL_DIR "/home/user/Desktop/hal-core/tcl"
+#define EMC2_TCL_DIR "/opt/hal-core/tcl"
 
 /* define if the Boost::Python headers and library are available */
 #define HAVE_BOOST_PYTHON 1
@@ -204,7 +204,7 @@
 #define RTAPI_USPACE /**/
 
 /* Directory of the installed realtime system */
-#define RTDIR "/home/user/Desktop/hal-core/src"
+#define RTDIR "/opt/hal-core/src"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1

@@ -6,7 +6,6 @@ cd bin
 rm -rf rtapi_app
 rm -rf linuxcnc_module_helper
 rm -rf halcmd
-rm -rf halscope
 cd ..
 
 cd lib

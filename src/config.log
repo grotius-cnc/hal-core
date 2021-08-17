@@ -201,7 +201,7 @@ configure:3583: g++ -c -g -O2  conftest.cpp >&5
 configure:3583: $? = 0
 configure:3590: result: yes
 configure:3681: checking build toplevel
-configure:3684: result: /home/user/Desktop/hal-core
+configure:3684: result: /opt/hal-core
 configure:3693: checking installation prefix
 configure:3697: result: run in place
 configure:3720: checking for grep
@@ -406,7 +406,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_CXX11 1
 | #define RTAPI_USPACE /**/
-| #define RTDIR "/home/user/Desktop/hal-core/src"
+| #define RTDIR "/opt/hal-core/src"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
 configure:5457: checking for usability of linux/hidraw.h
@@ -423,7 +423,7 @@ configure:5587: checking for libusb-1.0
 configure:5590: result: yes
 configure:5710: checking for module installation directory
 configure:5739: result: configuring for run-in-place
-configure:5748: result: /home/user/Desktop/hal-core/rtlib
+configure:5748: result: /opt/hal-core/rtlib
 configure:5911: checking for glib
 configure:5915: result: yes - 2.66.8
 configure:5940: checking for GTK 2.4.0 or above
@@ -505,9 +505,9 @@ configure:7762: $? = 0
 configure:7762: result: yes
 configure:7772: checking for optreset
 configure:7788: gcc -o conftest -g -O2   conftest.c  >&5
-/usr/bin/ld: /tmp/cc6vUPcF.o: warning: relocation against `optreset' in read-only section `.text.startup'
-/usr/bin/ld: /tmp/cc6vUPcF.o: in function `main':
-/home/user/Desktop/hal-core/src/conftest.c:49: undefined reference to `optreset'
+/usr/bin/ld: /tmp/ccHHSk8C.o: warning: relocation against `optreset' in read-only section `.text.startup'
+/usr/bin/ld: /tmp/ccHHSk8C.o: in function `main':
+/opt/hal-core/src/conftest.c:49: undefined reference to `optreset'
 /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
 collect2: error: ld returned 1 exit status
 configure:7788: $? = 1
@@ -531,23 +531,23 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_CXX11 1
 | #define RTAPI_USPACE /**/
-| #define RTDIR "/home/user/Desktop/hal-core/src"
+| #define RTDIR "/opt/hal-core/src"
 | #define HIDRAW_H_USABLE /**/
 | #define HAVE_LIBMODBUS3 yes
 | #define HAVE_LIBUSB10 yes
 | #define MODULE_EXT ".so"
-| #define EMC2_DEFAULT_NMLFILE "/home/user/Desktop/hal-core/configs/common/linuxcnc.nml"
-| #define EMC2_DEFAULT_TOOLTABLE "/home/user/Desktop/hal-core/configs/sim/sim.tbl"
-| #define EMC2_HOME "/home/user/Desktop/hal-core"
-| #define EMC2_BIN_DIR "/home/user/Desktop/hal-core/bin"
-| #define EMC2_TCL_DIR "/home/user/Desktop/hal-core/tcl"
-| #define EMC2_HELP_DIR "/home/user/Desktop/hal-core/docs/help"
-| #define EMC2_RTLIB_DIR "/home/user/Desktop/hal-core/rtlib"
-| #define EMC2_LANG_DIR "/home/user/Desktop/hal-core/src/objects"
-| #define EMC2_PO_DIR "/home/user/Desktop/hal-core/share/locale"
+| #define EMC2_DEFAULT_NMLFILE "/opt/hal-core/configs/common/linuxcnc.nml"
+| #define EMC2_DEFAULT_TOOLTABLE "/opt/hal-core/configs/sim/sim.tbl"
+| #define EMC2_HOME "/opt/hal-core"
+| #define EMC2_BIN_DIR "/opt/hal-core/bin"
+| #define EMC2_TCL_DIR "/opt/hal-core/tcl"
+| #define EMC2_HELP_DIR "/opt/hal-core/docs/help"
+| #define EMC2_RTLIB_DIR "/opt/hal-core/rtlib"
+| #define EMC2_LANG_DIR "/opt/hal-core/src/objects"
+| #define EMC2_PO_DIR "/opt/hal-core/share/locale"
 | #define EMC2_CONFIG_DIR ""
-| #define EMC2_NCFILES_DIR "/home/user/Desktop/hal-core/nc_files"
-| #define EMC2_IMAGE_DIR "/home/user/Desktop/hal-core"
+| #define EMC2_NCFILES_DIR "/opt/hal-core/nc_files"
+| #define EMC2_IMAGE_DIR "/opt/hal-core"
 | #define HAVE_SYS_IO_H 1
 | #define STDC_HEADERS 1
 | #define HAVE_SYS_WAIT_H 1
@@ -567,8 +567,8 @@ configure: failed program was:
 configure:7800: result: no
 configure:7808: checking for library containing dlopen
 configure:7839: gcc -o conftest -g -O2   conftest.c  >&5
-/usr/bin/ld: /tmp/ccfthkWM.o: in function `main':
-/home/user/Desktop/hal-core/src/conftest.c:53: undefined reference to `dlopen'
+/usr/bin/ld: /tmp/ccfdsynH.o: in function `main':
+/opt/hal-core/src/conftest.c:53: undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 configure:7839: $? = 1
 configure: failed program was:
@@ -591,23 +591,23 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_CXX11 1
 | #define RTAPI_USPACE /**/
-| #define RTDIR "/home/user/Desktop/hal-core/src"
+| #define RTDIR "/opt/hal-core/src"
 | #define HIDRAW_H_USABLE /**/
 | #define HAVE_LIBMODBUS3 yes
 | #define HAVE_LIBUSB10 yes
 | #define MODULE_EXT ".so"
-| #define EMC2_DEFAULT_NMLFILE "/home/user/Desktop/hal-core/configs/common/linuxcnc.nml"
-| #define EMC2_DEFAULT_TOOLTABLE "/home/user/Desktop/hal-core/configs/sim/sim.tbl"
-| #define EMC2_HOME "/home/user/Desktop/hal-core"
-| #define EMC2_BIN_DIR "/home/user/Desktop/hal-core/bin"
-| #define EMC2_TCL_DIR "/home/user/Desktop/hal-core/tcl"
-| #define EMC2_HELP_DIR "/home/user/Desktop/hal-core/docs/help"
-| #define EMC2_RTLIB_DIR "/home/user/Desktop/hal-core/rtlib"
-| #define EMC2_LANG_DIR "/home/user/Desktop/hal-core/src/objects"
-| #define EMC2_PO_DIR "/home/user/Desktop/hal-core/share/locale"
+| #define EMC2_DEFAULT_NMLFILE "/opt/hal-core/configs/common/linuxcnc.nml"
+| #define EMC2_DEFAULT_TOOLTABLE "/opt/hal-core/configs/sim/sim.tbl"
+| #define EMC2_HOME "/opt/hal-core"
+| #define EMC2_BIN_DIR "/opt/hal-core/bin"
+| #define EMC2_TCL_DIR "/opt/hal-core/tcl"
+| #define EMC2_HELP_DIR "/opt/hal-core/docs/help"
+| #define EMC2_RTLIB_DIR "/opt/hal-core/rtlib"
+| #define EMC2_LANG_DIR "/opt/hal-core/src/objects"
+| #define EMC2_PO_DIR "/opt/hal-core/share/locale"
 | #define EMC2_CONFIG_DIR ""
-| #define EMC2_NCFILES_DIR "/home/user/Desktop/hal-core/nc_files"
-| #define EMC2_IMAGE_DIR "/home/user/Desktop/hal-core"
+| #define EMC2_NCFILES_DIR "/opt/hal-core/nc_files"
+| #define EMC2_IMAGE_DIR "/opt/hal-core"
 | #define HAVE_SYS_IO_H 1
 | #define STDC_HEADERS 1
 | #define HAVE_SYS_WAIT_H 1
@@ -629,8 +629,8 @@ configure: failed program was:
 |   return 0;
 | }
 configure:7839: gcc -o conftest -g -O2   conftest.c -lc   >&5
-/usr/bin/ld: /tmp/ccIoiCxR.o: in function `main':
-/home/user/Desktop/hal-core/src/conftest.c:53: undefined reference to `dlopen'
+/usr/bin/ld: /tmp/ccHAAhXP.o: in function `main':
+/opt/hal-core/src/conftest.c:53: undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 configure:7839: $? = 1
 configure: failed program was:
@@ -653,23 +653,23 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_CXX11 1
 | #define RTAPI_USPACE /**/
-| #define RTDIR "/home/user/Desktop/hal-core/src"
+| #define RTDIR "/opt/hal-core/src"
 | #define HIDRAW_H_USABLE /**/
 | #define HAVE_LIBMODBUS3 yes
 | #define HAVE_LIBUSB10 yes
 | #define MODULE_EXT ".so"
-| #define EMC2_DEFAULT_NMLFILE "/home/user/Desktop/hal-core/configs/common/linuxcnc.nml"
-| #define EMC2_DEFAULT_TOOLTABLE "/home/user/Desktop/hal-core/configs/sim/sim.tbl"
-| #define EMC2_HOME "/home/user/Desktop/hal-core"
-| #define EMC2_BIN_DIR "/home/user/Desktop/hal-core/bin"
-| #define EMC2_TCL_DIR "/home/user/Desktop/hal-core/tcl"
-| #define EMC2_HELP_DIR "/home/user/Desktop/hal-core/docs/help"
-| #define EMC2_RTLIB_DIR "/home/user/Desktop/hal-core/rtlib"
-| #define EMC2_LANG_DIR "/home/user/Desktop/hal-core/src/objects"
-| #define EMC2_PO_DIR "/home/user/Desktop/hal-core/share/locale"
+| #define EMC2_DEFAULT_NMLFILE "/opt/hal-core/configs/common/linuxcnc.nml"
+| #define EMC2_DEFAULT_TOOLTABLE "/opt/hal-core/configs/sim/sim.tbl"
+| #define EMC2_HOME "/opt/hal-core"
+| #define EMC2_BIN_DIR "/opt/hal-core/bin"
+| #define EMC2_TCL_DIR "/opt/hal-core/tcl"
+| #define EMC2_HELP_DIR "/opt/hal-core/docs/help"
+| #define EMC2_RTLIB_DIR "/opt/hal-core/rtlib"
+| #define EMC2_LANG_DIR "/opt/hal-core/src/objects"
+| #define EMC2_PO_DIR "/opt/hal-core/share/locale"
 | #define EMC2_CONFIG_DIR ""
-| #define EMC2_NCFILES_DIR "/home/user/Desktop/hal-core/nc_files"
-| #define EMC2_IMAGE_DIR "/home/user/Desktop/hal-core"
+| #define EMC2_NCFILES_DIR "/opt/hal-core/nc_files"
+| #define EMC2_IMAGE_DIR "/opt/hal-core"
 | #define HAVE_SYS_IO_H 1
 | #define STDC_HEADERS 1
 | #define HAVE_SYS_WAIT_H 1
@@ -839,23 +839,23 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_CXX11 1
 | #define RTAPI_USPACE /**/
-| #define RTDIR "/home/user/Desktop/hal-core/src"
+| #define RTDIR "/opt/hal-core/src"
 | #define HIDRAW_H_USABLE /**/
 | #define HAVE_LIBMODBUS3 yes
 | #define HAVE_LIBUSB10 yes
 | #define MODULE_EXT ".so"
-| #define EMC2_DEFAULT_NMLFILE "/home/user/Desktop/hal-core/configs/common/linuxcnc.nml"
-| #define EMC2_DEFAULT_TOOLTABLE "/home/user/Desktop/hal-core/configs/sim/sim.tbl"
-| #define EMC2_HOME "/home/user/Desktop/hal-core"
-| #define EMC2_BIN_DIR "/home/user/Desktop/hal-core/bin"
-| #define EMC2_TCL_DIR "/home/user/Desktop/hal-core/tcl"
-| #define EMC2_HELP_DIR "/home/user/Desktop/hal-core/docs/help"
-| #define EMC2_RTLIB_DIR "/home/user/Desktop/hal-core/rtlib"
-| #define EMC2_LANG_DIR "/home/user/Desktop/hal-core/src/objects"
-| #define EMC2_PO_DIR "/home/user/Desktop/hal-core/share/locale"
+| #define EMC2_DEFAULT_NMLFILE "/opt/hal-core/configs/common/linuxcnc.nml"
+| #define EMC2_DEFAULT_TOOLTABLE "/opt/hal-core/configs/sim/sim.tbl"
+| #define EMC2_HOME "/opt/hal-core"
+| #define EMC2_BIN_DIR "/opt/hal-core/bin"
+| #define EMC2_TCL_DIR "/opt/hal-core/tcl"
+| #define EMC2_HELP_DIR "/opt/hal-core/docs/help"
+| #define EMC2_RTLIB_DIR "/opt/hal-core/rtlib"
+| #define EMC2_LANG_DIR "/opt/hal-core/src/objects"
+| #define EMC2_PO_DIR "/opt/hal-core/share/locale"
 | #define EMC2_CONFIG_DIR ""
-| #define EMC2_NCFILES_DIR "/home/user/Desktop/hal-core/nc_files"
-| #define EMC2_IMAGE_DIR "/home/user/Desktop/hal-core"
+| #define EMC2_NCFILES_DIR "/opt/hal-core/nc_files"
+| #define EMC2_IMAGE_DIR "/opt/hal-core"
 | #define HAVE_SYS_IO_H 1
 | #define STDC_HEADERS 1
 | #define HAVE_SYS_WAIT_H 1
@@ -934,23 +934,23 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_CXX11 1
 | #define RTAPI_USPACE /**/
-| #define RTDIR "/home/user/Desktop/hal-core/src"
+| #define RTDIR "/opt/hal-core/src"
 | #define HIDRAW_H_USABLE /**/
 | #define HAVE_LIBMODBUS3 yes
 | #define HAVE_LIBUSB10 yes
 | #define MODULE_EXT ".so"
-| #define EMC2_DEFAULT_NMLFILE "/home/user/Desktop/hal-core/configs/common/linuxcnc.nml"
-| #define EMC2_DEFAULT_TOOLTABLE "/home/user/Desktop/hal-core/configs/sim/sim.tbl"
-| #define EMC2_HOME "/home/user/Desktop/hal-core"
-| #define EMC2_BIN_DIR "/home/user/Desktop/hal-core/bin"
-| #define EMC2_TCL_DIR "/home/user/Desktop/hal-core/tcl"
-| #define EMC2_HELP_DIR "/home/user/Desktop/hal-core/docs/help"
-| #define EMC2_RTLIB_DIR "/home/user/Desktop/hal-core/rtlib"
-| #define EMC2_LANG_DIR "/home/user/Desktop/hal-core/src/objects"
-| #define EMC2_PO_DIR "/home/user/Desktop/hal-core/share/locale"
+| #define EMC2_DEFAULT_NMLFILE "/opt/hal-core/configs/common/linuxcnc.nml"
+| #define EMC2_DEFAULT_TOOLTABLE "/opt/hal-core/configs/sim/sim.tbl"
+| #define EMC2_HOME "/opt/hal-core"
+| #define EMC2_BIN_DIR "/opt/hal-core/bin"
+| #define EMC2_TCL_DIR "/opt/hal-core/tcl"
+| #define EMC2_HELP_DIR "/opt/hal-core/docs/help"
+| #define EMC2_RTLIB_DIR "/opt/hal-core/rtlib"
+| #define EMC2_LANG_DIR "/opt/hal-core/src/objects"
+| #define EMC2_PO_DIR "/opt/hal-core/share/locale"
 | #define EMC2_CONFIG_DIR ""
-| #define EMC2_NCFILES_DIR "/home/user/Desktop/hal-core/nc_files"
-| #define EMC2_IMAGE_DIR "/home/user/Desktop/hal-core"
+| #define EMC2_NCFILES_DIR "/opt/hal-core/nc_files"
+| #define EMC2_IMAGE_DIR "/opt/hal-core"
 | #define HAVE_SYS_IO_H 1
 | #define STDC_HEADERS 1
 | #define HAVE_SYS_WAIT_H 1
@@ -997,23 +997,23 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_CXX11 1
 | #define RTAPI_USPACE /**/
-| #define RTDIR "/home/user/Desktop/hal-core/src"
+| #define RTDIR "/opt/hal-core/src"
 | #define HIDRAW_H_USABLE /**/
 | #define HAVE_LIBMODBUS3 yes
 | #define HAVE_LIBUSB10 yes
 | #define MODULE_EXT ".so"
-| #define EMC2_DEFAULT_NMLFILE "/home/user/Desktop/hal-core/configs/common/linuxcnc.nml"
-| #define EMC2_DEFAULT_TOOLTABLE "/home/user/Desktop/hal-core/configs/sim/sim.tbl"
-| #define EMC2_HOME "/home/user/Desktop/hal-core"
-| #define EMC2_BIN_DIR "/home/user/Desktop/hal-core/bin"
-| #define EMC2_TCL_DIR "/home/user/Desktop/hal-core/tcl"
-| #define EMC2_HELP_DIR "/home/user/Desktop/hal-core/docs/help"
-| #define EMC2_RTLIB_DIR "/home/user/Desktop/hal-core/rtlib"
-| #define EMC2_LANG_DIR "/home/user/Desktop/hal-core/src/objects"
-| #define EMC2_PO_DIR "/home/user/Desktop/hal-core/share/locale"
+| #define EMC2_DEFAULT_NMLFILE "/opt/hal-core/configs/common/linuxcnc.nml"
+| #define EMC2_DEFAULT_TOOLTABLE "/opt/hal-core/configs/sim/sim.tbl"
+| #define EMC2_HOME "/opt/hal-core"
+| #define EMC2_BIN_DIR "/opt/hal-core/bin"
+| #define EMC2_TCL_DIR "/opt/hal-core/tcl"
+| #define EMC2_HELP_DIR "/opt/hal-core/docs/help"
+| #define EMC2_RTLIB_DIR "/opt/hal-core/rtlib"
+| #define EMC2_LANG_DIR "/opt/hal-core/src/objects"
+| #define EMC2_PO_DIR "/opt/hal-core/share/locale"
 | #define EMC2_CONFIG_DIR ""
-| #define EMC2_NCFILES_DIR "/home/user/Desktop/hal-core/nc_files"
-| #define EMC2_IMAGE_DIR "/home/user/Desktop/hal-core"
+| #define EMC2_NCFILES_DIR "/opt/hal-core/nc_files"
+| #define EMC2_IMAGE_DIR "/opt/hal-core"
 | #define HAVE_SYS_IO_H 1
 | #define STDC_HEADERS 1
 | #define HAVE_SYS_WAIT_H 1
@@ -1091,7 +1091,7 @@ configure:9779: $? = 0
 configure:9779: result: yes
 configure:9779: checking for X11/Xmu/Xmu.h
 configure:9779: result: yes
-configure:9926: creating ./config.status
+configure:9924: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -1111,7 +1111,6 @@ on debian10
 config.status:1006: creating ../scripts/rtapi.conf
 config.status:1006: creating ../scripts/halrun
 config.status:1006: creating ../scripts/rip-environment
-config.status:1006: creating ../scripts/haltcl
 config.status:1006: creating ../scripts/realtime
 config.status:1006: creating Makefile.inc
 config.status:1006: creating Makefile.modinc
@@ -1248,9 +1247,9 @@ CPPFLAGS=''
 CXX='g++'
 CXXCPP='g++ -E'
 CXXFLAGS='-g -O2'
-DATE='Mon Aug 16 06:23:31 EDT 2021'
+DATE='Tue Aug 17 06:44:47 EDT 2021'
 DBLATEX=''
-DEFAULT_NMLFILE='/home/user/Desktop/hal-core/configs/common/linuxcnc.nml'
+DEFAULT_NMLFILE='/opt/hal-core/configs/common/linuxcnc.nml'
 DEFS='-DHAVE_CONFIG_H'
 DVIPNG=''
 ECHO_C=''
@@ -1258,19 +1257,19 @@ ECHO_N='-n'
 ECHO_T=''
 EGREP='/usr/bin/grep -E'
 EMC2VERSION='Undetermined'
-EMC2_BIN_DIR='/home/user/Desktop/hal-core/bin'
-EMC2_HELP_DIR='/home/user/Desktop/hal-core/docs/help'
-EMC2_HOME='/home/user/Desktop/hal-core'
-EMC2_ICON='/home/user/Desktop/hal-core/linuxcncicon.png'
-EMC2_IMAGE_DIR='/home/user/Desktop/hal-core'
-EMC2_LANG_DIR='/home/user/Desktop/hal-core/src/objects'
-EMC2_LATENCY_SCRIPT='/home/user/Desktop/hal-core/scripts/latency-test'
-EMC2_NCFILES_DIR='/home/user/Desktop/hal-core/nc_files'
-EMC2_RTLIB_DIR='/home/user/Desktop/hal-core/rtlib'
-EMC2_SCRIPT='/home/user/Desktop/hal-core/scripts/linuxcnc'
+EMC2_BIN_DIR='/opt/hal-core/bin'
+EMC2_HELP_DIR='/opt/hal-core/docs/help'
+EMC2_HOME='/opt/hal-core'
+EMC2_ICON='/opt/hal-core/linuxcncicon.png'
+EMC2_IMAGE_DIR='/opt/hal-core'
+EMC2_LANG_DIR='/opt/hal-core/src/objects'
+EMC2_LATENCY_SCRIPT='/opt/hal-core/scripts/latency-test'
+EMC2_NCFILES_DIR='/opt/hal-core/nc_files'
+EMC2_RTLIB_DIR='/opt/hal-core/rtlib'
+EMC2_SCRIPT='/opt/hal-core/scripts/linuxcnc'
 EMC2_SUFFIX=' (run-in-place)'
-EMC2_TCL_DIR='/home/user/Desktop/hal-core/tcl'
-EMC2_TCL_LIB_DIR='/home/user/Desktop/hal-core/tcl'
+EMC2_TCL_DIR='/opt/hal-core/tcl'
+EMC2_TCL_LIB_DIR='/opt/hal-core/tcl'
 EXEEXT=''
 EXT_RTFLAGS=''
 FUSER='/usr/bin/fuser'
@@ -1281,7 +1280,7 @@ GS=''
 GTK_CFLAGS='-pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16'
 GTK_LIBS='-lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lfontconfig -lfreetype'
 GTK_VER='2.24.33'
-HALLIB_DIR='/home/user/Desktop/hal-core/lib/hallib'
+HALLIB_DIR='/opt/hal-core/lib/hallib'
 HAVE_CXX11='1'
 HAVE_GNOMEPRINT=''
 HAVE_LIBINTL=''
@@ -1293,7 +1292,7 @@ HAVE_OPTRESET='no'
 HAVE_READLINE='yes'
 HIDRAW_H_USABLE='yes'
 INCLUDEPY='/usr/include/python3.9'
-INSMOD='/home/user/Desktop/hal-core/bin/linuxcnc_module_helper insert'
+INSMOD='/opt/hal-core/bin/linuxcnc_module_helper insert'
 INSTALL='/usr/bin/install'
 INTLTOOL_EXTRACT='/usr/bin/intltool-extract'
 IPCS='/usr/bin/ipcs'
@@ -1316,7 +1315,7 @@ LIBUSB10_CFLAGS='-I/usr/include/libusb-1.0'
 LIBUSB10_LIBS='-lusb-1.0'
 LINUXCNC_AUX_EXAMPLES='/usr/share/linuxcnc/aux_examples'
 LINUXCNC_AUX_GLADEVCP='/usr/share/linuxcnc/aux_gladevcp'
-LINUXCNC_CONFIG_PATH='~/linuxcnc/configs:/home/user/Desktop/hal-core/configs'
+LINUXCNC_CONFIG_PATH='~/linuxcnc/configs:/opt/hal-core/configs'
 LOCALEDIR='/usr/share/locale'
 LSMOD=''
 LTLIBOBJS=''
@@ -1329,7 +1328,7 @@ MODPATH_rtai_ksched=''
 MODPATH_rtai_math=''
 MODPATH_rtai_sched=''
 MODPATH_rtai_sem=''
-MODULE_DIR='/home/user/Desktop/hal-core/lib/linuxcnc/modules'
+MODULE_DIR='/opt/hal-core/lib/linuxcnc/modules'
 MSGFMT='/usr/bin/msgfmt'
 OBJEXT='o'
 PACKAGE='linuxcnc'
@@ -1349,16 +1348,16 @@ PYTHON_CPPFLAGS='-I/usr/include/python3.9'
 PYTHON_LIBS='-lcrypt -lpthread -ldl  -lutil -lm'
 RANLIB='ranlib'
 READLINE_LIBS='-lreadline'
-REALTIME='/home/user/Desktop/hal-core/scripts/realtime'
-RIP_MODULE_DIR='/home/user/Desktop/hal-core/rtlib'
-RMMOD='/home/user/Desktop/hal-core/bin/linuxcnc_module_helper remove'
+REALTIME='/opt/hal-core/scripts/realtime'
+RIP_MODULE_DIR='/opt/hal-core/rtlib'
+RMMOD='/opt/hal-core/bin/linuxcnc_module_helper remove'
 RTAI=''
 RTAI_CONFIG='none'
 RTAI_LXRT_CFLAGS=''
 RTAI_LXRT_LDFLAGS=''
 RTAPI_APP_CFLAGS=''
 RTARCH='x86_64'
-RTDIR='/home/user/Desktop/hal-core/src'
+RTDIR='/opt/hal-core/src'
 RTFLAGS='-DUSPACE'
 RTPREFIX='uspace'
 RTS='uspace'
@@ -1412,7 +1411,7 @@ localstatedir='${prefix}/var'
 mandir='${datarootdir}/man'
 oldincludedir='/usr/include'
 pdfdir='${docdir}'
-prefix='/home/user/Desktop/hal-core'
+prefix='/opt/hal-core'
 program_transform_name='s,x,x,'
 psdir='${docdir}'
 runstatedir='${localstatedir}/run'
@@ -1444,23 +1443,23 @@ target_alias=''
 #define HAVE_UNISTD_H 1
 #define HAVE_CXX11 1
 #define RTAPI_USPACE /**/
-#define RTDIR "/home/user/Desktop/hal-core/src"
+#define RTDIR "/opt/hal-core/src"
 #define HIDRAW_H_USABLE /**/
 #define HAVE_LIBMODBUS3 yes
 #define HAVE_LIBUSB10 yes
 #define MODULE_EXT ".so"
-#define EMC2_DEFAULT_NMLFILE "/home/user/Desktop/hal-core/configs/common/linuxcnc.nml"
-#define EMC2_DEFAULT_TOOLTABLE "/home/user/Desktop/hal-core/configs/sim/sim.tbl"
-#define EMC2_HOME "/home/user/Desktop/hal-core"
-#define EMC2_BIN_DIR "/home/user/Desktop/hal-core/bin"
-#define EMC2_TCL_DIR "/home/user/Desktop/hal-core/tcl"
-#define EMC2_HELP_DIR "/home/user/Desktop/hal-core/docs/help"
-#define EMC2_RTLIB_DIR "/home/user/Desktop/hal-core/rtlib"
-#define EMC2_LANG_DIR "/home/user/Desktop/hal-core/src/objects"
-#define EMC2_PO_DIR "/home/user/Desktop/hal-core/share/locale"
+#define EMC2_DEFAULT_NMLFILE "/opt/hal-core/configs/common/linuxcnc.nml"
+#define EMC2_DEFAULT_TOOLTABLE "/opt/hal-core/configs/sim/sim.tbl"
+#define EMC2_HOME "/opt/hal-core"
+#define EMC2_BIN_DIR "/opt/hal-core/bin"
+#define EMC2_TCL_DIR "/opt/hal-core/tcl"
+#define EMC2_HELP_DIR "/opt/hal-core/docs/help"
+#define EMC2_RTLIB_DIR "/opt/hal-core/rtlib"
+#define EMC2_LANG_DIR "/opt/hal-core/src/objects"
+#define EMC2_PO_DIR "/opt/hal-core/share/locale"
 #define EMC2_CONFIG_DIR ""
-#define EMC2_NCFILES_DIR "/home/user/Desktop/hal-core/nc_files"
-#define EMC2_IMAGE_DIR "/home/user/Desktop/hal-core"
+#define EMC2_NCFILES_DIR "/opt/hal-core/nc_files"
+#define EMC2_IMAGE_DIR "/opt/hal-core"
 #define HAVE_SYS_IO_H 1
 #define STDC_HEADERS 1
 #define HAVE_SYS_WAIT_H 1
@@ -1554,73 +1553,3 @@ on debian10
 
 config.status:1006: creating config.h
 config.status:1176: config.h is unchanged
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by LinuxCNC config.status hal-embedded, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status -q --header=config.h
-
-on debian10
-
-config.status:1006: creating config.h
-config.status:1176: config.h is unchanged
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by LinuxCNC config.status hal-embedded, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status -q --header=config.h
-
-on debian10
-
-config.status:1006: creating config.h
-config.status:1176: config.h is unchanged
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by LinuxCNC config.status hal-embedded, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status --file=../scripts/linuxcnc
-
-on debian10
-
-config.status:1006: creating ../scripts/linuxcnc
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by LinuxCNC config.status hal-embedded, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status --file=../scripts/linuxcnc_info
-
-on debian10
-
-config.status:1006: creating ../scripts/linuxcnc_info
