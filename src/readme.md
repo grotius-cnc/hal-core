@@ -1,15 +1,10 @@
-Install with Makefile:
+Install:
 
     $ ./clean.sh
     $ ./configure
     $ make -j2
     $ sudo make setuid
     
-Install with .sh script:
-
-    $ ./clean.sh
-    $ ./make.sh
-
 To clean install:
 
     $ ./clean.sh

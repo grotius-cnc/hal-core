@@ -6851,7 +6851,7 @@ if test "${with_rmmod+set}" = set; then :
 
 else
 
-            RMMOD="$EMC2_BIN_DIR/linuxcnc_module_helper remove"
+            RMMOD="$EMC2_BIN_DIR/module_helper remove"
 
 fi
 
@@ -6873,7 +6873,7 @@ if test "${with_insmod+set}" = set; then :
 
 else
 
-            INSMOD="$EMC2_BIN_DIR/linuxcnc_module_helper insert"
+            INSMOD="$EMC2_BIN_DIR/module_helper insert"
 
 fi
 

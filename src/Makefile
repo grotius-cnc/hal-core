@@ -87,7 +87,7 @@ ifeq ($(origin KERNELRELEASE),undefined)
 default: userspace modules
 ifeq ($(RUN_IN_PLACE),yes)
 ifneq ($(BUILD_SYS),uspace)
-	@if [ -f ../bin/linuxcnc_module_helper ]; then if ! [ `id -u` = 0 -a -O ../bin/linuxcnc_module_helper -a -u ../bin/linuxcnc_module_helper ]; then $(VECHO) "You now need to run 'sudo make setuid' in order to run in place."; fi; fi
+	@if [ -f ../bin/module_helper ]; then if ! [ `id -u` = 0 -a -O ../bin/module_helper -a -u ../bin/module_helper ]; then $(VECHO) "You now need to run 'sudo make setuid' in order to run in place."; fi; fi
 else
 	@if [ -f ../bin/rtapi_app ]; then if ! [ `id -u` = 0 -a -O  ../bin/rtapi_app -a -u ../bin/rtapi_app ]; then $(VECHO) "You now need to run 'sudo make setuid' in order to run in place with access to hardware."; fi; fi
 endif
@@ -284,8 +284,8 @@ setuid:
 ifeq ($(BUILD_SYS),uspace)
 	chown root ../bin/rtapi_app
 	chmod 4750 ../bin/rtapi_app
-	chown root ../bin/linuxcnc_module_helper
-	chmod 4750 ../bin/linuxcnc_module_helper
+	chown root ../bin/module_helper
+	chmod 4750 ../bin/module_helper
 endif
 
 # These rules allows a header file from this directory to be installed into

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./configure
+
 mkdir -p objects/rthal
 mkdir -p objects/rtapi
 mkdir -p objects/module_helper
@@ -60,7 +62,7 @@ gcc -c -I. -Irtapi -Ihal  -Os -fwrapv  -g -Wall  -DULAPI -std=gnu99 -fgnu89-inli
         -MP -MD -MF "objects/module_helper/module_helper.d" -MT "objects/module_helper/module_helper.o" \
         module_helper/module_helper.c -o objects/module_helper/module_helper.o
 # Linking linuxcnc_module_helper
-gcc -o ../bin/linuxcnc_module_helper objects/module_helper/module_helper.o -Wall
+gcc -o ../bin/module_helper objects/module_helper/module_helper.o -Wall
 
 # Compiling realtime hal/hal_lib.c
 gcc -c -Os -fwrapv  -g -Wall  -DRTAPI \
