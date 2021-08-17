@@ -1,9 +1,14 @@
-Install:
+Install by Makefile:
 
     $ ./clean.sh
     $ ./configure
     $ make -j2
     $ sudo make setuid
+    
+Install by script file, this is a very transparant way, the compile steps are show'n by order:
+    
+    $ ./clean.sh
+    $ ./make.sh
     
 To clean install:
 
