@@ -9,7 +9,6 @@ To clean install:
 
     $ ./clean.sh
     
-    
 If app refuses to insert kernel module try:
 - This is actually the command "sudo make setuid".
 
@@ -18,8 +17,6 @@ If app refuses to insert kernel module try:
         $ sudo chmod 777 rtapi_app
         $ sudo chmod 777 linuxcnc_module_helper    
     
-
-
 Pre requirments:
 
     sudo apt-get install git

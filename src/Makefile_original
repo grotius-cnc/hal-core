@@ -42,7 +42,7 @@ ifeq ("$(origin V)", "command line")
   BUILD_VERBOSE = $(V)
 endif
 ifndef BUILD_VERBOSE
-  BUILD_VERBOSE = 1
+  BUILD_VERBOSE = 0
 endif
 
 ifeq ($(BUILD_VERBOSE),1)
@@ -95,7 +95,7 @@ endif
 
 
 # Print 'entering' all the time
-MAKEFLAGS += w 
+MAKEFLAGS += w
 
 # Create the variables with := so that subsequent += alterations keep it
 # as a "substitute at assignment time" variable
@@ -353,7 +353,7 @@ RTDEPS := $(sort $(RTOBJS:.o=.d))
 modules: $(patsubst %.o,../rtlib/%.so,$(obj-m))
 ../rtlib/%.so:
 	$(ECHO) Linking $@
-	$(Q)ld -d -r -o -v objects/$*.tmp $^
+	$(Q)ld -d -r -o objects/$*.tmp $^
 	$(Q)objcopy -j .rtapi_export -O binary objects/$*.tmp objects/$*.sym
 	$(Q)(echo '{ global : '; tr -s '\0' < objects/$*.sym | xargs -r0 printf '%s;\n' | grep .; echo 'local : * ; };') > objects/$*.ver
 	$(Q)$(CC) -shared -Bsymbolic $(LDFLAGS) -Wl,--version-script,objects/$*.ver -o $@ $^ -lm
