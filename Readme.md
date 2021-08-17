@@ -1,3 +1,8 @@
+
+Installation and runtest preview:
+
+https://user-images.githubusercontent.com/44880102/129791198-ab705999-23ca-4004-a5f5-f0bd3357b47e.mp4
+
 Hal_core is a stripped down hal environment.
 The installed size is approx 6.8Mib
 
