@@ -1,6 +1,7 @@
 
 To install from a git clone :
 
+	Install hal-core:
 	$ git clone https://github.com/grotius-cnc/hal_core.git hal-core
 	$ cp -rf hal-core /opt
 	$ cd /opt/hal-core/src
@@ -9,6 +10,12 @@ To install from a git clone :
 	$ cd /opt/hal-core/
 	$ chmod +x runtest
 	$ ./runtest
+	
+	Install ethercat component:
+	$ cd /opt/hal-core/src/hal/components/ethercat/
+	$ chmod +x make 
+	$ ./make
+	
 
 Installation and runtest preview:
 
