@@ -23,6 +23,10 @@ To install from a git clone :
 	$ chmod +x make 
 	$ ./make
 	
+	Install dofs component:
+	$ cd /opt/hal-core/src/hal/components/dofs/hal
+	$ chmod +x make
+	$ ./make
 
 Installation and runtest preview:
 
