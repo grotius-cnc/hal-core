@@ -1,34 +1,21 @@
 #!/usr/bin/bash
 
-cd ..
+# Go one step back to be on hal-core directory
+cd .. 
 
-cd bin
-rm -rf rtapi_app
-rm -rf linuxcnc_module_helper
-rm -rf halcmd
-cd ..
+# Remove the following directories from bin
+rm -rf bin/rtapi_app
+rm -rf bin/linuxcnc_module_helper
+rm -rf bin/halcmd
 
-cd lib
-rm -rf *.so *.so.0
-cd ..
+# Remove .so and .so.0 files from lib
+rm -rf lib/*.so lib/*.so.0
 
-cd rtlib
-rm -rf *.so 
-cd ..
+# Remove .so files from rtlib
+rm -rf rtlib/*.so 
 
-cd tcl
-rm -rf *.so
-cd ..
+# Remove .so files from tcl
+rm -rf tcl/*.so
 
-cd src/objects/
-# remove files
-rm -rf *.*
-# remove dirs
-rm -dr *
-
-cd ..
-cd ..
-cd src
-
-
-
+# Remove files and directories from src/objects/
+rm -rf src/objects/*
