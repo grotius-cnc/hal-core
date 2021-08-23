@@ -53,4 +53,4 @@ rm -rf /opt/hal-core/rtlib/lcec_conf
 cp lcec_conf /opt/hal-core/rtlib/
 
 # Leave the source example intact.
-cp ethercat-conf.xml /opt/hal-core/rtlib/
+cp ../ethercat-conf.xml /opt/hal-core/rtlib/
