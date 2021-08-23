@@ -14,7 +14,11 @@ To install from a git clone :
 	Install ethercat component:
 	$ cd /opt/hal-core/src/hal/components/ethercat/
 	$ chmod +x make 
+	$ chmod +x runtest
 	$ ./make
+	$ ./runtest
+	
+	
 	
 
 Installation and runtest preview:
