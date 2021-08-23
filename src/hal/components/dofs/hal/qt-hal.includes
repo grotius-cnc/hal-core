@@ -1,0 +1,7 @@
+.
+/opt/linuxcnc/lib
+/opt/linuxcnc/src/rtapi
+/opt/linuxcnc/rtlib
+/opt/linuxcnc/include
+/opt/linuxcnc/src/hal/utils
+/opt/linuxcnc/src/hal

@@ -7,6 +7,9 @@ Left over system files:
     
 Custom components
 
-    threads.so
-    test.so
+    threads.so (module that creates thread's, for example to update a module function every 1ms)
+    test.so (test module)
+    
+    dofs.so (s-curve motion planner module)
+    libdofs.so (shared library, needed by dofs.so) 
 
