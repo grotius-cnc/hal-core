@@ -5,7 +5,7 @@ Left over system files:
     hal_lib.so
     scope_rt.so
     
-Custom components
+Custom components:
 
     threads.so (module that creates thread's, for example to update a module function every 1ms)
     test.so (test module)
@@ -13,3 +13,7 @@ Custom components
     dofs.so (s-curve motion planner module)
     libdofs.so (shared library, needed by dofs.so) 
 
+Ethercat component:
+
+	lcec.so
+	lcec_conf (ethercat .xml config reader used by lcec.so)
