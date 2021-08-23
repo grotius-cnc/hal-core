@@ -1,4 +1,15 @@
 
+To install from a git clone :
+
+	$ git clone https://github.com/grotius-cnc/hal_core.git hal-core
+	$ cp -rf hal-core /opt
+	$ cd /opt/hal-core/src
+	$ chmod +x configure
+	$ ./make
+	$ cd /opt/hal-core/
+	$ chmod +x runtest
+	$ ./runtest
+
 Installation and runtest preview:
 
 https://user-images.githubusercontent.com/44880102/129791198-ab705999-23ca-4004-a5f5-f0bd3357b47e.mp4
