@@ -15,7 +15,7 @@ Thread component:
 Motion component:
    
    	dofs.so (s-curve motion planner module)
-    	libdofs.so (shared library, needed by dofs.so) 
+	libdofs.so (shared library, needed by dofs.so) 
 
 Ethercat component:
 	
