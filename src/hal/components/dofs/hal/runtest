@@ -1,0 +1,58 @@
+#!/bin/bash
+cd /opt/hal-core/src/hal/components/dofs/hal
+
+# Compile with halcore
+gcc -o halmodule.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c halmodule.c
+cc -shared -o dofs.so halmodule.o -Wl,-rpath,/opt/halcore/lib -L/opt/hal-core/lib -lhalcore -lrt -L/opt/hal-core/src/hal/components/dofs/cpp_interface -ldofs
+
+# Copy the kernel module to the /hal-core/rtlib
+rm -rf /opt/hal-core/rtlib/dofs.so
+cp -rf dofs.so /opt/hal-core/rtlib
+
+# Copy the c++ shared lib to the /hal-core/rtlib
+cd /opt/hal-core/src/hal/components/dofs/cpp_interface
+cp -rf libdofs.so /opt/hal-core/rtlib
+cp -rf libdofs.so.1 /opt/hal-core/rtlib
+cp -rf libdofs.so.1.0 /opt/hal-core/rtlib
+cp -rf libdofs.so.1.0.0 /opt/hal-core/rtlib
+
+# Optional: Let linux know where to search for extra shared library's.
+# sudo ldconfig /opt/hal-core/src/hal/components/dofs/cpp_interface
+
+# Runtest
+cd /opt/hal-core/scripts && . ./rip-environment
+	
+	# stop hal.
+        halcmd stop
+	
+	# Load rt component:
+        halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
+
+        halcmd loadrt dofs nr=3
+
+        halcmd addf dofs.run servo-thread
+
+        # start hal.
+        halcmd start
+
+        halcmd setp dofs.enable.0           1       # bool 0-1
+        halcmd setp dofs.maxvel.0           100     # max velocity
+        halcmd setp dofs.maxacc.0           10      # max acceleration
+        halcmd setp dofs.maxjerk.0          2       # max jerk
+        halcmd setp dofs.tarpos.0           1500    # targetposition
+
+        halcmd setp dofs.enable.1           1
+        halcmd setp dofs.maxvel.1           80
+        halcmd setp dofs.maxacc.1           8
+        halcmd setp dofs.maxjerk.1          2
+        halcmd setp dofs.tarpos.1           1250
+
+        halcmd setp dofs.enable.2           1
+        halcmd setp dofs.maxvel.2           20
+        halcmd setp dofs.maxacc.2           4
+        halcmd setp dofs.maxjerk.2          1
+        halcmd setp dofs.tarpos.2           1000
+
+	# Unload rt components and clean up hal:
+        # halrun -U
+
