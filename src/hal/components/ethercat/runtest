@@ -1,8 +1,5 @@
 #!/usr/bin/bash
 
-# Unix command to load the ethercat .xml config
-/opt/hal-core/rtlib/./lcec_conf /opt/hal-core/rtlib/ethercat-conf.xml &
-
 # Startup hal-core
 cd /opt/hal-core/scripts
 . ./rip-environment
@@ -11,9 +8,9 @@ cd /opt/hal-core/bin
 
 halcmd stop
 halcmd loadrt threads name1=base-thread fp1=0 period1=30000 name2=servo-thread period2=1000000
-halcmd loadrt test
-halcmd addf the_function servo-thread
 
+# Unix command to load the ethercat .xml config
+/opt/hal-core/rtlib/./lcec_conf /opt/hal-core/rtlib/ethercat-conf.xml &
 halcmd loadrt lcec
 
 halcmd net ec-slaves-responding <= lcec.slaves-responding
