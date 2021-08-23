@@ -18,7 +18,10 @@ To install from a git clone :
 	$ ./make
 	$ ./runtest
 	
-	
+	Install threads component:
+	$ cd /opt/hal-core/src/hal/components/threads/
+	$ chmod +x make 
+	$ ./make
 	
 
 Installation and runtest preview:
