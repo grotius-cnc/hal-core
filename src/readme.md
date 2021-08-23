@@ -17,10 +17,10 @@ To clean install:
 If app refuses to insert kernel module try:
 - This is actually the command "sudo make setuid".
 
-        $ sudo chown user -R rtapi_app
-        $ sudo chown user -R linuxcnc_module_helper
+        $ sudo chown $USER -R rtapi_app
+        $ sudo chown $USER -R module_helper
         $ sudo chmod 777 rtapi_app
-        $ sudo chmod 777 linuxcnc_module_helper    
+        $ sudo chmod 777 module_helper    
     
 Pre requirments:
 

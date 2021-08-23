@@ -7,7 +7,7 @@ cd ../src
 gcc -c -Os -fwrapv  -g -Wall  -DRTAPI \
         -I. -I/opt/hal-core/src/include -DUSPACE -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal \
         -DSEQUENTIAL_SUPPORT -DHAL_SUPPORT -DDYNAMIC_PLCSIZE -DRT_SUPPORT -DOLD_TIMERS_MONOS_SUPPORT -DMODBUS_IO_MASTER \
-         -fno-fast-math -mieee-fp -fno-unsafe-math-optimizations -Wframe-larger-than=2560 -Wno-declaration-after-statement -fwrapv -fno-builtin-sin -fno-builtin-cos -fno-builtin-sincos -fPIC -Os \
+         -fno-fast-math -fno-unsafe-math-optimizations -Wframe-larger-than=2560 -Wno-declaration-after-statement -fwrapv -fno-builtin-sin -fno-builtin-cos -fno-builtin-sincos -fPIC -Os \
         -MP -MD -MF "objects/rthal/hal_lib.d" -MT "objects/rthal/hal_lib.o" \
         hal/hal_lib.c -o objects/rthal/hal_lib.o
 # Linking ../rtlib/hal_lib.so
