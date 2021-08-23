@@ -34,18 +34,8 @@ HEADERS += \
     libruckig/trajectory.hpp \
     libruckig/velocity.hpp
 
-
-#INCLUDEPATH+= /libruckig \
-#LIBS+= -L/home/user/Desktop/Linux-Embedded/linux-hal/halcompile-trajectory-ruckig/cpp_interface/ruckig/build -lruckig
-
-INCLUDEPATH+=
-
 # Default rules for deployment.
 unix {
     target.path = /usr/lib
 }
 !isEmpty(target.path): INSTALLS += target
-
-DISTFILES += \
-    libruckig/ruckig-0.3.3.tar.gz \
-    libruckig/setup.py
