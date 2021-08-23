@@ -26,3 +26,4 @@ halcmd show
 
 # To clean the hal environment :
 # $ /opt/hal-core$ /opt/linuxcnc/scripts/halrun -U
+
