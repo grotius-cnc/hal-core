@@ -1,0 +1,10 @@
+#!/bin/bash
+cd /opt/hal-core/src/hal/components/dofs/hal
+
+# Compile with halcore
+gcc -o halmodule.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c halmodule.c
+cc -shared -o dofs.so halmodule.o -Wl,-rpath,/opt/halcore/lib -L/opt/hal-core/lib -lhalcore -lrt -L/opt/hal-core/src/hal/components/dofs/cpp_interface -ldofs
+
+# Copy the kernel module to the /hal-core/rtlib
+rm -rf /opt/hal-core/rtlib/dofs.so
+cp -rf dofs.so /opt/hal-core/rtlib
