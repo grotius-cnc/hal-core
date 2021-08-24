@@ -20,7 +20,7 @@ To install:
 	$ chmod +x /opt/hal-core/make
 	$ /opt/hal-core/./make
 	
-To test hal-core:
+To run:
 
 	$ /opt/hal-core/./runtest
 
