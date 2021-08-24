@@ -2,7 +2,7 @@
 #!/usr/bin/bash
 
 # Startup hal-core
-/opt/hal-core/scripts/. ./rip-environment
+cd /opt/hal-core/scripts/ && . ./rip-environment
 
 cd /opt/hal-core/bin
 
