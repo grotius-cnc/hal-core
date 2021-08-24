@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Give file permissions
+chmod +x /opt/hal-core/runtest
 chmod +x /opt/hal-core/src/clean
 chmod +x /opt/hal-core/src/make
 chmod +x /opt/hal-core/src/configure
