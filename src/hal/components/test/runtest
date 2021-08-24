@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-/opt/hal-core/scripts/. ./rip-environment
+cd /opt/hal-core/scripts/ && . ./rip-environment
 
 cd /opt/hal-core/bin
 
