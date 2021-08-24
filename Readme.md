@@ -2,7 +2,8 @@
 To install from a git clone :
 
 	Install hal-core:
-	$ git clone https://github.com/grotius-cnc/hal_core.git /opt/hal-core
+	$ git clone https://github.com/grotius-cnc/hal_core.git hal-core
+	$ cp -rf hal-core /opt/
 	$ chmod +x /opt/hal-core/make
 	$ /opt/hal-core/./make
 
