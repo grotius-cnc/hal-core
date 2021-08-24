@@ -1,18 +1,18 @@
 Install by Makefile:
 
-    $ ./clean.sh
+    $ ./clean
     $ ./configure
     $ make -j2
     $ sudo make setuid
     
 Install by script file, this is a very transparant way, the compile steps are show'n by order:
     
-    $ ./clean.sh
-    $ ./make.sh
+    $ ./clean
+    $ ./make
     
 To clean install:
 
-    $ ./clean.sh
+    $ ./clean
     
 If app refuses to insert kernel module try:
 - This is actually the command "sudo make setuid".
