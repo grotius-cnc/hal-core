@@ -1,12 +1,5 @@
 #!/bin/bash
 
-
-# Clone hal-core:
-git clone https://github.com/grotius-cnc/hal_core.git hal-core
-
-# Copy to correct filepath:
-cp -rf hal-core /opt
-
 # Give file permissions
 chmod +x /opt/hal-core/src/clean
 chmod +x /opt/hal-core/src/make
