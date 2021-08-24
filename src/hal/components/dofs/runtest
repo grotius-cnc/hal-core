@@ -3,7 +3,7 @@
 # Let linux know where to find extra shared c++ libraries.
 sudo ldconfig /opt/hal-core/src/hal/components/dofs/cpp_interface
 
-cd /opt/hal-core/scripts/. ./rip-environment
+cd /opt/hal-core/scripts/ && . ./rip-environment
 	
 cd /opt/hal-core/bin/
 
