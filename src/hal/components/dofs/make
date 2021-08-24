@@ -9,9 +9,3 @@ cc -shared -o dofs.so halmodule.o -Wl,-rpath,/opt/halcore/lib -L/opt/hal-core/li
 rm -rf /opt/hal-core/rtlib/dofs.so
 cp -rf dofs.so /opt/hal-core/rtlib
 
-# Copy the c++ shared lib to the /hal-core/rtlib
-cd /opt/hal-core/src/hal/components/dofs/cpp_interface
-cp -rf libdofs.so /opt/hal-core/rtlib
-cp -rf libdofs.so.1 /opt/hal-core/rtlib
-cp -rf libdofs.so.1.0 /opt/hal-core/rtlib
-cp -rf libdofs.so.1.0.0 /opt/hal-core/rtlib
