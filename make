@@ -25,7 +25,8 @@ chmod +x /opt/hal-core/src/hal/components/threads/runtest
 cd /opt/hal-core/src/hal/components/threads/ && ./make
 
 # Compile dofs component: 
-chmod +x /opt/hal-core/src/hal/components/dofs/make
-cd /opt/hal-core/src/hal/components/dofs/ && ./make
+# To be reviewed compiling Rpi4.
+# chmod +x /opt/hal-core/src/hal/components/dofs/make
+# cd /opt/hal-core/src/hal/components/dofs/ && ./make
 
 
