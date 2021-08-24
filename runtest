@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+/opt/hal-core/scripts/. ./rip-environment
+
+cd /opt/hal-core/bin
+
+halcmd show
+
+# To clean the hal environment :
+# $ /opt/hal-core$ /opt/linuxcnc/scripts/halrun -U
