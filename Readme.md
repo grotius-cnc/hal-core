@@ -19,8 +19,10 @@ To install:
 	$ cp -rf hal-core /opt/
 	$ chmod +x /opt/hal-core/make
 	$ /opt/hal-core/./make
+	
+To test hal-core:
 
-Installation and runtest preview:
+	$ /opt/hal-core/./runtest
 
 https://user-images.githubusercontent.com/44880102/129791198-ab705999-23ca-4004-a5f5-f0bd3357b47e.mp4
 
