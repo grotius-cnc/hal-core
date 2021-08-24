@@ -15,8 +15,7 @@ A hal environment can be used as platform to run realtime applications like:
 To install:
 
 	Install hal-core:
-	$ git clone https://github.com/grotius-cnc/hal_core.git hal-core
-	$ cp -rf hal-core /opt/
+	$ git clone https://github.com/grotius-cnc/hal_core.git /opt/hal-core
 	$ chmod +x /opt/hal-core/make
 	$ /opt/hal-core/./make
 	
