@@ -15,6 +15,7 @@ gcc -o lcec_ax5200.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-opti
 gcc -o lcec_el1xxx.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ $X -DSIM -fPIC -Os -c lcec_el1xxx.c
 gcc -o lcec_el1252.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ $X -DSIM -fPIC -Os -c lcec_el1252.c
 gcc -o lcec_el1859.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ $X -DSIM -fPIC -Os -c lcec_el1859.c
+gcc -o lcec_el1918_logic.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ $X -DSIM -fPIC -Os -c lcec_el1918_logic.c
 gcc -o lcec_el2521.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ $X -DSIM -fPIC -Os -c lcec_el2521.c
 gcc -o lcec_el2xxx.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ $X -DSIM -fPIC -Os -c lcec_el2xxx.c
 gcc -o lcec_el2202.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ $X -DSIM -fPIC -Os -c lcec_el2202.c
@@ -45,7 +46,7 @@ gcc -o lcec_omrg5.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-optim
 gcc -o lcec_ph3lm2rm.o -Os -g -I. $X -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ $X -DSIM -fPIC -Os -c lcec_ph3lm2rm.c
 
 # Compile to shared library
-gcc -shared -o lcec.so lcec_main.o lcec_class_enc.o lcec_generic.o lcec_ax5200.o lcec_el1xxx.o lcec_el1252.o lcec_el1859.o lcec_el2521.o lcec_el2xxx.o lcec_el2202.o lcec_el31x2.o lcec_el31x4.o lcec_el3255.o lcec_el40x1.o lcec_el40x2.o lcec_el40x8.o lcec_el41x2.o lcec_el41x4.o lcec_el5101.o lcec_el5151.o lcec_el5152.o lcec_el6900.o lcec_el1904.o lcec_el2904.o lcec_el70x1.o lcec_el7041_1000.o lcec_el7211.o lcec_el7342.o lcec_el7411.o lcec_el95xx.o lcec_em7004.o lcec_stmds5k.o lcec_deasda.o lcec_omrg5.o lcec_ph3lm2rm.o -Wl,-rpath,/opt/hal-core/lib -L/opt/hal-core/lib -lhalcore -lethercat -lrt
+gcc -shared -o lcec.so lcec_main.o lcec_class_enc.o lcec_generic.o lcec_ax5200.o lcec_el1xxx.o lcec_el1252.o lcec_el1859.o lcec_el1918_logic.o lcec_el2521.o lcec_el2xxx.o lcec_el2202.o lcec_el31x2.o lcec_el31x4.o lcec_el3255.o lcec_el40x1.o lcec_el40x2.o lcec_el40x8.o lcec_el41x2.o lcec_el41x4.o lcec_el5101.o lcec_el5151.o lcec_el5152.o lcec_el6900.o lcec_el1904.o lcec_el2904.o lcec_el70x1.o lcec_el7041_1000.o lcec_el7211.o lcec_el7342.o lcec_el7411.o lcec_el95xx.o lcec_em7004.o lcec_stmds5k.o lcec_deasda.o lcec_omrg5.o lcec_ph3lm2rm.o -Wl,-rpath,/opt/hal-core/lib -L/opt/hal-core/lib -lhalcore -lethercat -lrt
 
 # Copy to /rtlib
 rm -rf /opt/hal-core/rtlib/lcec.so
