@@ -7,7 +7,10 @@ chmod +x /opt/hal-core/src/make
 chmod +x /opt/hal-core/src/configure
 
 # Compile hal-core
-cd /opt/hal-core/src/ && ./make
+cd /opt/hal-core/src/
+./configure --disable-gtk --with-realtime=uspace
+./make && sudo make setuid
+
 
 # Compile test component: 
 chmod +x /opt/hal-core/src/hal/components/test/make
