@@ -45,15 +45,7 @@ Update sources to get dependencies:
 
 Install dependencies from bullseye and sid repository, not all of this is needed anymore, we can filter out dep's in future.
 
-    sudo apt-get -y install debhelper libudev-dev tcl8.6-dev tk8.6-dev libtk-img bwidget tclx8.4 asciidoc \
-    dblatex docbook-xsl dvipng graphviz groff source-highlight w3c-linkchecker xsltproc \
-    texlive-extra-utils texlive-font-utils texlive-fonts-recommended texlive-lang-cyrillic texlive-lang-french \
-    texlive-lang-german texlive-lang-polish texlive-lang-spanish texlive-latex-recommended \
-    libxmu-dev libglu1-mesa-dev libgl1-mesa-dev libgtk2.0-dev libboost-python-dev \
-    netcat libmodbus-dev libusb-1.0-0-dev yapps2 \
-    gobject-introspection python3-gi python3-cairo-dev python3-gi-cairo python3-webview python3-pyqt5.qtsvg python3-opencv espeak \
-    gstreamer1.0-python3-plugin-loader python3-intelhex libncurses-dev libtinfo-dev python3-tk \
-    python3-xlib pyqt5-dev-tools qttools5-dev-tools intltool \
+    sudo apt-get -y install install libmodbus-dev libusb-1.0 libglib2.0-dev yapps2 libreadline-gplv2-dev tcl8.6-dev tclx8.4 tk8.6-dev libboost-python-dev
 
 
 
