@@ -11,10 +11,6 @@ A hal environment can be used as platform to run realtime applications like:
 	research and development 
 	scientific projects
 
-Packages needed for the installation (at the bottom):
-
-https://github.com/grotius-cnc/hal_core/tree/main/src#readme
-
 To install:
 
 	$ sudo apt-get install git
