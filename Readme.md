@@ -21,8 +21,9 @@ To install:
 	$ sudo apt-get install git
         $ sudo chmod 777 /opt
 	$ git clone https://github.com/grotius-cnc/hal_core.git /opt/hal-core
-	$ /opt/hal-core/./prepare
-	$ /opt/hal-core/./make
+	$ sudo chmod +x /opt/hal-core/prepare
+	$ sudo /opt/hal-core/./prepare
+	$ sudo /opt/hal-core/./make
 	
 To run:
 
