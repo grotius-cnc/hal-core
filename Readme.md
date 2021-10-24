@@ -18,8 +18,8 @@ https://github.com/grotius-cnc/hal_core/tree/main/src#readme
 To install:
 
 	Install hal-core:
-	$ apt-get install git
-        $ chmod 777 /opt
+	$ sudo apt-get install git
+        $ sudo chmod 777 /opt
 	$ git clone https://github.com/grotius-cnc/hal_core.git /opt/hal-core
 	$ /opt/hal-core/./prepare
 	$ /opt/hal-core/./make
