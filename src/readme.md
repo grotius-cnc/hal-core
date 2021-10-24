@@ -24,11 +24,6 @@ If app refuses to insert kernel module try:
     
 Script install example tested on the linux-pro edition (https://sourceforge.net/projects/linux-11-pro/)
 
-Filename : script.sh
-Flag : executable
-Usage : sudo ./script.sh
-File :
-
     #!/bin/bash
     
     # Update sources to get dependencies:
