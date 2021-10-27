@@ -20,6 +20,11 @@ Hal-Core install guide:
 
 		# Set user permissions to the /opt dir.
 		$ sudo chmod 777 /opt
+		
+		# Download and prepare hal-core
+		$ git clone https://github.com/grotius-cnc/hal_core.git /opt/hal-core
+		$ sudo chmod +x /opt/hal-core/prepare
+		$ sudo /opt/hal-core/./prepare
 
 		# If you don't have installed qt, kdl kinematics, opencascade cad, you can consider to do this now.
 		# Hal-core is working exstensively with these c++ libraries, but hal-core will work without it.
@@ -37,9 +42,6 @@ Hal-Core install guide:
 		$ sudo dpkg -i qt-creator.deb kdl-kinematics.deb opencascade.deb
 
 		# Install hal-core
-		$ git clone https://github.com/grotius-cnc/hal_core.git /opt/hal-core
-		$ sudo chmod +x /opt/hal-core/prepare
-		$ sudo /opt/hal-core/./prepare
 		$ sudo /opt/hal-core/./make
 	
 Run / test hal-core:
