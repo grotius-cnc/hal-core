@@ -1,11 +1,22 @@
 #!/bin/bash
-cd /opt/hal-core/src/hal/components/dofs/hal
 
-# Compile with halcore
+# Compile c++ interface lib
+cd /opt/hal-core/src/hal/components/dofs/cpp_interface
+make clean
+make
+
+# Create symbolic links to rtlib
+ln -sf libdofs.so /opt/hal-core/rtlib/
+ln -sf libdofs.so.1 /opt/hal-core/rtlib/
+ln -sf libdofs.so.1.0 /opt/hal-core/rtlib/
+ln -sf libdofs.so.1.0.0 /opt/hal-core/rtlib/
+
+# Compile hal component 
+cd /opt/hal-core/src/hal/components/dofs/hal
 gcc -o halmodule.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c halmodule.c
 cc -shared -o dofs.so halmodule.o -Wl,-rpath,/opt/halcore/lib -L/opt/hal-core/lib -lhalcore -lrt -L/opt/hal-core/src/hal/components/dofs/cpp_interface -ldofs
 
-# Copy the kernel module to the /hal-core/rtlib
+# Copy the hal component to the /hal-core/rtlib
 rm -rf /opt/hal-core/rtlib/dofs.so
 cp -rf dofs.so /opt/hal-core/rtlib
 
