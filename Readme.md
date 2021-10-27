@@ -14,7 +14,7 @@ A hal environment can be used as platform to run realtime applications like:
 Hal-core can interact with high end software packages like "qt", "kdl kinematics", "opencascade cad", "ruckig trajectory", etc.
 Therefore consider to install these software packages before installing hal-core. 
 
-To install:
+Hal-Core install guide:
 
 		$ sudo apt-get install git
 
@@ -42,8 +42,8 @@ To install:
 		$ sudo /opt/hal-core/./prepare
 		$ sudo /opt/hal-core/./make
 	
-To run hal-core:
+Run / test hal-core:
 
-	$ /opt/hal-core/./runtest
+		$ /opt/hal-core/./runtest
 
 https://user-images.githubusercontent.com/44880102/129791198-ab705999-23ca-4004-a5f5-f0bd3357b47e.mp4
