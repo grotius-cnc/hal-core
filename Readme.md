@@ -1,6 +1,3 @@
-
-![Iron-Man-Arc-Reactor-Core-Avengers-Logo](https://user-images.githubusercontent.com/44880102/139134651-6a6fe6d1-092c-4b75-be55-782e8da1c05d.png)
-
 Hal_core is a lightweight hal environment.
 
 The installed size is approx 6.8Mib
