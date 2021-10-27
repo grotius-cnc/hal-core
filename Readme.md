@@ -11,6 +11,8 @@ A hal environment can be used as platform to run realtime applications like:
 	research and development 
 	scientific projects
 	   
+Hal-core can interact with high end software packages like qt, kdl kinematics, opencascade cad.
+Therefore consider to install these software packages before installing hal-core. 
 
 To install:
 
@@ -32,7 +34,7 @@ To install:
 	$ sudo /opt/hal-core/./prepare
 	$ sudo /opt/hal-core/./make
 	
-To run:
+To run hal-core:
 
 	$ /opt/hal-core/./runtest
 
