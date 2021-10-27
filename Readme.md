@@ -20,7 +20,6 @@ To install:
         $ sudo chmod 777 /opt
 	
 	# If you don't have installed qt, kdl kinematics, opencascade cad :
-	$ cd /opt
 	$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/qt-creator.deb
 	$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/kdl-kinematics.deb
 	$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/opencascade.deb
