@@ -11,7 +11,7 @@ A hal environment can be used as platform to run realtime applications like:
 	research and development 
 	scientific projects
 	   
-Hal-core can interact with high end software packages like qt, kdl kinematics, opencascade cad.
+Hal-core can interact with high end software packages like "qt", "kdl kinematics", "opencascade cad", "ruckig trajectory", etc.
 Therefore consider to install these software packages before installing hal-core. 
 
 To install:
@@ -21,11 +21,19 @@ To install:
 	# Set user permissions to the /opt dir.
         $ sudo chmod 777 /opt
 	
-	# If you don't have installed qt, kdl kinematics, opencascade cad :
+	# If you don't have installed qt, kdl kinematics, opencascade cad, you can consider to do this now.
+	# Hal-core is working exstensively with these c++ libraries, but hal-core will work without it.
 	$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/qt-creator.deb
 	$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/kdl-kinematics.deb
-	$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/opencascade.deb
-	# Todo. create a updated opencascade.deb installing the freeimage drivers to preview pictures with opencascade.
+	
+	# New wget link with opencascade image support
+	$ wget ...
+	
+	# Dependencies opencascade
+	$ sudo apt-get install doxygen cmake tcllib tklib tcl-dev tk-dev libfreetype-dev libx11-dev libgl1-mesa-dev libfreeimage-dev rapidjson-dev 
+        $ sudo apt-get install libxmu-dev libxi-dev libfreeimage3 libfreeimage-dev ffmpeg
+	
+	# Install packages
 	$ sudo dpkg -i qt-creator.deb kdl-kinematics.deb opencascade.deb
 	
 	# Install hal-core
