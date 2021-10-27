@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Let linux know where to find extra shared c++ libraries.
-sudo ldconfig /opt/hal-core/src/hal/components/dofs/cpp_interface
-sudo ldconfig /opt/hal-core/rtlib/
+# Clean up previous hal runs
+/opt/hal-core/scripts/./halrun -U
 
 cd /opt/hal-core/scripts/ && . ./rip-environment
 	
@@ -36,5 +35,4 @@ halcmd setp dofs.maxacc.2           4
 halcmd setp dofs.maxjerk.2          1
 halcmd setp dofs.tarpos.2           1000
 
-# Unload rt components and clean up hal:
-# halrun -U
+halcmd show
