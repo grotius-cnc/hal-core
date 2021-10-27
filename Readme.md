@@ -24,6 +24,7 @@ To install:
 	$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/qt-creator.deb
 	$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/kdl-kinematics.deb
 	$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/opencascade.deb
+	# Todo. create a updated opencascade.deb installing the freeimage drivers to preview pictures with opencascade.
 	$ sudo dpkg -i qt-creator.deb kdl-kinematics.deb opencascade.deb
 	
 	# Install hal-core
