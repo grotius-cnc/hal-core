@@ -27,7 +27,7 @@ Hal-Core install guide:
 		$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/kdl-kinematics.deb
 
 		# New wget link with opencascade image support
-		$ wget ...
+		$ wget https://github.com/grotius-cnc/oce/releases/download/1.0.1/opencascade.deb
 
 		# Dependencies opencascade
 		$ sudo apt-get install doxygen cmake tcllib tklib tcl-dev tk-dev libfreetype-dev libx11-dev libgl1-mesa-dev libfreeimage-dev rapidjson-dev 
