@@ -11,7 +11,10 @@ A hal environment can be used as platform to run realtime applications like:
 		research and development 
 		scientific projects
 		building control systems
-		rpi4 ethercat compatible
+		
+Included hardware drivers:	
+
+		beckhoff, rpi4 ethercat compatible
 		mesa ethernet compatible
 		parport compatible
 	   
