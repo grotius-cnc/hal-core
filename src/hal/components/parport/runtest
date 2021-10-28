@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+
+cd /opt/hal-core/scripts/ && . ./rip-environment
+
+cd /opt/hal-core/bin
+
+halcmd stop
+
+halcmd loadrt hal_parport cfg="0x378 out" # http://linuxcnc.org/docs/html/man/man1/hal_parport.1.html
+
+halcmd setp parport.0.reset-time 5000
+
+halcmd loadrt stepgen step_type=0,0,0
+
+halcmd addf parport.0.read base-thread
+
+halcmd addf stepgen.make-pulses base-thread
+
+halcmd addf parport.0.write base-thread
+
+halcmd addf parport.0.reset base-thread
+
+halcmd addf stepgen.capture-position servo-thread
+
+halcmd start
+
+halcmd show
+
+# To clean the hal environment :
+# $ /opt/hal-core$ /opt/linuxcnc/scripts/halrun -U
