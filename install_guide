@@ -12,8 +12,13 @@ $ git clone https://github.com/grotius-cnc/hal_core.git /opt/hal-core
 $ sudo chmod +x /opt/hal-core/prepare
 $ sudo /opt/hal-core/./prepare
 
+# Install the ethercat bus  (optional for hal-core) 
+wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/ethercat-master.deb 
+dpkg -i ethercat-master.deb
+/opt/ethercat/script/init.d/ethercat restart
+
 # If you don't have installed qt, kdl kinematics, opencascade cad, you can consider to do this now.
-# Hal-core is working exstensively with these c++ libraries, but hal-core will work without it.
+# Hal-core is working exstensively with these c++ libraries.  (optional for hal-core) 
 $ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/qt-creator.deb
 $ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/kdl-kinematics.deb
 
