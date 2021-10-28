@@ -12,6 +12,7 @@ A hal environment can be used as platform to run realtime applications like:
 		scientific projects
 		building control systems
 		rpi4 ethercat compatible
+		mesa ethernet compatible
 	   
 Hal-core can interact with high end software packages like "qt", "kdl kinematics", "opencascade cad", "ruckig trajectory", etc.
 Therefore consider to install these software packages before installing hal-core. 
