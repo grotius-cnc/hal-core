@@ -22,5 +22,3 @@ Hal-Core install guide:
 Run / test hal-core:
 
 		$ /opt/hal-core/./runtest
-
-https://user-images.githubusercontent.com/44880102/129791198-ab705999-23ca-4004-a5f5-f0bd3357b47e.mp4
