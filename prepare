@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Install ethercat (optional for hal-core) 
-wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/ethercat-master.deb 
-dpkg -i ethercat-master.deb
-/opt/ethercat/script/init.d/ethercat restart
-
 # Install hal-core :
 apt-get install -y locales
 export LC_ALL=C
