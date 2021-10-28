@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Let linux know where to find libraries
+sudo ldconfig /opt/hal-core/rtlib
+sudo ldconfig /opt/hal-core/src/hal/components/dofs/cpp_interface
+
 # Clean up previous hal runs
 /opt/hal-core/scripts/./halrun -U
 
