@@ -16,33 +16,8 @@ Therefore consider to install these software packages before installing hal-core
 
 Hal-Core install guide:
 
-		$ sudo apt-get install git
-
-		# Set user permissions to the /opt dir.
-		$ sudo chmod 777 /opt
-		
-		# Download and prepare hal-core
-		$ git clone https://github.com/grotius-cnc/hal_core.git /opt/hal-core
-		$ sudo chmod +x /opt/hal-core/prepare
-		$ sudo /opt/hal-core/./prepare
-
-		# If you don't have installed qt, kdl kinematics, opencascade cad, you can consider to do this now.
-		# Hal-core is working exstensively with these c++ libraries, but hal-core will work without it.
-		$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/qt-creator.deb
-		$ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/kdl-kinematics.deb
-
-		# New wget link with opencascade image support
-		$ wget https://github.com/grotius-cnc/oce/releases/download/1.0.1/opencascade.deb
-
-		# Dependencies opencascade
-		$ sudo apt-get install doxygen cmake tcllib tklib tcl-dev tk-dev libfreetype-dev libx11-dev libgl1-mesa-dev libfreeimage-dev rapidjson-dev 
-		$ sudo apt-get install libxmu-dev libxi-dev libfreeimage3 libfreeimage-dev ffmpeg
-
-		# Install packages
-		$ sudo dpkg -i qt-creator.deb kdl-kinematics.deb opencascade.deb
-
-		# Install hal-core
-		$ sudo /opt/hal-core/./make
+		$ chmod +x install_guide
+		$ sudo ./install_guide
 	
 Run / test hal-core:
 
