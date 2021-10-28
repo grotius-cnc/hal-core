@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Compile to .o file
+gcc -o hostmot2.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c hostmot2.c
+
+# Compile to .so file
+gcc -shared -o hostmot2.so hostmot2.o  -Wl,-rpath,/opt/hal-core/lib -L/opt/hal-core/lib -lhalcore -lrt -I/opt/hal-core/src/rtapi/
+
+# Install to the rtlib
+cp -rf hostmot2.so /opt/hal-core/rtlib/
+
