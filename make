@@ -53,3 +53,8 @@ cd /opt/hal-core/src/hal/components/hm2_eth/ && ./make
 chmod +x /opt/hal-core/src/hal/components/hal_parport/make
 chmod +x /opt/hal-core/src/hal/components/hal_parport/runtest
 cd /opt/hal-core/src/hal/components/hal_parport/ && ./make
+
+# Compile hal_stepgen component: 
+chmod +x /opt/hal-core/src/hal/components/hal_stepgen/make
+chmod +x /opt/hal-core/src/hal/components/hal_stepgen/runtest
+cd /opt/hal-core/src/hal/components/hal_stepgen/ && ./make
