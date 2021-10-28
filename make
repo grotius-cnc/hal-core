@@ -39,3 +39,14 @@ chmod +x /opt/hal-core/src/hal/components/dofs/make
 chmod +x /opt/hal-core/src/hal/components/dofs/runtest
 cd /opt/hal-core/src/hal/components/dofs/ && ./make
 
+# Compile hostmot2 component: 
+chmod +x /opt/hal-core/src/hal/components/hostmot2/make
+chmod +x /opt/hal-core/src/hal/components/hostmot2/runtest
+cd /opt/hal-core/src/hal/components/hostmot2/ && ./make
+
+# Compile hm2_eth component: 
+chmod +x /opt/hal-core/src/hal/components/hm2_eth/make
+chmod +x /opt/hal-core/src/hal/components/hm2_eth/runtest
+cd /opt/hal-core/src/hal/components/hm2_eth/ && ./make
+
+
