@@ -10,6 +10,7 @@ A hal environment can be used as platform to run realtime applications like:
 		parport, ethercat applications
 		research and development 
 		scientific projects
+		building control systems
 		rpi4 ethercat compatible
 	   
 Hal-core can interact with high end software packages like "qt", "kdl kinematics", "opencascade cad", "ruckig trajectory", etc.
