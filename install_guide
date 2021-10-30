@@ -39,3 +39,4 @@ sudo /opt/hal-core/./make
 # Download & install hal-view
 wget https://github.com/grotius-cnc/hal-view/releases/download/1.0.0/halview.deb
 sudo dpkg -i halview.deb
+sudo chmod +x /opt/hal-core/runtest_halview
