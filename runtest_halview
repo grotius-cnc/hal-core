@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+# usage : $ ./runtest_halview
+
+cd /opt/hal-core/scripts/ && . ./rip-environment
+
+cd /opt/hal-core/bin
+
+halcmd show
+
+/opt/halview/./halview &
+
+# 1.In halview set the halcmd line to : /opt/hal-core/bin/./halcmd
+# 2.Save settings in halview
+
+# To clean the hal environment :
+# $ /opt/hal-core$ /opt/linuxcnc/scripts/halrun -U
