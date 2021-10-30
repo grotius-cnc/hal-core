@@ -23,6 +23,7 @@ Therefore consider to install these software packages before installing hal-core
 
 Hal-Core install guide:
 
+		$ wget https://github.com/grotius-cnc/hal-core/blob/main/install_guide
 		$ chmod +x install_guide
 		$ sudo ./install_guide
 	
