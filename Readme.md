@@ -33,3 +33,5 @@ Run / test hal-core in terminal :
 Run / test hal-core with halview :
 
 		$ /opt/hal-core/./runtest_halview
+		
+![halview](https://user-images.githubusercontent.com/44880102/139556936-2f9da025-027b-4467-a3a4-c3cdaad8ad88.jpg)
