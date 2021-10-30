@@ -5,10 +5,6 @@
 #include <float.h>
 #include "rtapi_math.h"
 
-#define MAX_CHAN 16
-#define MAX_CYCLE 18
-#define USER_STEP_TYPE 13
-
 MODULE_AUTHOR("Skynet");
 MODULE_DESCRIPTION("Example 1 axis step generator for Hal-core");
 MODULE_LICENSE("GPL");
