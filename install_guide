@@ -35,3 +35,7 @@ sudo dpkg -i qt-creator.deb kdl-kinematics.deb opencascade.deb
 
 # Install hal-core
 sudo /opt/hal-core/./make
+
+# Install hal-view
+wget https://github.com/grotius-cnc/hal-view/releases/download/1.0.0/halview.deb
+sudo dpkg -i halview.deb
