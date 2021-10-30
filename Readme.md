@@ -21,7 +21,7 @@ Included hardware drivers:
 Hal-core can interact with high end software packages like "qt", "kdl kinematics", "opencascade cad", "ruckig trajectory", "hal view" etc.
 Therefore consider to install these software packages before installing hal-core. 
 
-Hal-Core install guide:
+Hal-Core install :
 
 		$ wget https://github.com/grotius-cnc/hal-core/blob/main/install_guide
 		$ chmod +x install_guide
