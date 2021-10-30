@@ -1,0 +1,34 @@
+#!/usr/bin/bash
+
+# Clear previous hal-core sessions
+/opt/hal-core/scripts/./halrun -U
+
+# Run
+cd /opt/hal-core/scripts/ && . ./rip-environment
+
+cd /opt/hal-core/bin
+
+halcmd stop
+
+halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
+
+halcmd loadrt stepgenerator 
+
+halcmd addf stepgenerator.pulse base-thread
+halcmd addf stepgenerator.update servo-thread
+
+# Perform outputs every base-thread cycle, or delay a few cycle's to increase steplen and stepspace.
+# Wait 1 cycle, then set stepper pulse output high or low.
+halcmd setp stepgenerator.cycle_delay 1
+
+# Example in 1ms travel 5mm.
+# Stepdriver setting: 5000 pulse/rev => 5000 pulse/(lineair travel 40mm a revolution) = 125 pulses/mm
+halcmd setp stepgenerator.pulses_mm 125
+
+# Set a position
+# halcmd setp stepgenerator.pos_cmd 150
+
+halcmd start
+
+# To clean the hal environment :
+# $ /opt/hal-core$ /opt/linuxcnc/scripts/halrun -U

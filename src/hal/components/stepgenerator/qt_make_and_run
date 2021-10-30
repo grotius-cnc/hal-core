@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# Compile to .o file
+gcc -o /opt/hal-core/src/hal/components/stepgenerator/stepgenerator.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c /opt/hal-core/src/hal/components/stepgenerator/stepgenerator.c
+
+# Compile to .so file
+gcc -shared -o /opt/hal-core/src/hal/components/stepgenerator/stepgenerator.so /opt/hal-core/src/hal/components/stepgenerator/stepgenerator.o  -Wl,-rpath,/opt/hal-core/lib -L/opt/hal-core/lib -lhalcore -lrt -I/opt/hal-core/src/rtapi/
+
+# Install to the rtlib
+cp -rf /opt/hal-core/src/hal/components/stepgenerator/stepgenerator.so /opt/hal-core/rtlib/
+
+# Clear previous hal-core sessions
+/opt/hal-core/scripts/./halrun -U
+
+# Run
+cd /opt/hal-core/scripts/ && . ./rip-environment
+
+cd /opt/hal-core/bin
+
+halcmd stop
+
+halcmd loadrt threads name1=base-thread fp1=0 period1=30000 name2=servo-thread period2=1000000
+
+# Unix command to load the ethercat .xml config
+/opt/hal-core/rtlib/./lcec_conf /opt/hal-core/rtlib/ethercat-conf.xml &
+halcmd loadrt lcec
+
+halcmd net ec-slaves-responding lcec.slaves-responding
+halcmd net ec-link-up lcec.link-up
+halcmd net ec-all-op lcec.all-op
+
+halcmd addf lcec.read-all base-thread
+halcmd addf lcec.write-all base-thread
+
+halcmd net ec-slaves-responding lcec.slaves-responding
+halcmd net ec-link-up lcec.link-up
+halcmd net ec-all-op lcec.all-op
+
+halcmd addf lcec.read-all base-thread
+halcmd addf lcec.write-all base-thread
+
+# Load 1 axis stepgenerator
+halcmd loadrt stepgenerator
+
+halcmd addf stepgenerator.pulse base-thread
+halcmd addf stepgenerator.update servo-thread
+
+#EL2124 4x 5us pulse
+halcmd net signal_step stepgenerator.step lcec.0.output_stepper_1.dout-0
+halcmd net signal_dir stepgenerator.dir lcec.0.output_stepper_1.dout-1
+
+# Perform outputs every base-thread cycle, or delay a few cycle's to increase steplen and stepspace.
+# Wait 1 cycle, then set stepper pulse output high or low.
+halcmd setp stepgenerator.cycle_delay 1
+
+# example in 1ms travel 5mm.
+# stepdriver setting: 5000 pulse/rev => 5000 pulse/(lineair travel 40mm a revolution) = 125 pulses/mm
+halcmd setp stepgenerator.pulses_mm 125
+
+halcmd start
+
+halcmd show
+
+# To clean the hal environment :
+# $ /opt/hal-core$ /opt/linuxcnc/scripts/halrun -U
