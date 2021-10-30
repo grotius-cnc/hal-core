@@ -1,10 +1,10 @@
 # stepgenerator component
 
 # To compile
-$ ./make
+	$ ./make
 
 # To run a test
-$ ./runtest
+	$ ./runtest
 
 This is a 1 axis stepgenerator code example.
 
