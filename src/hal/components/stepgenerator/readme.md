@@ -23,8 +23,7 @@ The motor teeth gear travels 40mm at 1 revolution.
 The stepdriver setting: 5000 pulse/rev.
 
 Internal driver calculation:
-
-	5000 pulse/(lineair travel 40mm a revolution) = 125 pulses/mm
+5000 pulse/(lineair travel 40mm a revolution) = 125 pulses/mm
 
 Set the motor gear settings by :
 
