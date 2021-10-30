@@ -19,7 +19,9 @@ Wait 1 cycle, then set stepper pulse output high or low.
 
 
 Example travel 5mm in 1ms (servo-thread).
+
 The motor teeth gear travels 40mm at 1 revolution.
+
 The stepdriver setting: 5000 pulse/rev.
 
 Internal driver calculation:
@@ -38,7 +40,9 @@ To check the motor position, we have a pin that counts a seperate stepgenerator 
         stepgenerator.pos_fb
 	
 To open the project in Qt :
+
 Start Qt, open file : qt-hal.creator
+
 To compile with Qt, run the compile script from within qt.
 
 
