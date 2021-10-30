@@ -18,7 +18,7 @@ Included hardware drivers:
 		mesa ethernet compatible
 		parport compatible
 	   
-Hal-core can interact with high end software packages like "qt", "kdl kinematics", "opencascade cad", "ruckig trajectory", etc.
+Hal-core can interact with high end software packages like "qt", "kdl kinematics", "opencascade cad", "ruckig trajectory", "hal view" etc.
 Therefore consider to install these software packages before installing hal-core. 
 
 Hal-Core install guide:
