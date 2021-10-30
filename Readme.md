@@ -26,6 +26,10 @@ Hal-Core install guide:
 		$ chmod +x install_guide
 		$ sudo ./install_guide
 	
-Run / test hal-core:
+Run / test hal-core in terminal :
 
 		$ /opt/hal-core/./runtest
+
+Run / test hal-core with halview :
+
+		$ /opt/hal-core/./runtest_halview
