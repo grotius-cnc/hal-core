@@ -36,3 +36,10 @@ Perform a new motor position by :
 To check the motor position, we have a pin that counts a seperate stepgenerator position.	
 
         stepgenerator.pos_fb
+	
+To open the project in Qt :
+Start Qt, open file : qt-hal.creator
+To compile with Qt, run the compile script from within qt.
+
+
+
