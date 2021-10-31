@@ -64,9 +64,7 @@ OBJECTS       = cpp_interface.o \
 		position-step2.o \
 		velocity-step1.o \
 		velocity-step2.o
-DIST          = libruckig/ruckig-0.3.3.tar.gz \
-		libruckig/setup.py \
-		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/spec_pre.prf \
+DIST          = /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/common/unix.conf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/common/linux.conf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/common/sanitize.conf \
@@ -222,7 +220,6 @@ DIST          = libruckig/ruckig-0.3.3.tar.gz \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -442,7 +439,6 @@ Makefile: cpp_interface.pro /opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmak
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -619,7 +615,6 @@ Makefile: cpp_interface.pro /opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmak
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/qt_config.prf:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/toolchain.prf:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/default_pre.prf:
