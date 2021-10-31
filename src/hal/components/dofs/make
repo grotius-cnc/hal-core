@@ -5,11 +5,11 @@ cd /opt/hal-core/src/hal/components/dofs/cpp_interface
 make clean
 make
 
-# Create symbolic links to rtlib
-ln -sf libdofs.so /opt/hal-core/rtlib/
-ln -sf libdofs.so.1 /opt/hal-core/rtlib/
-ln -sf libdofs.so.1.0 /opt/hal-core/rtlib/
-ln -sf libdofs.so.1.0.0 /opt/hal-core/rtlib/
+# Copy c++ library to rtlib
+cp -rf libdofs.so /opt/hal-core/rtlib
+cp -rf libdofs.so.1 /opt/hal-core/rtlib
+cp -rf libdofs.so.1.0 /opt/hal-core/rtlib
+cp -rf libdofs.so.1.0.0 /opt/hal-core/rtlib
 
 # Compile hal component 
 cd /opt/hal-core/src/hal/components/dofs/hal
