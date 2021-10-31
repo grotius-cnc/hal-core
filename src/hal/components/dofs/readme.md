@@ -34,6 +34,6 @@ If you don't use the stepper generation, you don't have to load :
         
         halcmd addf dofs.pulse base-thread
         
-For more info about loading, visit the ./runtest file.        
+For more info about loading, visit the ~hal/runtest file.        
 
   
