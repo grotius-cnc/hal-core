@@ -30,4 +30,10 @@ My test result where done by loading a 4 axis Dofs with above parameters.
 If your Dofs speed is to high for the stepper to follow, your stepper feedback position will differ from the actual Dofs position.
 You could make a pin for this to monitor follow errors.
 
+If you don't use the stepper generation, you don't have to load :
+        
+        halcmd addf dofs.pulse base-thread
+        
+For more info about loading, visit the ./runtest file.        
+
   
