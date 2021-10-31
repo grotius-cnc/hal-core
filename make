@@ -37,7 +37,12 @@ cd /opt/hal-core/src/hal/components/threads/ && ./make
 # Compile dofs component: 
 chmod +x /opt/hal-core/src/hal/components/dofs/make
 chmod +x /opt/hal-core/src/hal/components/dofs/runtest
+chmod +x /opt/hal-core/src/hal/components/dofs/hal/make
+chmod +x /opt/hal-core/src/hal/components/dofs/hal/runtest
 cd /opt/hal-core/src/hal/components/dofs/ && ./make
+
+# Compile synchrodofs component: 
+chmod +x /opt/hal-core/src/hal/components/synchrodofs/runtest
 
 # Compile hostmot2 component: 
 chmod +x /opt/hal-core/src/hal/components/hostmot2/make
