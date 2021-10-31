@@ -1,0 +1,108 @@
+#!/bin/bash
+cd /opt/hal-core/src/hal/components/dofs/hal
+
+# Compile with halcore
+gcc -o halmodule.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c halmodule.c
+cc -shared -o dofs.so halmodule.o -Wl,-rpath,/opt/halcore/lib -L/opt/hal-core/lib -lhalcore -lrt -L/opt/hal-core/src/hal/components/dofs/cpp_interface -ldofs
+
+# Copy the kernel module to the /hal-core/rtlib
+rm -rf /opt/hal-core/rtlib/dofs.so
+cp -rf dofs.so /opt/hal-core/rtlib
+
+# Copy the c++ shared lib to the /hal-core/rtlib
+cd /opt/hal-core/src/hal/components/dofs/cpp_interface
+cp -rf libdofs.so /opt/hal-core/rtlib
+cp -rf libdofs.so.1 /opt/hal-core/rtlib
+cp -rf libdofs.so.1.0 /opt/hal-core/rtlib
+cp -rf libdofs.so.1.0.0 /opt/hal-core/rtlib
+
+# Optional: Let linux know where to search for extra shared library's.
+# sudo ldconfig /opt/hal-core/src/hal/components/dofs/cpp_interface
+
+# Clean up previous hal-core sessions.
+/opt/hal-core/scripts/./halrun -U
+
+# Runtest
+cd /opt/hal-core/scripts && . ./rip-environment
+	
+	# stop hal.
+        halcmd stop
+	
+	# Load rt component:
+        halcmd loadrt threads name1=base-thread fp1=0 period1=15000 name2=servo-thread period2=1000000
+
+        # Load ethercat
+        # Unix command to load the ethercat .xml config
+        /opt/hal-core/rtlib/./lcec_conf /opt/hal-core/rtlib/ethercat-conf.xml &
+        halcmd loadrt lcec
+
+        halcmd net ec-slaves-responding lcec.slaves-responding
+        halcmd net ec-link-up lcec.link-up
+        halcmd net ec-all-op lcec.all-op
+
+        halcmd addf lcec.read-all base-thread
+        halcmd addf lcec.write-all base-thread
+
+        # Load dofs
+        halcmd loadrt dofs nr=4
+
+        halcmd addf dofs.run servo-thread
+        halcmd addf dofs.pulse base-thread
+
+        #Beckhoff EL2124 4x 5us pulse
+        #halcmd net signal_dofs_0_step dofs.stepgen.step.0 lcec.0.output_stepper_1.dout-0
+        #halcmd net signal_dofs_0_dir dofs.stepgen.dir.0 lcec.0.output_stepper_1.dout-1
+        #halcmd net signal_dofs_1_step dofs.stepgen.step.1 lcec.0.output_stepper_1.dout-2
+        #halcmd net signal_dofs_1_dir dofs.stepgen.dir.1 lcec.0.output_stepper_1.dout-3
+
+        #Beckhoff EL2124 4x 5us pulse
+        #halcmd net signal_dofs_2_step dofs.stepgen.step.2 lcec.0.output_stepper_2.dout-0
+        #halcmd net signal_dofs_2_dir dofs.stepgen.dir.2 lcec.0.output_stepper_2.dout-1
+        #halcmd net signal_dofs_3_step dofs.stepgen.step.3 lcec.0.output_stepper_2.dout-2
+        #halcmd net signal_dofs_3_dir dofs.stepgen.dir.3 lcec.0.output_stepper_2.dout-3
+
+        halcmd setp dofs.enable.0           1       # bool 0-1
+        halcmd setp dofs.maxvel.0           250     # max velocity
+        halcmd setp dofs.maxacc.0           150     # max acceleration
+        halcmd setp dofs.maxjerk.0          10      # max jerk
+        halcmd setp dofs.tarpos.0           1000    # targetposition
+
+        halcmd setp dofs.enable.1           1
+        halcmd setp dofs.maxvel.1           250
+        halcmd setp dofs.maxacc.1           150
+        halcmd setp dofs.maxjerk.1          10
+        halcmd setp dofs.tarpos.1           -1000
+
+        halcmd setp dofs.enable.2           1
+        halcmd setp dofs.maxvel.2           250
+        halcmd setp dofs.maxacc.2           150
+        halcmd setp dofs.maxjerk.2          10
+        halcmd setp dofs.tarpos.2           -100
+
+        halcmd setp dofs.enable.3           1
+        halcmd setp dofs.maxvel.3           250
+        halcmd setp dofs.maxacc.3           150
+        halcmd setp dofs.maxjerk.3          10
+        halcmd setp dofs.tarpos.3           200
+
+        # Example in 1ms travel 5mm.
+        # Stepdriver setting: 5000 pulse/rev => 5000 pulse/(lineair travel 40mm a revolution) = 125 pulses/mm
+        # Stepdriver setting: 1000 pulse/rev => 1000 pulse/(lineair travel 40mm a revolution) = 25 pulses/mm
+        # Stepdriver setting: 400 pulse/rev => 400 pulse/(lineair travel 40mm a revolution) = 10 pulses/mm
+        halcmd setp dofs.stepgen.pulses_mm.0 125
+        halcmd setp dofs.stepgen.pulses_mm.1 125
+        halcmd setp dofs.stepgen.pulses_mm.2 125
+        halcmd setp dofs.stepgen.pulses_mm.3 125
+
+        # Perform outputs every base-thread cycle, or delay a few cycle's to increase steplen and stepspace.
+        # Wait 1 cycle, then set stepper pulse output high or low.
+        halcmd setp dofs.stepgen.cycle_delay.0 0
+        halcmd setp dofs.stepgen.cycle_delay.1 0
+        halcmd setp dofs.stepgen.cycle_delay.2 0
+        halcmd setp dofs.stepgen.cycle_delay.3 0
+
+        # start hal.
+        halcmd start
+
+/opt/halview/./halview
+
