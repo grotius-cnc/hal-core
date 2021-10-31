@@ -1,7 +1,7 @@
 .
-/opt/linuxcnc/lib
-/opt/linuxcnc/src/rtapi
-/opt/linuxcnc/rtlib
-/opt/linuxcnc/include
-/opt/linuxcnc/src/hal/utils
-/opt/linuxcnc/src/hal
+/opt/hal-core/src/rtapi
+/opt/hal-core/rtlib
+/opt/hal-core/include
+/opt/hal-core/src/hal/utils
+/opt/hal-core/src/hal
+/opt/hal-core/src/hal/components/dofs

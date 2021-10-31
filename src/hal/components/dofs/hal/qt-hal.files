@@ -46,9 +46,8 @@
 ../../src/rtapi/uspace_rtapi_string.c
 ../../src/rtapi/uspace_ulapi.c
 ../../src/rtapi/uspace_xenomai.cc
-ai.c
-ai.h
-halclean
+readme.md
 halmodule.c
 halmodule.h
 runtest
+
