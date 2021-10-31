@@ -1,42 +1,4 @@
 #!/bin/bash
 
-# Let linux know where to find libraries
-sudo ldconfig /opt/hal-core/rtlib
-sudo ldconfig /opt/hal-core/src/hal/components/dofs/cpp_interface
-
-# Clean up previous hal runs
-/opt/hal-core/scripts/./halrun -U
-
-cd /opt/hal-core/scripts/ && . ./rip-environment
-	
-cd /opt/hal-core/bin/
-
-halcmd stop
-halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
-
-halcmd loadrt dofs nr=3
-
-halcmd addf dofs.run servo-thread
-
-# start hal.
-halcmd start
-
-halcmd setp dofs.enable.0           1       # bool 0-1
-halcmd setp dofs.maxvel.0           100     # max velocity
-halcmd setp dofs.maxacc.0           10      # max acceleration
-halcmd setp dofs.maxjerk.0          2       # max jerk
-halcmd setp dofs.tarpos.0           1500    # targetposition
-
-halcmd setp dofs.enable.1           1
-halcmd setp dofs.maxvel.1           80
-halcmd setp dofs.maxacc.1           8
-halcmd setp dofs.maxjerk.1          2
-halcmd setp dofs.tarpos.1           1250
-
-halcmd setp dofs.enable.2           1
-halcmd setp dofs.maxvel.2           20
-halcmd setp dofs.maxacc.2           4
-halcmd setp dofs.maxjerk.2          1
-halcmd setp dofs.tarpos.2           1000
-
-halcmd show
+# Link to optimized runtest.
+/opt/hal-core/src/hal/components/dofs/hal/./runtest
