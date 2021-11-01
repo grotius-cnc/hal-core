@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Let linux know where to find libraries.
+sudo ldconfig /opt/hal-core/rtlib/
+
+# Copy module to /rtlib
+rm -rf /opt/hal-core/rtlib/hal_kinematic.so
+cp -rf hal_kinematic.so /opt/hal-core/rtlib/
+
+# Copy c++ libraries to /rtlib
+cp -rf /opt/hal-core/src/hal/components/kinematic/cpp_interface/libkinematic.so /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/kinematic/cpp_interface/libkinematic.so.1 /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/kinematic/cpp_interface/libkinematic.so.1.0 /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/kinematic/cpp_interface/libkinematic.so.1.0.0 /opt/hal-core/rtlib
+
+# Clean previous hal-core sessions
+/opt/hal-core/scripts/./halrun -U
+
+# Start hal-core
+cd /opt/hal-core/scripts && . ./rip-environment
+
+cd /opt/hal-core/bin/
+
+        ./halcmd stop
+
+        ./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
+        ./halcmd loadrt hal_kinematic
+
+        ./halcmd addf hal_kinematic servo-thread
+ 	
+        ./halcmd \-f /opt/hal-core/src/hal/components/kinematic/hal/machinemodel.hal
+ 	
+        ./halcmd start
+
+# Start halview
+/opt/halview/./halview &
+
+
+

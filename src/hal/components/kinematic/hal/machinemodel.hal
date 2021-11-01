@@ -1,0 +1,61 @@
+# Setup Kdl chain following the attached document : /docs/Kuka Kr 6 10 angilus.pdf
+ 
+# C++ KDL library implemenation example: 
+# KDLChain.addSegment(KDL::Segment("J0",KDL::Joint(KDL::Joint::RotZ), KDL::Frame(KDL::Vector(25.0,0.0,400.0))));      //0.0 to J2
+# KDLChain.addSegment(KDL::Segment("J1",KDL::Joint(KDL::Joint::RotY), KDL::Frame(KDL::Vector(0.0,0.0,455.0))));       //J2 to J3
+# KDLChain.addSegment(KDL::Segment("J2",KDL::Joint(KDL::Joint::RotY), KDL::Frame(KDL::Vector(0.0,0.0,35.0))));        //J3 to J5
+# KDLChain.addSegment(KDL::Segment("J3",KDL::Joint(KDL::Joint::RotX), KDL::Frame(KDL::Vector(420.0,0.0,0.0))));       //J4
+# KDLChain.addSegment(KDL::Segment("J4",KDL::Joint(KDL::Joint::RotY), KDL::Frame(KDL::Vector(80.0,0.0,0.0))));        //J5 to end-effector (robot flange axis 6)
+# KDLChain.addSegment(KDL::Segment("J5",KDL::Joint(KDL::Joint::RotX), KDL::Frame(KDL::Vector(105.0,0.0,0.0))));       //Tool cone lenght.
+
+# This are parameter rw pins from the component "kinematics.comp"
+# Joint input's in degrees.
+
+# Joint 0
+setp hal_kinematic.j0-x 25
+setp hal_kinematic.j0-y 0
+setp hal_kinematic.j0-z 400
+setp hal_kinematic.j0-init 0
+setp hal_kinematic.j0-min -170
+setp hal_kinematic.j0-max 170
+# Joint 1
+setp hal_kinematic.j1-x 0
+setp hal_kinematic.j1-y 0
+setp hal_kinematic.j1-z 455
+setp hal_kinematic.j1-init 0
+setp hal_kinematic.j1-min -100
+setp hal_kinematic.j1-max 135
+# Joint 2
+setp hal_kinematic.j2-x 0
+setp hal_kinematic.j2-y 0
+setp hal_kinematic.j2-z 35
+setp hal_kinematic.j2-init 0
+setp hal_kinematic.j2-min -210
+setp hal_kinematic.j2-max 66
+# Joint 3
+setp hal_kinematic.j3-x 420
+setp hal_kinematic.j3-y 0
+setp hal_kinematic.j3-z 0
+setp hal_kinematic.j3-init 0
+setp hal_kinematic.j3-min -185
+setp hal_kinematic.j3-max 185
+# Joint 4
+setp hal_kinematic.j4-x 80
+setp hal_kinematic.j4-y 0
+setp hal_kinematic.j4-z 0
+setp hal_kinematic.j4-init 0
+setp hal_kinematic.j4-min -120
+setp hal_kinematic.j4-max 120
+# Joint 5
+setp hal_kinematic.j5-x 105
+setp hal_kinematic.j5-y 0
+setp hal_kinematic.j5-z 0
+setp hal_kinematic.j5-init 0
+setp hal_kinematic.j5-min -350
+setp hal_kinematic.j5-max 350
+
+setp hal_kinematic.perform-fk 1
+setp hal_kinematic.perform-ik 0
+setp hal_kinematic.ik-from-init 1
+setp hal_kinematic.iterations 100
+

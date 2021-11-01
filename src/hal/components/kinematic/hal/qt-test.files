@@ -1,0 +1,7 @@
+halmodule.c
+halmodule.h
+kinematic.c
+kinematic.h
+machinemodel.hal
+make
+runtest
