@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Compile c++ interface lib
-cd /opt/hal-core/src/hal/components/kinematic/cpp_interface
+cd /opt/hal-core/src/hal/components/kinematic/cpp_interface/
 make clean
 make
 
@@ -10,6 +10,8 @@ cp -rf /opt/hal-core/src/hal/components/kinematic/cpp_interface/libkinematic.so 
 cp -rf /opt/hal-core/src/hal/components/kinematic/cpp_interface/libkinematic.so.1 /opt/hal-core/rtlib
 cp -rf /opt/hal-core/src/hal/components/kinematic/cpp_interface/libkinematic.so.1.0 /opt/hal-core/rtlib
 cp -rf /opt/hal-core/src/hal/components/kinematic/cpp_interface/libkinematic.so.1.0.0 /opt/hal-core/rtlib
+
+cd /opt/hal-core/src/hal/components/kinematic/hal/
 
 # Compile with halcore
 gcc -o halmodule.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c halmodule.c
