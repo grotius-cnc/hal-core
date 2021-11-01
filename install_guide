@@ -39,7 +39,7 @@ sudo dpkg -i halview.deb
 sudo chmod +x /opt/hal-core/runtest_halview
 
 # Download & install cam
-wget https://github.com/grotius-cnc/simple_cam/releases/download/1.0.0/cam.deb
+wget https://github.com/grotius-cnc/cam/releases/download/1.0.0/cam.deb
 # Install dependencies for cam
 sudo apt-get install -y zenity zenity-common
 sudo dpkg -i cam.deb
