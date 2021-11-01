@@ -2,7 +2,7 @@
 
 # usage : $ sudo ./install_guide
 
-sudo apt-get install -y git
+sudo apt-get install git
 
 # Set user permissions to the /opt dir.
 sudo chmod 777 /opt
@@ -14,7 +14,7 @@ sudo /opt/hal-core/./prepare
 
 # Install the ethercat bus  (optional for hal-core) 
 wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/ethercat-master.deb 
-dpkg -f ethercat-master.deb
+dpkg -i ethercat-master.deb
 /opt/ethercat/script/init.d/ethercat restart
 
 # If you don't have installed qt, kdl kinematics, opencascade cad, you can consider to do this now.
@@ -31,12 +31,12 @@ libfreetype-dev libx11-dev libgl1-mesa-dev libfreeimage-dev rapidjson-dev \
 libxmu-dev libxi-dev libfreeimage3 libfreeimage-dev ffmpeg
 
 # Install packages
-sudo dpkg -f qt-creator.deb kdl-kinematics.deb opencascade.deb
+sudo dpkg -i qt-creator.deb kdl-kinematics.deb opencascade.deb
 
 # Install hal-core
 sudo /opt/hal-core/./make
 
 # Download & install hal-view
 wget https://github.com/grotius-cnc/hal-view/releases/download/1.0.0/halview.deb
-sudo dpkg -f halview.deb
+sudo dpkg -i halview.deb
 sudo chmod +x /opt/hal-core/runtest_halview
