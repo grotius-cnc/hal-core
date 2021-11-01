@@ -17,7 +17,7 @@ cp -rf libdofs.so.1.0 /opt/hal-core/rtlib
 cp -rf libdofs.so.1.0.0 /opt/hal-core/rtlib
 
 # Optional: Let linux know where to search for extra shared library's.
-# sudo ldconfig /opt/hal-core/src/hal/components/dofs/cpp_interface
+sudo ldconfig /opt/hal-core/rtlib/
 
 # Clean up previous hal-core sessions.
 /opt/hal-core/scripts/./halrun -U
