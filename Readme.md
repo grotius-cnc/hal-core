@@ -26,6 +26,15 @@ Hal-Core install including subprogram "ethercat bus, qt, kdl, opencascade, halvi
 		$ wget https://raw.githubusercontent.com/grotius-cnc/hal-core/main/install_guide
 		$ chmod +x install_guide
 		$ sudo ./install_guide
+		
+		# Set user permissions /opt dir.
+		sudo chmod -R -f 777 /opt
+
+		# Change owner /opt dir
+		sudo chown -R $USER /opt
+
+		# Change group /opt dir
+		sudo chown -R $USER:$USER /opt
 	
 Run / test hal-core in terminal :
 
