@@ -1,7 +1,0 @@
-.
-/opt/hal-core/lib/
-/opt/hal-core/src/
-/opt/hal-core/src/hal/
-/opt/hal-core/src/rtapi/
-/opt/hal-core/src/module_helper/
-/opt/hal-core/src/hal/components/stepgenerator/
