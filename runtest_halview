@@ -15,3 +15,5 @@ halcmd show
 
 # To clean the hal environment :
 # $ /opt/hal-core$ /opt/linuxcnc/scripts/halrun -U
+
+echo "Set your halcmd path to : $ /opt/hal-core/bin/./halcmd    and press save"
