@@ -4,9 +4,6 @@
 
 sudo apt-get install git
 
-# Set user permissions to the /opt dir.
-sudo chmod 777 /opt
-
 # Download and prepare hal-core
 git clone https://github.com/grotius-cnc/hal_core.git /opt/hal-core
 sudo chmod +x /opt/hal-core/prepare
@@ -40,3 +37,13 @@ sudo /opt/hal-core/./make
 wget https://github.com/grotius-cnc/hal-view/releases/download/1.0.0/halview.deb
 sudo dpkg -i halview.deb
 sudo chmod +x /opt/hal-core/runtest_halview
+
+
+# Set user permissions to the /opt dir.
+sudo chmod -R -f 777 /opt
+
+# Change owner
+sudo chown -R $USER /opt
+
+# Change group
+sudo chown -R $USER:$USER /opt
