@@ -104,5 +104,6 @@ cd /opt/hal-core/scripts && . ./rip-environment
         # start hal.
         halcmd start
 
-/opt/halview/./halview
+/opt/halview/./halview &
+echo "set halview halcmd path to : /opt/hal-core/bin/./halcmd "
 
