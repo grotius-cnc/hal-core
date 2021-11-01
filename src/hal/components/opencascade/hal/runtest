@@ -26,7 +26,7 @@ cd /opt/hal-core/bin/
 	./halcmd loadrt hal_opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl display_hz=60
 	
 	
-	./halcmd loadrt kinematic 
+	./halcmd loadrt hal_kinematic 
 	
 	./halcmd addf hal_opencascade servo-thread
 	./halcmd addf hal_kinematic servo-thread
