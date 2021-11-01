@@ -34,13 +34,13 @@ setp hal_opencascade.j1-roty 1
 setp hal_opencascade.j1-rotz 0
 
 # Joint 2
-setp kinematic.j2-x 0
-setp kinematic.j2-y 0
-setp kinematic.j2-z 35
-setp kinematic.j2-init 0 
-setp kinematic.j2-rw 0
-setp kinematic.j2-min -210	
-setp kinematic.j2-max 66
+setp hal_kinematic.j2-x 0
+setp hal_kinematic.j2-y 0
+setp hal_kinematic.j2-z 35
+setp hal_kinematic.j2-init 0 
+setp hal_kinematic.j2-rw 0
+setp hal_kinematic.j2-min -210	
+setp hal_kinematic.j2-max 66
 
 setp hal_opencascade.j2-x 0
 setp hal_opencascade.j2-y 0
