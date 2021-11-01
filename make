@@ -63,9 +63,3 @@ cd /opt/hal-core/src/hal/components/hal_parport/ && ./make
 chmod +x /opt/hal-core/src/hal/components/lineair_stepgen/make
 chmod +x /opt/hal-core/src/hal/components/lineair_stepgen/runtest
 cd /opt/hal-core/src/hal/components/lineair_stepgen/ && ./make
-
-# Compile stepgenerator component: 
-chmod +x /opt/hal-core/src/hal/components/stepgenerator/make
-chmod +x /opt/hal-core/src/hal/components/stepgenerator/runtest
-chmod +x /opt/hal-core/src/hal/components/stepgenerator/qt_make_and_run
-cd /opt/hal-core/src/hal/components/stepgenerator/ && ./make
