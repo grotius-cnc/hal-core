@@ -63,3 +63,17 @@ cd /opt/hal-core/src/hal/components/hal_parport/ && ./make
 chmod +x /opt/hal-core/src/hal/components/stepgen/make
 chmod +x /opt/hal-core/src/hal/components/stepgen/runtest
 cd /opt/hal-core/src/hal/components/stepgen/ && ./make
+
+# Compile hal_kinematic component: 
+chmod +x /opt/hal-core/src/hal/components/kinematic/hal/make
+chmod +x /opt/hal-core/src/hal/components/kinematic/hal/runtest
+cd /opt/hal-core/src/hal/components/kinematic/hal/ && ./make
+
+# Compile hal_opencascade component: 
+chmod +x /opt/hal-core/src/hal/components/opencascade/hal/make
+chmod +x /opt/hal-core/src/hal/components/opencascade/hal/runtest
+cd /opt/hal-core/src/hal/components/opencascade/hal/ && ./make
+
+
+
+
