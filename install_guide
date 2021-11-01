@@ -2,7 +2,7 @@
 
 # usage : $ sudo ./install_guide
 
-sudo apt-get install git
+sudo apt-get install -y git
 
 # Set user permissions to the /opt dir.
 sudo chmod 777 /opt
@@ -26,7 +26,7 @@ wget https://github.com/grotius-cnc/Linux-Pro/releases/download/1.0.0/kdl-kinema
 wget https://github.com/grotius-cnc/oce/releases/download/1.0.1/opencascade.deb
 
 # Dependencies opencascade
-sudo apt-get install doxygen cmake tcllib tklib tcl-dev tk-dev \
+sudo apt-get install -y doxygen cmake tcllib tklib tcl-dev tk-dev \
 libfreetype-dev libx11-dev libgl1-mesa-dev libfreeimage-dev rapidjson-dev \
 libxmu-dev libxi-dev libfreeimage3 libfreeimage-dev ffmpeg
 
