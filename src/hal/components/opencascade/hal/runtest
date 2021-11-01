@@ -38,7 +38,7 @@ cd /opt/hal-core/bin/
 	
 	
  	# Link (net) kinematic results to opencascade.
- 	./halcmd -f /home/user/Desktop/Linux-Embedded/linux-hal/halcompile-opencascade/c-project/link.hal
+ 	./halcmd -f /opt/hal-core/src/hal/components/opencascade/hal/link.hal
  	
  	# start hal.
  	./halcmd start
