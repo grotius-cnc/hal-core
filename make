@@ -59,7 +59,7 @@ chmod +x /opt/hal-core/src/hal/components/hal_parport/make
 chmod +x /opt/hal-core/src/hal/components/hal_parport/runtest
 cd /opt/hal-core/src/hal/components/hal_parport/ && ./make
 
-# Compile hal_stepgen component: 
-chmod +x /opt/hal-core/src/hal/components/lineair_stepgen/make
-chmod +x /opt/hal-core/src/hal/components/lineair_stepgen/runtest
-cd /opt/hal-core/src/hal/components/lineair_stepgen/ && ./make
+# Compile stepgen component: 
+chmod +x /opt/hal-core/src/hal/components/stepgen/make
+chmod +x /opt/hal-core/src/hal/components/stepgen/runtest
+cd /opt/hal-core/src/hal/components/stepgen/ && ./make
