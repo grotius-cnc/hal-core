@@ -1,5 +1,15 @@
 #!/bin/bash
-cd /opt/hal-core/src/hal/components/opencascade/hal
+
+# Compile c++ interface lib
+cd /opt/hal-core/src/hal/components/opencascade/cpp_interface
+make clean
+make
+
+# Copy c++ libraries to /rtlib
+cp -rf /opt/hal-core/src/hal/components/opencascade/cpp_interface/libopencascade.so /opt/hal-core/rtlib/
+cp -rf /opt/hal-core/src/hal/components/opencascade/cpp_interface/libopencascade.so.1 /opt/hal-core/rtlib/
+cp -rf /opt/hal-core/src/hal/components/opencascade/cpp_interface/libopencascade.so.1.0 /opt/hal-core/rtlib/
+cp -rf /opt/hal-core/src/hal/components/opencascade/cpp_interface/libopencascade.so.1.0.0 /opt/hal-core/rtlib/
 
 # Compile with halcore
 gcc -o halmodule.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c halmodule.c
