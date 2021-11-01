@@ -1,0 +1,94 @@
+# kuka_kr_6_10_agilus
+# Joint input's in degrees
+
+# Joint 0
+setp kinematic.j0-x 25
+setp kinematic.j0-y 0
+setp kinematic.j0-z 400
+setp kinematic.j0-init 0 
+setp kinematic.j0-rw 0
+setp kinematic.j0-min -170	
+setp kinematic.j0-max 170
+
+setp opencascade.j0-x 25
+setp opencascade.j0-y 0
+setp opencascade.j0-z 400
+setp opencascade.j0-rotx 0
+setp opencascade.j0-roty 1
+setp opencascade.j0-rotz 0
+
+# Joint 1
+setp kinematic.j1-x 0
+setp kinematic.j1-y 0
+setp kinematic.j1-z 455
+setp kinematic.j1-init 0 
+setp kinematic.j1-rw 0
+setp kinematic.j1-min -100	
+setp kinematic.j1-max 135
+
+setp opencascade.j1-x 0
+setp opencascade.j1-y 0
+setp opencascade.j1-z 455
+setp opencascade.j1-rotx 0
+setp opencascade.j1-roty 1
+setp opencascade.j1-rotz 0
+
+# Joint 2
+setp kinematic.j2-x 0
+setp kinematic.j2-y 0
+setp kinematic.j2-z 35
+setp kinematic.j2-init 0 
+setp kinematic.j2-rw 0
+setp kinematic.j2-min -210	
+setp kinematic.j2-max 66
+
+setp opencascade.j2-x 0
+setp opencascade.j2-y 0
+setp opencascade.j2-z 35
+setp opencascade.j2-rotx 1
+setp opencascade.j2-roty 0
+setp opencascade.j2-rotz 0
+
+# Joint 3
+setp kinematic.j3-x 420
+setp kinematic.j3-y 0
+setp kinematic.j3-z 0
+setp kinematic.j3-init 0 
+setp kinematic.j3-rw 0
+setp kinematic.j3-min -185
+setp kinematic.j3-max 185
+
+setp opencascade.j3-x 420
+setp opencascade.j3-y 0
+setp opencascade.j3-z 0
+setp opencascade.j3-rotx 0
+setp opencascade.j3-roty 1
+setp opencascade.j3-rotz 0
+
+# Joint 4
+setp kinematic.j4-x 80
+setp kinematic.j4-y 0
+setp kinematic.j4-z 0
+setp kinematic.j4-init 0 
+setp kinematic.j4-rw 0
+setp kinematic.j4-min -120
+setp kinematic.j4-max 120
+
+setp opencascade.j4-x 80
+setp opencascade.j4-y 0
+setp opencascade.j4-z 0
+setp opencascade.j4-rotx 1
+setp opencascade.j4-roty 0
+setp opencascade.j4-rotz 0
+
+# Joint 5
+setp kinematic.j5-x 105
+setp kinematic.j5-y 0
+setp kinematic.j5-z 0
+setp kinematic.j5-init 0 
+setp kinematic.j5-rw 0
+setp kinematic.j5-min -350
+setp kinematic.j5-max 350
+
+setp kinematic.perform-fk 1
+setp kinematic.perform-ik 0

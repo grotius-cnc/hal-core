@@ -1,0 +1,21 @@
+# net signalname source => destiny
+
+# test opencascade input pins example:
+# setp opencascade.pin-j0 -90
+
+net sig-j0 kinematic.pin-j0	opencascade.pin-j0
+net sig-j1 kinematic.pin-j1 opencascade.pin-j1
+net sig-j2 kinematic.pin-j2 opencascade.pin-j2
+net sig-j3 kinematic.pin-j3 opencascade.pin-j3
+net sig-j4 kinematic.pin-j4 opencascade.pin-j4
+net sig-j5 kinematic.pin-j5 opencascade.pin-j5
+
+net sig-cartx kinematic.pin-cartx opencascade.pin-cartx
+net sig-carty kinematic.pin-carty opencascade.pin-carty
+net sig-cartz kinematic.pin-cartz opencascade.pin-cartz
+
+net sig-eulerx kinematic.pin-eulerx opencascade.pin-eulerx
+net sig-eulery kinematic.pin-eulery opencascade.pin-eulery
+net sig-eulerz kinematic.pin-eulerz opencascade.pin-eulerz
+
+

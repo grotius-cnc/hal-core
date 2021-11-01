@@ -1,0 +1,51 @@
+#!/bin/bash
+
+sudo ldconfig /opt/hal-core/rtlib/
+
+cp -rf /opt/hal-core/src/hal/components/opencascade/cpp_interface/libopencascade.so /opt/hal-core/rtlib/
+cp -rf /opt/hal-core/src/hal/components/opencascade/cpp_interface/libopencascade.so.1 /opt/hal-core/rtlib/
+cp -rf /opt/hal-core/src/hal/components/opencascade/cpp_interface/libopencascade.so.1.0 /opt/hal-core/rtlib/
+cp -rf /opt/hal-core/src/hal/components/opencascade/cpp_interface/libopencascade.so.1.0.0 /opt/hal-core/rtlib/
+
+# Cleanup previous hal-core sessions.
+/opt/hal-core/scripts/./halrun -U
+
+# Start hal-core
+cd /opt/hal-core/scripts && . ./rip-environment
+	
+cd /opt/hal-core/bin/	
+	# stop hal.
+	./halcmd stop
+	
+	# Load rt component:
+	./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
+
+	# Load the kuka model:
+    #halcmd loadrt opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus display_hz=60
+    # Load the mitsubishi model:
+	./halcmd loadrt hal_opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl display_hz=60
+	
+	
+	./halcmd loadrt kinematic 
+	
+	./halcmd addf hal_opencascade servo-thread
+	./halcmd addf hal_kinematic servo-thread
+	
+	# Load the kuka params:
+	#halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus/kuka_kr_6_10_agilus.hal
+	# Load the mitsubishi params:
+    ./halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl/mitsubishi_rv_6sdl.hal
+	
+	
+ 	# Link (net) kinematic results to opencascade.
+ 	./halcmd -f /home/user/Desktop/Linux-Embedded/linux-hal/halcompile-opencascade/c-project/link.hal
+ 	
+ 	# start hal.
+ 	./halcmd start
+
+# Start halview
+/opt/halview/./halview &
+
+
+
+
