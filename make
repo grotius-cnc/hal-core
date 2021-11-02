@@ -74,6 +74,9 @@ chmod +x /opt/hal-core/src/hal/components/opencascade/hal/make
 chmod +x /opt/hal-core/src/hal/components/opencascade/hal/runtest
 cd /opt/hal-core/src/hal/components/opencascade/hal/ && ./make
 
-
+# Compile hal_trajectory component: 
+chmod +x /opt/hal-core/src/hal/components/trajectory/hal/make
+chmod +x /opt/hal-core/src/hal/components/trajectory/hal/runtest
+cd /opt/hal-core/src/hal/components/trajectory/hal/ && ./make
 
 
