@@ -53,8 +53,8 @@ MainWindow::MainWindow(QWidget *parent)
     comp_id = hal_init("gui");
     port = (port_data_t*)hal_malloc(sizeof(char[150]));
     hal_pin_port_new("gui.port",HAL_OUT,&(port->Pin),comp_id);
-    hal_signal_new("signal_filename",HAL_PORT);
-    hal_link("gui.port","signal_filename");
+    // hal_signal_new("signal_filename",HAL_PORT);
+    // hal_link("gui.port","signal_filename");
     hal_ready(comp_id);
 }
 
