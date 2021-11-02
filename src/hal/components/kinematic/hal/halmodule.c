@@ -80,6 +80,9 @@ MODULE_INFO(linuxcnc, "pin:pin_cartz:float:0:out:pin out cartz:None:None");
 MODULE_INFO(linuxcnc, "pin:pin_eulerx:float:0:out:pin out eulerx:None:None");
 MODULE_INFO(linuxcnc, "pin:pin_eulery:float:0:out:pin out eulery:None:None");
 MODULE_INFO(linuxcnc, "pin:pin_eulerz:float:0:out:pin out eulerz:None:None");
+MODULE_INFO(linuxcnc, "pin:pin_cartx_in:float:0:in:test input from axis_mm gui:None:None");
+MODULE_INFO(linuxcnc, "pin:pin_carty_in:float:0:in:test input from axis_mm gui:None:None");
+MODULE_INFO(linuxcnc, "pin:pin_cartz_in:float:0:in:test input from axis_mm gui:None:None");
 MODULE_INFO(linuxcnc, "funct:_:1:");
 MODULE_LICENSE("GPLv2 or greater");
 #endif // MODULE_INFO
@@ -105,6 +108,9 @@ struct __comp_state {
     hal_float_t *pin_eulerx;
     hal_float_t *pin_eulery;
     hal_float_t *pin_eulerz;
+    hal_float_t *pin_cartx_in;
+    hal_float_t *pin_carty_in;
+    hal_float_t *pin_cartz_in;
     hal_float_t j0_x;
     hal_float_t j0_y;
     hal_float_t j0_z;
@@ -228,6 +234,15 @@ static int export(char *prefix, long extra_arg) {
     if(r != 0) return r;
     r = hal_pin_float_newf(HAL_OUT, &(inst->pin_eulerz), comp_id,
         "%s.pin-eulerz", prefix);
+    if(r != 0) return r;
+    r = hal_pin_float_newf(HAL_IN, &(inst->pin_cartx_in), comp_id,
+        "%s.pin-cartx-in", prefix);
+    if(r != 0) return r;
+    r = hal_pin_float_newf(HAL_IN, &(inst->pin_carty_in), comp_id,
+        "%s.pin-carty-in", prefix);
+    if(r != 0) return r;
+    r = hal_pin_float_newf(HAL_IN, &(inst->pin_cartz_in), comp_id,
+        "%s.pin-cartz-in", prefix);
     if(r != 0) return r;
     r = hal_param_float_newf(HAL_RW, &(inst->j0_x), comp_id,
         "%s.j0-x", prefix);
@@ -442,6 +457,12 @@ void rtapi_app_exit(void) {
 #define pin_eulery (*__comp_inst->pin_eulery)
 #undef pin_eulerz
 #define pin_eulerz (*__comp_inst->pin_eulerz)
+#undef pin_cartx_in
+#define pin_cartx_in (0+*__comp_inst->pin_cartx_in)
+#undef pin_carty_in
+#define pin_carty_in (0+*__comp_inst->pin_carty_in)
+#undef pin_cartz_in
+#define pin_cartz_in (0+*__comp_inst->pin_cartz_in)
 #undef j0_x
 #define j0_x (__comp_inst->j0_x)
 #undef j0_y
@@ -541,9 +562,6 @@ void rtapi_app_exit(void) {
 #undef text
 #define text (__comp_inst->text)
 
-
-#line 137 "/home/user/Desktop/Linux-Embedded/linux-hal/halcompile-kinematic/kinematic.comp"
-
 #include "rtapi_math.h"
 #include "halmodule.h"
 
@@ -605,6 +623,11 @@ FUNCTION(_) {
     d.J5=j5_rw*toRadians;
     d.J5_min=j5_min*toRadians;
     d.J5_max=j5_max*toRadians;
+
+    // Test axis_mm.
+    cart_x=pin_cartx_in;
+    cart_y=pin_carty_in;
+    cart_z=pin_cartz_in;
 
     d.Cartx=cart_x;
     d.Carty=cart_y;
