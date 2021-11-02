@@ -63,9 +63,9 @@ cd /opt/hal-core/bin/
     ./halcmd setp hal_kinematic.perform-ik 1
 
     # set machine tcp offsets.
-    ./halcmd setp hal_trajectory.tcp_offset_x 630
+    ./halcmd setp hal_trajectory.tcp_offset_x 860
     ./halcmd setp hal_trajectory.tcp_offset_y 0
-    ./halcmd setp hal_trajectory.tcp_offset_z 500
+    ./halcmd setp hal_trajectory.tcp_offset_z 1400
 
     # set standard values.
     ./halcmd setp hal_trajectory.max_velocity 100
