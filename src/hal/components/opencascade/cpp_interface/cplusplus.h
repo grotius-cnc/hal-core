@@ -29,6 +29,9 @@ struct data {
     double J0=0,J1=0,J2=0,J3=0,J4=0,J5=0;
     double Cartx=0,Carty=0,Cartz=0;
     double Eulerx=0,Eulery=0,Eulerz=0;
+
+    //! Gcode quaternion
+    double gcode_x, gcode_y, gcode_z, gcode_euler_x, gcode_euler_y, gcode_euler_z;
 };
 // Example of extern variable:
 extern data databucket;

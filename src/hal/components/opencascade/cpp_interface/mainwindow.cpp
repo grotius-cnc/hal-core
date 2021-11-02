@@ -42,6 +42,12 @@ void MainWindow::Update_Opencascade()
     ui->lineEdit_eulery->setText(QString::number(databucket.Eulery,'f',3));
     ui->lineEdit_eulerz->setText(QString::number(databucket.Eulerz,'f',3));
 
+    ui->lineEdit_gcode_x->setText(QString::number(databucket.gcode_x,'f',3));
+    ui->lineEdit_gcode_y->setText(QString::number(databucket.gcode_y,'f',3));
+    ui->lineEdit_gcode_z->setText(QString::number(databucket.gcode_z,'f',3));
+    ui->lineEdit_gcode_euler_x->setText(QString::number(databucket.gcode_euler_x,'f',3));
+    ui->lineEdit_gcode_euler_y->setText(QString::number(databucket.gcode_euler_y,'f',3));
+    ui->lineEdit_gcode_euler_z->setText(QString::number(databucket.gcode_euler_z,'f',3));
 
     // Load machine model stepfiles:
     if(!init_model){
@@ -103,7 +109,12 @@ void MainWindow::gcode(){
 
     // Robot offsets
     // Kuka x=630, y=0, z=890
-    double x=630, y=0, z=500;
+    double x=databucket.gcode_x;
+    double y=databucket.gcode_x;
+    double z=databucket.gcode_x;
+    double euler_x=databucket.gcode_euler_x;
+    double euler_y=databucket.gcode_euler_y;
+    double euler_z=databucket.gcode_euler_z;
 
     for(unsigned int i=0; i<blkvec.size(); i++){
 
@@ -118,12 +129,17 @@ void MainWindow::gcode(){
         if(i>0 && blkvec.at(i).type=="G0"){
             Handle(AIS_Shape) Ais_shape=draw_primitives().draw_3d_line(p1,p2);
             Ais_shape=draw_primitives().colorize(Ais_shape,Quantity_NOC_BLUE,0);
-            Ais_shape=draw_primitives().translate_3d(Ais_shape,{0,0,0},{x,y,z});
+
+            Ais_shape=draw_primitives().rotate_translate_3d_quaternion(Ais_shape,{x,y,z},euler_z,euler_y,euler_x);
+
+            //Ais_shape=draw_primitives().translate_3d(Ais_shape,{0,0,0},{x,y,z});
             OpencascadeWidget->show_shape(Ais_shape);
         }
         if(i>0 && blkvec.at(i).type=="G1"){
             Handle(AIS_Shape) Ais_shape=draw_primitives().draw_3d_line(p1,p2);
-            Ais_shape=draw_primitives().translate_3d(Ais_shape,{0,0,0},{x,y,z});
+
+            Ais_shape=draw_primitives().rotate_translate_3d_quaternion(Ais_shape,{x,y,z},euler_z,euler_y,euler_x);
+            // Ais_shape=draw_primitives().translate_3d(Ais_shape,{0,0,0},{x,y,z});
             Ais_shape=draw_primitives().colorize(Ais_shape,Quantity_NOC_BLACK,0);
             OpencascadeWidget->show_shape(Ais_shape);
         }
@@ -133,13 +149,17 @@ void MainWindow::gcode(){
             // X=xend, Y=yend. For arc given a G0 startposition and a XY endposition. http://linuxcnc.org/docs/html/gcode/g-code.html#gcode:g2-g3
             // I=offset xcenter-xstart, J=offset ycenter-ystart, G2=clockwise (cw), G3=counterclockwise (ccw)
             Handle(AIS_Shape) Ais_shape=draw_primitives().draw_cp_2d_arc(pc,p2,p1);
-            Ais_shape=draw_primitives().translate_3d(Ais_shape,{0,0,0},{x,y,z});
+
+            Ais_shape=draw_primitives().rotate_translate_3d_quaternion(Ais_shape,{x,y,z},euler_z,euler_y,euler_x);
+            //Ais_shape=draw_primitives().translate_3d(Ais_shape,{0,0,0},{x,y,z});
             Ais_shape=draw_primitives().colorize(Ais_shape,Quantity_NOC_BLACK,0);
             OpencascadeWidget->show_shape(Ais_shape);
         }
         if(i>0 && (blkvec.at(i).type=="G3")){
             Handle(AIS_Shape) Ais_shape=draw_primitives().draw_cp_2d_arc(pc,p2,p1);
-            Ais_shape=draw_primitives().translate_3d(Ais_shape,{0,0,0},{x,y,z});
+
+            Ais_shape=draw_primitives().rotate_translate_3d_quaternion(Ais_shape,{x,y,z},euler_z,euler_y,euler_x);
+            //Ais_shape=draw_primitives().translate_3d(Ais_shape,{0,0,0},{x,y,z});
             Ais_shape=draw_primitives().colorize(Ais_shape,Quantity_NOC_BLACK,0);
             OpencascadeWidget->show_shape(Ais_shape);
         }
