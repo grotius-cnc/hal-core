@@ -276,8 +276,8 @@ static int setup_pins(){
     port = (port_data_t*)hal_malloc(sizeof(char[150]));
     r+=hal_pin_port_new("hal_trajectory.port",HAL_IN,&(port->Pin),comp_idx);
 
-    //hal_signal_new("signal_filename",HAL_PORT); // Is created from libhalcmdgui. This is the trajectory gui program.
-    hal_link("hal_trajectory.port","signal_filename");
+    // hal_signal_new("signal_filename",HAL_PORT); // Is created from libhalcmdgui. This is the trajectory gui program.
+    // hal_link("hal_trajectory.port","signal_filename");
 
     //! Input pins, type bit.
     enable = (bit_data_t*)hal_malloc(sizeof(bit_data_t));
