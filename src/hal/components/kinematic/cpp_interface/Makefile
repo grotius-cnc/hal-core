@@ -210,7 +210,6 @@ DIST          = /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -415,7 +414,6 @@ Makefile: next.pro /opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmake.conf /o
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/qt-creator/5.15.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -592,7 +590,6 @@ Makefile: next.pro /opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmake.conf /o
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/qt_config.prf:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/toolchain.prf:
 /opt/qt-creator/5.15.1/gcc_64/mkspecs/features/default_pre.prf:
