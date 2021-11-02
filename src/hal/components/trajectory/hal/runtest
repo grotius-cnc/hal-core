@@ -9,17 +9,17 @@ cp -rf /opt/hal-core/src/hal/components/trajectory/hal/hal_trajectory.so /opt/ha
 
 # Clean previous hal-core sessions.
 /opt/hal-core/scripts/./halrun -U
-
+		
 # Start hal-core
 cd /opt/hal-core/scripts && . ./rip-environment
-
-# start the trajectory gui program
-/opt/hal-core/rtlib/libhalcmdgui &
 	
 cd /opt/hal-core/bin/
 
 	# stop hal.
         ./halcmd stop
+        
+    # start the trajectory gui program
+	/opt/hal-core/rtlib/./libhalcmdgui &
 	
 	# Load rt component:
         ./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
@@ -46,11 +46,14 @@ cd /opt/hal-core/bin/
 
         ./halcmd -f /opt/hal-core/src/hal/components/trajectory/hal/trajectory.hal
 
+  		# Create a hal port bridge (text char io bridge) between the "gui app" and the "trajectory"
+    	./halcmd net signal_filename hal_trajectory.port gui.port
+        # set the buffersize of the char array to pass the gcode_filename.
+        ./halcmd sets signal_filename 150
+        
         # start hal.
         ./halcmd start
-	
-	# set the buffersize of the char array to pass the gcode_filename.
-        ./halcmd sets signal_filename 150
+      
 
         # initialize the machine kinematics.
         ./halcmd setp hal_kinematic.perform-fk 0
@@ -74,7 +77,8 @@ cd /opt/hal-core/bin/
         # ./halcmd setp hal_trajectory.jog_x_plus 1
 
 
-
+# 1.delete port from opencascade.
+# 2.remove port link from halcmdgui.
 
 #/opt/halview/./halview &
 
