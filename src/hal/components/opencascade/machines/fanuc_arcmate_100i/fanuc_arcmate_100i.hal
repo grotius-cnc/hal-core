@@ -82,7 +82,7 @@ setp hal_opencascade.j4-roty 0
 setp hal_opencascade.j4-rotz 0
 
 # Joint 5
-setp hal_kinematic.j5-x 150
+setp hal_kinematic.j5-x 75
 setp hal_kinematic.j5-y 0
 setp hal_kinematic.j5-z 0
 setp hal_kinematic.j5-init 0 
