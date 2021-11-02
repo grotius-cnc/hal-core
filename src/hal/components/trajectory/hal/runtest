@@ -1,0 +1,88 @@
+#!/bin/bash
+
+# Let linux know where to find libraries.
+sudo ldconfig /opt/hal-core/rtlib
+
+# Copy component to /rtlib
+rm -rf /opt/hal-core/rtlib/hal_trajectory.so                                                        # Remove old files
+cp -rf /opt/hal-core/src/hal/components/trajectory/hal/hal_trajectory.so /opt/hal-core/rtlib        # Copy new component .so file to rtlib
+
+# Clean previous hal-core sessions.
+/opt/hal-core/scripts/./halrun -U
+
+# Start hal-core
+cd /opt/hal-core/scripts && . ./rip-environment
+
+# start the trajectory gui program
+/opt/hal-core/rtlib/libhalcmdgui &
+	
+cd /opt/hal-core/bin/
+
+	# stop hal.
+        ./halcmd stop
+	
+	# Load rt component:
+        ./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
+
+        ./halcmd loadrt hal_trajectory
+        ########### Section opencascade + kinematics ############
+        # Load the kuka model:
+        ./halcmd loadrt hal_opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus display_hz=60
+        # Load the mitsubishi model:
+        # halcmd loadrt opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl/mitsubishi_rv_6sdl display_hz=60
+        ./halcmd loadrt hal_kinematic
+
+        ./halcmd addf hal_trajectory servo-thread
+        ./halcmd addf hal_opencascade servo-thread
+        ./halcmd addf hal_kinematic servo-thread
+
+        # Load the kuka params:
+        ./halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus/kuka_kr_6_10_agilus.hal
+        # Load the mitsubishi params:
+        # halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl/mitsubishi_rv_6sdl.hal
+
+        # Link (net) kinematic results to opencascade.
+        ./halcmd -f /opt/hal-core/src/hal/components/opencascade/hal/link.hal
+
+        ./halcmd -f /opt/hal-core/src/hal/components/trajectory/hal/trajectory.hal
+
+        # set the buffersize of the char array to pass the gcode_filename.
+        #./halcmd sets signal_filename 150
+
+        # start hal.
+        ./halcmd start
+
+        # initialize the machine kinematics.
+        ./halcmd setp hal_kinematic.perform-fk 0
+        ./halcmd setp hal_kinematic.perform-ik 1
+
+        # set machine tcp offsets.
+        ./halcmd setp hal_trajectory.tcp_offset_x 630
+        ./halcmd setp hal_trajectory.tcp_offset_y 0
+        ./halcmd setp hal_trajectory.tcp_offset_z 500
+
+        # set standard values.
+        ./halcmd setp hal_trajectory.max_velocity 100
+        ./halcmd setp hal_trajectory.max_acceleration 90
+        ./halcmd setp hal_trajectory.max_jerk 500
+        ./halcmd setp hal_trajectory.velocity_override 1.0
+        ./halcmd setp hal_trajectory.enable 1
+
+        ./halcmd setp hal_trajectory.mode_auto 0
+        ./halcmd setp hal_trajectory.mode_jog 1
+        #./halcmd setp hal_trajectory.mode_mdi 0
+        # ./halcmd setp hal_trajectory.jog_x_plus 1
+
+
+
+
+#/opt/halview/./halview &
+
+# commands to test the program, in halshow :
+# ./halcmd setp hal_kinematic.perform-fk 0
+# ./halcmd setp hal_kinematic.perform-ik 1
+# ./halcmd setp hal_trajectory.max_velocity 2000
+
+# https://www.youtube.com/watch?v=ZU7g3jggfBU
+
+

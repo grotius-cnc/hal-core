@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Compile c++ interface lib
+cd /opt/hal-core/src/hal/components/trajectory/cpp_interface/
+make clean
+make
+
+# Copy c++ libraries to /rtlib
+cp -rf /opt/hal-core/src/hal/components/trajectory/cpp_interface/libtrajectory_6DoFs.so /opt/hal-core/rtlib/
+cp -rf /opt/hal-core/src/hal/components/trajectory/cpp_interface/libtrajectory_6DoFs.so.1 /opt/hal-core/rtlib/
+cp -rf /opt/hal-core/src/hal/components/trajectory/cpp_interface/libtrajectory_6DoFs.so.1.0 /opt/hal-core/rtlib/
+cp -rf /opt/hal-core/src/hal/components/trajectory/cpp_interface/libtrajectory_6DoFs.so.1.0.0 /opt/hal-core/rtlib/
+
+# Compile c++ halcmd gui program
+cd /opt/hal-core/src/hal/components/trajectory/cpp_interface/libhalcmdgui/
+make clean
+make
+
+# Copy c++ halcmd gui program to /rtlib
+cp -rf /opt/hal-core/src/hal/components/trajectory/cpp_interface/libhalcmdgui/libhalcmdgui /opt/hal-core/rtlib/
+
+
+cd /opt/hal-core/src/hal/components/trajectory/hal/
+
+# Compile with halcore
+gcc -o halmodule.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c halmodule.c
+cc -shared -o hal_trajectory.so halmodule.o -Wl,-rpath,/opt/halcore/lib -L/opt/hal-core/lib -lhalcore -lrt -L/opt/hal-core/src/hal/components/trajectory/cpp_interface -ltrajectory_6DoFs
+
+# Copy the kernel module to the /hal-core/rtlib
+rm -rf /opt/hal-core/rtlib/hal_trajectory.so
+cp -rf hal_trajectory.so /opt/hal-core/rtlib

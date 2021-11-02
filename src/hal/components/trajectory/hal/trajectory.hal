@@ -1,0 +1,8 @@
+
+# setp hal_kinematic.perform-fk 0
+# setp hal_kinematic.perform-ik 1
+
+net net_cart_x_in hal_trajectory.tcp_x hal_kinematic.pin-cartx-in
+net net_cart_y_in hal_trajectory.tcp_y hal_kinematic.pin-carty-in
+net net_cart_z_in hal_trajectory.tcp_z hal_kinematic.pin-cartz-in
+
