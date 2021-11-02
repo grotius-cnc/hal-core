@@ -46,11 +46,11 @@ cd /opt/hal-core/bin/
 
         ./halcmd -f /opt/hal-core/src/hal/components/trajectory/hal/trajectory.hal
 
-        # set the buffersize of the char array to pass the gcode_filename.
-        #./halcmd sets signal_filename 150
-
         # start hal.
         ./halcmd start
+	
+	# set the buffersize of the char array to pass the gcode_filename.
+        ./halcmd sets signal_filename 150
 
         # initialize the machine kinematics.
         ./halcmd setp hal_kinematic.perform-fk 0
