@@ -1,1 +1,2 @@
-New robot is coming soon !
+This is the data of the Fanuc ArcMate 100i
+
