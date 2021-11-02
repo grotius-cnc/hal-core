@@ -16,3 +16,5 @@ https://user-images.githubusercontent.com/44880102/127900012-b7c19051-7d22-45dc-
 
 To load the trajectory component visit :
 /hal/runtest
+
+Currently the gcode has to be loaded in the "trajectory app" and in the "opencascade app".
