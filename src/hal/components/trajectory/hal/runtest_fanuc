@@ -24,7 +24,8 @@ cd /opt/hal-core/bin/
 	# Load rt component:
     ./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
 
-    ./halcmd loadrt hal_trajectory
+    ./halcmd loadrt hal_kinematic
+    
     ########### Section opencascade + kinematics ############
     # Load the fanuc model:
     ./halcmd loadrt hal_opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/fanuc_arcmate_100i display_hz=60
@@ -32,14 +33,14 @@ cd /opt/hal-core/bin/
     #./halcmd loadrt hal_opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus display_hz=60
     # Load the mitsubishi model:
     # halcmd loadrt opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl/mitsubishi_rv_6sdl display_hz=60
-    ./halcmd loadrt hal_kinematic
-
-    ./halcmd addf hal_trajectory servo-thread
-    ./halcmd addf hal_opencascade servo-thread
+    ./halcmd loadrt hal_trajectory
+    
     ./halcmd addf hal_kinematic servo-thread
+    ./halcmd addf hal_opencascade servo-thread
+    ./halcmd addf hal_trajectory servo-thread
 
-	# Load the fanuc params:
-	./halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/fanuc_arcmate_100i/fanuc_arcmate_100i.hal
+    # Load the fanuc params:
+    ./halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/fanuc_arcmate_100i/fanuc_arcmate_100i.hal
     # Load the kuka params:
     #./halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus/kuka_kr_6_10_agilus.hal
     # Load the mitsubishi params:
@@ -50,7 +51,7 @@ cd /opt/hal-core/bin/
 
     ./halcmd -f /opt/hal-core/src/hal/components/trajectory/hal/trajectory.hal
 
-  	# Create a hal port bridge (text char io bridge) between the "gui app" and the "trajectory"
+    # Create a hal port bridge (text char io bridge) between the "gui app" and the "trajectory"
     ./halcmd net signal_filename hal_trajectory.port gui.port
     # set the buffersize of the char array to pass the gcode_filename.
     ./halcmd sets signal_filename 150
