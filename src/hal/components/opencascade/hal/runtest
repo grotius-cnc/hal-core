@@ -20,21 +20,20 @@ cd /opt/hal-core/bin/
 	# Load rt component:
 	./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
 
-	# Load the kuka model:
-    #halcmd loadrt opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus display_hz=60
-    # Load the mitsubishi model:
-	./halcmd loadrt hal_opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl display_hz=60
-	
 	./halcmd loadrt hal_kinematic 
 	
-	./halcmd addf hal_opencascade servo-thread
+	# Load the kuka model:
+    	#halcmd loadrt opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus display_hz=60
+    	# Load the mitsubishi model:
+	./halcmd loadrt hal_opencascade stepfilepath=/opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl display_hz=60
+	
 	./halcmd addf hal_kinematic servo-thread
+	./halcmd addf hal_opencascade servo-thread
 	
 	# Load the kuka params:
 	#halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/kuka_kr_6_10_agilus/kuka_kr_6_10_agilus.hal
 	# Load the mitsubishi params:
-    ./halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl/mitsubishi_rv_6sdl.hal
-	
+    	./halcmd -f /opt/hal-core/src/hal/components/opencascade/machines/mitsubishi_rv_6sdl/mitsubishi_rv_6sdl.hal
 	
  	# Link (net) kinematic results to opencascade.
  	./halcmd -f /opt/hal-core/src/hal/components/opencascade/hal/link.hal
