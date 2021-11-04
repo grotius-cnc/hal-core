@@ -44,4 +44,5 @@ Run / test hal-core with halview :
 
 		$ /opt/hal-core/./runtest_halview
 		
-![halview](https://user-images.githubusercontent.com/44880102/139556936-2f9da025-027b-4467-a3a4-c3cdaad8ad88.jpg)
+A example of the hal-core hal-opencascade component.
+![fanuc_tig_welding](https://user-images.githubusercontent.com/44880102/140246982-4a3ec9e3-b9f8-4ef0-8b9e-9f2046071318.jpg)
