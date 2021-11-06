@@ -2,6 +2,10 @@ Hal_core is a lightweight hal environment.
 
 The installed size is approx 6.8Mib
 
+To get the latest source code just download the latest release tar.gz archive.
+After the installation as discribed below, you can overwrite the /opt/hal-core directory with latest archive files and eventually you
+can perform a recompile fron the /opt/hal-core top dir, requesting the make file.
+
 A hal environment can be used as platform to run realtime applications like:
 
 		motion controllers 
