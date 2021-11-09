@@ -50,4 +50,4 @@ Run / test hal-core with halview :
 		
 A example of the hal-core hal-opencascade component.
 
-![skynet-halcore-lets-go-brandon](https://user-images.githubusercontent.com/44880102/140850753-8e57d91c-41c7-48fd-918e-845285173d32.jpg)
+![cyberdyne](https://user-images.githubusercontent.com/44880102/140981140-ab475f91-21ff-497b-9f54-ab2f5540c380.jpg)
