@@ -49,4 +49,5 @@ Run / test hal-core with halview :
 		$ /opt/hal-core/./runtest_halview
 		
 A example of the hal-core hal-opencascade component.
-![fanuc_tig_welding](https://user-images.githubusercontent.com/44880102/140246982-4a3ec9e3-b9f8-4ef0-8b9e-9f2046071318.jpg)
+
+![skynet-halcore-lets-go-brandon](https://user-images.githubusercontent.com/44880102/140850753-8e57d91c-41c7-48fd-918e-845285173d32.jpg)
