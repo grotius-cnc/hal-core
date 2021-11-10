@@ -57,5 +57,6 @@ Full realtime kinematic model of boston dynamics robot dog running in a kernel m
 4 Seperate kinematic chains, each representing a dog's leg.
 Dynamic motion back-end by ruckigs dofs s-curve profile.
 Can eventually perform an ai fann library implementation.
+On the dog's upper side, robot's can be attached as a dog's node. 
 
 ![boston_cyberdyne](https://user-images.githubusercontent.com/44880102/141102184-1dfd6f2e-4bbb-4cf5-b5ba-cbbbbd562764.jpg)
