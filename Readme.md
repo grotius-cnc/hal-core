@@ -60,3 +60,6 @@ Can eventually perform an ai fann library implementation.
 On the dog's upper side, robot's can be attached as a dog's node. 
 
 ![boston_cyberdyne](https://user-images.githubusercontent.com/44880102/141102184-1dfd6f2e-4bbb-4cf5-b5ba-cbbbbd562764.jpg)
+
+A example using 2 kinematic chains.
+![dmg_mori](https://user-images.githubusercontent.com/44880102/141663797-adc62715-a67b-4ea4-9eab-4b341c7ae6fe.jpg)
