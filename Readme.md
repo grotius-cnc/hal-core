@@ -3,7 +3,6 @@ Hal_core is a lightweight hal environment.
 - To be added in next release, 
 a 5 axis gantry cnc example with a position tool axis wich makes it a total of 6 axis.
 Nice thing to mention is moving the machine in tooldirection. 
-https://user-images.githubusercontent.com/44880102/141758278-8ac7b21e-fdc4-40fa-b7c1-1eccc1beae00.mp4
 
 - In current release:
 
@@ -77,4 +76,8 @@ Run / test hal-core with halview :
 		$ /opt/hal-core/./runtest_halview
 		
 
+
+
+
+https://user-images.githubusercontent.com/44880102/141758521-3ae1ee1c-136b-4d56-993f-bb8093ccdb41.mp4
 
