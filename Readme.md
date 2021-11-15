@@ -1,9 +1,11 @@
-Hal_core is a lightweight hal environment.
+Hal_core is a lightweight cnc and robot controller in progress.
 
 - To be added in next release:
-Jog including scurve motion by ruckig.
+
+	Jog including scurve motion by ruckig.
 
 - In current release:
+
 - skynet cyberdyne 6 axis gantry cnc (5 axis xyzab + 1 c axis tool drill rotation)
 ![skynet_cyberdyne_5axiscnc](https://user-images.githubusercontent.com/44880102/141767852-eba6eab5-252b-49d7-9844-b5945201f2b1.jpg)
 - novabot
