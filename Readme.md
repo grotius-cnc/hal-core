@@ -6,6 +6,10 @@ Nice thing to mention is moving the machine in tooldirection.
 
 https://user-images.githubusercontent.com/44880102/141758521-3ae1ee1c-136b-4d56-993f-bb8093ccdb41.mp4
 
+And added a tiny robot, eseries_ur16e
+![eseries_ur16e](https://user-images.githubusercontent.com/44880102/141760557-11c9ba86-6a8c-487b-86e5-1551f3207175.jpg)
+
+
 - In current release:
 
 - novabot
