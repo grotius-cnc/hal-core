@@ -1,19 +1,15 @@
 Hal_core is a lightweight hal environment.
 
-- To be added in next release, 
-a 5 axis gantry cnc example with a position tool axis wich makes it a total of 6 axis.
-Nice thing to mention is moving the machine in tooldirection. 
-
-https://user-images.githubusercontent.com/44880102/141758521-3ae1ee1c-136b-4d56-993f-bb8093ccdb41.mp4
-
-And added a tiny robot, eseries_ur16e
-![eseries_ur16e](https://user-images.githubusercontent.com/44880102/141760557-11c9ba86-6a8c-487b-86e5-1551f3207175.jpg)
-
+- To be added in next release:
+Motion.
 
 - In current release:
-
+- skynet cyberdyne 6 axis gantry cnc (5 axis xyzab + 1 c axis tool drill rotation)
+https://user-images.githubusercontent.com/44880102/141758521-3ae1ee1c-136b-4d56-993f-bb8093ccdb41.mp4
 - novabot
 ![novabot](https://user-images.githubusercontent.com/44880102/141680735-aaa408bb-2462-430c-8513-e02252ae7fe7.jpg)
+- eseries_ur16e
+![eseries_ur16e](https://user-images.githubusercontent.com/44880102/141760557-11c9ba86-6a8c-487b-86e5-1551f3207175.jpg)
 - dmu 54 fd monoblock 5 axis cnc
 ![5_axis_cnc](https://user-images.githubusercontent.com/44880102/141680728-e012b434-fdae-41c6-82e7-2b57b09c69e3.jpg)
 - nachi mz07
