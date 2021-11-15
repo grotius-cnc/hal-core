@@ -1,5 +1,13 @@
 Hal_core is a lightweight hal environment.
 
+- To be added in next release, 
+a 5 axis gantry cnc example with a position tool axis wich makes it a total of 6 axis.
+Nice thing to mention is moving the machine in tooldirection. 
+https://user-images.githubusercontent.com/44880102/141757656-8b60db4b-db81-4e4d-be93-46b7de02f50b.mp4
+
+
+- In current release:
+
 - novabot
 ![novabot](https://user-images.githubusercontent.com/44880102/141680735-aaa408bb-2462-430c-8513-e02252ae7fe7.jpg)
 - dmu 54 fd monoblock 5 axis cnc
