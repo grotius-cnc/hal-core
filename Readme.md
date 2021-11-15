@@ -23,11 +23,6 @@ https://user-images.githubusercontent.com/44880102/141758521-3ae1ee1c-136b-4d56-
 - fanuc arcmate 100i
 ![fanuc](https://user-images.githubusercontent.com/44880102/141680721-7c114b41-52c8-4191-9415-7ed65770aa4c.jpg)
 
-- chirurchical robot hand. User has glove with encoders attached on it. Robot hand will follow the positions. 
-Communication over distance trough internet connection.
-![hand_base](https://user-images.githubusercontent.com/44880102/141683552-40b59e36-7c57-4d64-93bc-0262d3ebaa5a.jpg)
-![hand_in](https://user-images.githubusercontent.com/44880102/141683557-22b88eea-9c85-41fc-9771-2219fe513dad.jpg)
-
 
 To get the latest source code just download the latest release tar.gz archive.
 This archives are pre-compiled for linux amd64.
