@@ -1,11 +1,11 @@
 Hal_core is a lightweight hal environment.
 
 - To be added in next release:
-Motion.
+Jog including scurve motion by ruckig.
 
 - In current release:
 - skynet cyberdyne 6 axis gantry cnc (5 axis xyzab + 1 c axis tool drill rotation)
-https://user-images.githubusercontent.com/44880102/141758521-3ae1ee1c-136b-4d56-993f-bb8093ccdb41.mp4
+![skynet_cyberdyne_5axiscnc](https://user-images.githubusercontent.com/44880102/141767852-eba6eab5-252b-49d7-9844-b5945201f2b1.jpg)
 - novabot
 ![novabot](https://user-images.githubusercontent.com/44880102/141680735-aaa408bb-2462-430c-8513-e02252ae7fe7.jpg)
 - eseries_ur16e
@@ -72,6 +72,7 @@ Run / test hal-core with halview :
 
 		$ /opt/hal-core/./runtest_halview
 		
+
 
 
 
