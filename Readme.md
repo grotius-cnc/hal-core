@@ -1,4 +1,12 @@
-Hal_core is a lightweight cnc and robot controller in progress.
+Hal_core is a lightweight cnc and robot controller in progress. It uses mature kernel technologies based on hal.
+It makes advanched usage of high end c++ libraries to do advanched calculations in realtime.
+
+Hal-core is written as a universal program where all kind of kinematic models are welcome.
+
+Multiple machines can be controlled at the same time. Multiple gcode's can be applied to a certain machine id.
+
+My latest work can be found in the /component/matrix/ dir.
+
 
 Matrix project examples:
 ![nice_update](https://user-images.githubusercontent.com/44880102/144340945-7b1ca7d0-0a15-4c99-9e8a-21b7baecbea0.jpg)
