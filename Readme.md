@@ -1,11 +1,9 @@
 Hal_core is a lightweight cnc and robot controller in progress.
 
-To be added in next release:
+Matrix project examples:
+![nice_update](https://user-images.githubusercontent.com/44880102/144340945-7b1ca7d0-0a15-4c99-9e8a-21b7baecbea0.jpg)
 
-	Jog including scurve motion by ruckig.
-
-In current release:
-
+Skynet project examples:
 - skynet cyberdyne 6 axis gantry cnc (5 axis xyzab + 1 c axis tool drill rotation)
 ![skynet_cyberdyne_5axiscnc](https://user-images.githubusercontent.com/44880102/141767852-eba6eab5-252b-49d7-9844-b5945201f2b1.jpg)
 - novabot
