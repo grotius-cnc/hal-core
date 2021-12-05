@@ -9,6 +9,12 @@ My latest work can be found in the /component/matrix/ dir.
 
 Matrix project examples, now including parts of the gcode runner:
 
+a 3d gcode
+
+https://user-images.githubusercontent.com/44880102/144768038-322f80b2-bf2a-4455-8579-d2f0079fd013.mp4
+
+a pocket gcode 2000+ gcodelines
+
 https://user-images.githubusercontent.com/44880102/144765887-f340a338-94d0-4e9b-b308-38a88b8f102a.mp4
 
 https://user-images.githubusercontent.com/44880102/144764463-0cdf39f8-ac25-4901-a94b-2b6bf52af1aa.mp4
