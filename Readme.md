@@ -8,9 +8,8 @@ Multiple machines can be controlled at the same time. Multiple gcode's can be ap
 My latest work can be found in the /component/matrix/ dir.
 
 Matrix project examples:
+
 https://user-images.githubusercontent.com/44880102/144764463-0cdf39f8-ac25-4901-a94b-2b6bf52af1aa.mp4
-
-
 
 Skynet project examples:
 - skynet cyberdyne 6 axis gantry cnc (5 axis xyzab + 1 c axis tool drill rotation)
