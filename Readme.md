@@ -9,9 +9,9 @@ My latest work can be found in the /component/matrix/ dir.
 
 Matrix project examples, now including parts of the gcode runner:
 
-a 3d gcode
+a 3d gcode. The machine in the back is doing a complex task !
 
-https://user-images.githubusercontent.com/44880102/144768038-322f80b2-bf2a-4455-8579-d2f0079fd013.mp4
+https://user-images.githubusercontent.com/44880102/144768106-1d59e470-8c0b-46f1-806d-56ce2cb4c4f6.mp4
 
 a pocket gcode 2000+ gcodelines
 
