@@ -3,6 +3,9 @@
 [![forks - hal-core](https://img.shields.io/github/forks/grotius-cnc/hal-core?style=social)](https://github.com/grotius-cnc/hal-core)
 
 
+[![GitHub release](https://img.shields.io/github/release/grotius-cnc/hal-core?include_prereleases=&sort=semver&color=blue)](https://github.com/grotius-cnc/hal-core/releases/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+
 Hal_core is a lightweight cnc and robot controller in progress. It uses mature kernel technologies based on hal.
 It makes advanched usage of high end c++ libraries to do advanched calculations in realtime.
 
