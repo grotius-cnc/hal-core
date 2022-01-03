@@ -10,6 +10,11 @@
 [![stars - s-curve-motion-planning](https://img.shields.io/github/stars/grotius-cnc/s-curve-motion-planning?style=social)](https://github.com/grotius-cnc/s-curve-motion-planning)
 [![forks - s-curve-motion-planning](https://img.shields.io/github/forks/grotius-cnc/s-curve-motion-planning?style=social)](https://github.com/grotius-cnc/s-curve-motion-planning)
 
+[![grotius-cnc - s-curve-pro](https://img.shields.io/static/v1?label=grotius-cnc&message=s-curve-motion-planning&color=blue&logo=github)](https://github.com/grotius-cnc/scurve_pro "Go to GitHub repo")
+[![stars - s-curve-motion-pro](https://img.shields.io/github/stars/grotius-cnc/s-curve-motion-planning?style=social)](https://github.com/grotius-cnc/scurve-pro)
+[![forks - s-curve-motion-pro](https://img.shields.io/github/forks/grotius-cnc/s-curve-motion-planning?style=social)](https://github.com/grotius-cnc/scurve-pro)
+
+https://github.com/grotius-cnc/scurve-pro
 
 Hal_core is a lightweight cnc and robot controller in progress. It uses mature kernel technologies based on hal.
 It makes advanched usage of high end c++ libraries to do advanched calculations in realtime.
