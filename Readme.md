@@ -1,7 +1,7 @@
 [![grotius-cnc - hal-core](https://img.shields.io/static/v1?label=grotius-cnc&message=hal-core&color=blue&logo=github)](https://github.com/grotius-cnc/hal-core "Go to GitHub repo")
 [![stars - hal-core](https://img.shields.io/github/stars/grotius-cnc/hal-core?style=social)](https://github.com/grotius-cnc/hal-core)
 [![forks - hal-core](https://img.shields.io/github/forks/grotius-cnc/hal-core?style=social)](https://github.com/grotius-cnc/hal-core)
-
+[![Github All Releases](https://img.shields.io/github/downloads/grotius-cnc/hal-core/total.svg)]()
 
 [![GitHub release](https://img.shields.io/github/release/grotius-cnc/hal-core?include_prereleases=&sort=semver&color=blue)](https://github.com/grotius-cnc/hal-core/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
