@@ -1,5 +1,3 @@
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=grotius-cnc&show_icons=true)
-
 [![grotius-cnc - hal-core](https://img.shields.io/static/v1?label=grotius-cnc&message=hal-core&color=blue&logo=github)](https://github.com/grotius-cnc/hal-core "Go to GitHub repo")
 [![stars - hal-core](https://img.shields.io/github/stars/grotius-cnc/hal-core?style=social)](https://github.com/grotius-cnc/hal-core)
 [![forks - hal-core](https://img.shields.io/github/forks/grotius-cnc/hal-core?style=social)](https://github.com/grotius-cnc/hal-core)
