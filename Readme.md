@@ -15,6 +15,9 @@ Multiple machines can be controlled at the same time. Multiple gcode's can be ap
 
 My latest work can be found in the /component/matrix/ dir.
 
+To be uploaded soon :
+![halcore_picture](https://user-images.githubusercontent.com/44880102/149306101-466b1270-4d2f-4c57-aea1-6a3b5c56885e.jpg)
+
 Matrix project examples, now including parts of the gcode runner:
 
 a 3d gcode. The machine in the back is doing a complex task !
