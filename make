@@ -79,4 +79,9 @@ chmod +x /opt/hal-core/src/hal/components/trajectory/hal/make
 chmod +x /opt/hal-core/src/hal/components/trajectory/hal/runtest
 cd /opt/hal-core/src/hal/components/trajectory/hal/ && ./make
 
+# Compile matrix gui app component: 
+chmod +x /opt/hal-core/src/hal/components/matrix/hal/make_halmodule
+chmod +x /opt/hal-core/src/hal/components/matrix/hal/runtest
+cd /opt/hal-core/src/hal/components/matrix/hal/ && ./make_halmodule
+cd /opt/hal-core/src/hal/components/matrix/cpp_interface/ && make
 
