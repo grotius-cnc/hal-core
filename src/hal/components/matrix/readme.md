@@ -29,6 +29,10 @@ Specs :
     11. It can rotate and translate the gcode workframe in any position.
     12. This is a realtime program, driven by a kernel module.
     
+ Todo :
+ 
+     1. Look ahead function.
+    
 ![screen0](https://user-images.githubusercontent.com/44880102/150279993-4963d765-6a89-4d5e-8ff0-951183f059ef.jpg)
     
 ![halcore_picture](https://user-images.githubusercontent.com/44880102/150311471-a83901c7-d88b-457f-b202-64741f897e92.jpg)
