@@ -13,25 +13,9 @@ Hal-core is written as a universal program where all kind of kinematic models ar
 
 Multiple machines can be controlled at the same time. Multiple gcode's can be applied to a certain machine id.
 
-My latest work can be found in the /component/matrix/ dir.
-
-Latest archive:
-
+Git clone up to date. ~/opt/hal-core/src/hal/components/matrix/
 ![screen0](https://user-images.githubusercontent.com/44880102/150279993-4963d765-6a89-4d5e-8ff0-951183f059ef.jpg)
 ![screen1](https://user-images.githubusercontent.com/44880102/150280000-0dbd5131-46e8-41b7-a1cd-31d0172e6f1d.jpg)
-
-
-Matrix project examples, now including parts of the gcode runner:
-
-a 3d gcode. The machine in the back is doing a complex task !
-
-https://user-images.githubusercontent.com/44880102/144768106-1d59e470-8c0b-46f1-806d-56ce2cb4c4f6.mp4
-
-a pocket gcode 2000+ gcodelines
-
-https://user-images.githubusercontent.com/44880102/144765887-f340a338-94d0-4e9b-b308-38a88b8f102a.mp4
-
-https://user-images.githubusercontent.com/44880102/144764463-0cdf39f8-ac25-4901-a94b-2b6bf52af1aa.mp4
 
 Skynet project examples:
 - skynet cyberdyne 6 axis gantry cnc (5 axis xyzab + 1 c axis tool drill rotation)
