@@ -1,0 +1,66 @@
+#!/bin/bash
+FILE=/opt/hal-core/src/hal/components/matrix/machine
+
+# Let linux know where to find libraries.
+sudo ldconfig /opt/hal-core/rtlib/
+
+# Copy module to /rtlib
+rm -rf /opt/hal-core/rtlib/matrix.so
+cp -rf /opt/hal-core/src/hal/components/matrix/hal/matrix.so /opt/hal-core/rtlib/
+
+# Copy c++ libraries to /rtlib
+cp -rf /opt/hal-core/src/hal/components/matrix/cpp_interface/libcppmatrix.so /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/matrix/cpp_interface/libcppmatrix.so.1 /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/matrix/cpp_interface/libcppmatrix.so.1.0 /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/matrix/cpp_interface/libcppmatrix.so.1.0.0 /opt/hal-core/rtlib
+
+# Clean previous hal-core sessions
+/opt/hal-core/scripts/./halrun -U
+
+# Start hal-core
+cd /opt/hal-core/scripts && . ./rip-environment
+
+# We use the halcmd symlink from within this directory to start the application.
+# We are in the stepfile directory to avoid segmentation faults trough passing dir paths trough halcmd, problably the segmentation fault's are caused by the "/" sign.
+cd /opt/hal-core/src/hal/components/matrix/machine/
+
+./halcmd stop
+./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
+
+# Unit : mm - degrees
+# Rotx=0, Roty=1, Rotz=2, Transx=3, Transy=4, Transz=5
+# Stringvec         always include a static.step file and at least one joint.step file for each machine.
+# Jointposvec       input sequence: x,y,z, rotationtype
+# Jointvalvec       input sequence: minpos ,maxpos, maxvel, maxacc, jerk
+# Machinevalvec     input sequence: maxvel_cartesian, maxacc_cartesian, gain_cartesian, maxvel_euler, maxacc_euler, gain_euler
+# Machineoffsetvec  input sequence: x,y,z,eulerx,eulery,eulerz
+
+./halcmd loadrt matrix machines=2 joints=6,6 \
+stringvec=static.step,0.step,1.step,2.step,3.step,4.step,5.step,static.step,0.step,1.step,2.step,3.step,4.step,5.step \
+jointposvec=410,0,0,3,0,700,0,4,0,0,500,5,225,0,75,0,0,-35,-275,1,0,0,-100,2,410,0,0,3,0,700,0,4,0,0,500,5,225,0,75,0,0,-35,-275,1,0,0,-100,2 \
+jointvalvec=-10000,10000,300,200,200,-10000,10000,300,200,200,-10000,10000,300,200,200,-10000,10000,250,250,250,-10000,10000,250,250,250,-10000,10000,250,250,250,-10000,10000,250,250,250,-10000,10000,250,250,250,-10000,10000,250,250,250,-10000,10000,250,250,250,-10000,10000,250,250,250,-10000,10000,250,250,250 \
+machineoffsetvec=0,0,0,0,0,0,0,2500,0,0,0,45 \
+machinevalvec=1000,500,100,20,5,100,250,250,250,20,5,100 \
+transparancy=0.9 \
+iterations=100 \
+baseperiod=1000000 \
+servoperiod=1000000
+
+#./halcmd loadrt matrix machines=2 joints=6,6 \
+#stringvec=static.step,0.step,1.step,2.step,3.step,4.step,5.step,static.step,0.step,1.step,2.step,3.step,4.step,5.step \
+#jointposvec=410,0,0,3,0,700,0,4,0,0,500,5,225,0,75,0,0,-35,-275,1,0,0,-100,2,410,0,0,3,0,700,0,4,0,0,500,5,225,0,75,0,0,-35,-275,1,0,0,-100,2 \
+#jointvalvec=-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180,-10000,10000,300,200,180 \
+#machineoffsetvec=0,0,0,0,0,0,0,2500,0,0,0,45 \
+#machinevalvec=275,175,150,50,25,10,285,180,155,52,23,12 \
+#transparancy=0.9 \
+#iterations=100
+
+./halcmd addf matrix.mainfunction servo-thread
+#./halcmd addf matrix.follow base-thread
+./halcmd start
+
+# Start halview
+#/opt/halview/./halview &
+
+
+

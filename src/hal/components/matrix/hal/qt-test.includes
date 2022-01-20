@@ -1,0 +1,4 @@
+.
+/opt/hal-core/src/rtapi
+/opt/hal-core/src/hal
+/opt/hal-core/src/hal/components/matrix/cpp_interface

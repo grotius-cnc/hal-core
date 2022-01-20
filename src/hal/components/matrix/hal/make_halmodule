@@ -1,0 +1,22 @@
+#!/bin/bash
+
+rm -rf /opt/hal-core/rtlib/libcppmatrix.so
+rm -rf /opt/hal-core/rtlib/libcppmatrix.so.1
+rm -rf /opt/hal-core/rtlib/libcppmatrix.so.1.0
+rm -rf /opt/hal-core/rtlib/libcppmatrix.so.1.0.0
+
+# Copy c++ libraries to /rtlib
+cp -rf /opt/hal-core/src/hal/components/matrix/cpp_interface/libcppmatrix.so /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/matrix/cpp_interface/libcppmatrix.so.1 /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/matrix/cpp_interface/libcppmatrix.so.1.0 /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/matrix/cpp_interface/libcppmatrix.so.1.0.0 /opt/hal-core/rtlib
+
+cd /opt/hal-core/src/hal/components/matrix/hal/
+
+# Compile with halcore
+gcc -o halmodule.o -Os -g -I. -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DUSPACE -fno-fast-math -fno-unsafe-math-optimizations -DRTAPI -D_GNU_SOURCE -Drealtime -D__MODULE__ -I/opt/hal-core/src/rtapi -I/opt/hal-core/src/hal -DSIM -fPIC -Os -c halmodule.c
+cc -shared -o matrix.so halmodule.o -Wl,-rpath,/opt/halcore/lib -L/opt/hal-core/lib -lhalcore -lrt -L/opt/hal-core/src/hal/components/matrix/cpp_interface -lcppmatrix
+
+# Copy the kernel module to the /hal-core/rtlib
+rm -rf /opt/hal-core/rtlib/matrix.so
+cp -rf matrix.so /opt/hal-core/rtlib

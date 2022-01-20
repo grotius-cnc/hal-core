@@ -1,0 +1,7 @@
+../machines/skynet_5axis_cnc/runtest
+../machines/skynet_5axis_cnc/skynet_5axis_cnc.hal
+config.txt
+halmodule.c
+halmodule.h
+make_halmodule
+runtest

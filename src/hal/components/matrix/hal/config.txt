@@ -1,0 +1,29 @@
+/opt/hal-core/src/hal/components/matrix/machine/static.step
+/opt/hal-core/src/hal/components/matrix/machine/0.step
+/opt/hal-core/src/hal/components/matrix/machine/1.step
+/opt/hal-core/src/hal/components/matrix/machine/2.step
+/opt/hal-core/src/hal/components/matrix/machine/3.step
+/opt/hal-core/src/hal/components/matrix/machine/4.step
+
+/*
+This file contains the stepfiles for a project.
+First stepfile is the machine basis, static parts.
+Followed by the joint stepfiles. Filenames and path's may be changed.
+
+For example loading 2 machines do it like this :
+
+/opt/hal-core/src/hal/components/matrix/machine/static.step
+/opt/hal-core/src/hal/components/matrix/machine/1.step
+/opt/hal-core/src/hal/components/matrix/machine/2.step
+/opt/hal-core/src/hal/components/matrix/machine/3.step
+/opt/hal-core/src/hal/components/matrix/machine/4.step
+/opt/hal-core/src/hal/components/matrix/machine/5.step
+/opt/hal-core/src/hal/components/matrix/machine/static.step
+/opt/hal-core/src/hal/components/matrix/machine/1.step
+/opt/hal-core/src/hal/components/matrix/machine/2.step
+/opt/hal-core/src/hal/components/matrix/machine/3.step
+/opt/hal-core/src/hal/components/matrix/machine/4.step
+/opt/hal-core/src/hal/components/matrix/machine/5.step
+
+The c++ code is just reading the lines until the file count is matching the machine setup.
+*/
