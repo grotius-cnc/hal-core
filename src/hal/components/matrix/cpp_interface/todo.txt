@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+TODO:
+Look ahead
+Tangential pos outputs?
+Input relative coordinates by hand.
+
+DONE:
+Startpos mdi should be machine curpos.
+Restart from line. User can do a mdi with safe height when not in position.
+relative positions + reset j0-j5
+solve the isnan euler output. gcode_interface line 335.
+When in reverse feed fix euler abs outputs.
+Manual mode, scurve adaption.
+Mcodes, create standard hal outputs for m3,m5,m7,m8,m9.
+
