@@ -11,7 +11,7 @@ It makes advanched usage of high end c++ libraries to do advanched calculations 
 
 Hal-core is written as a universal program where all kind of kinematic models are welcome.
 
-Multiple machines can be controlled at the same time. Multiple gcode's can be applied to a certain machine id.
+Multiple machines can be controlled at the same time. Every machine may load a gcode file.
 
 Git clone up to date. ~/opt/hal-core/src/hal/components/matrix/
 ![screen0](https://user-images.githubusercontent.com/44880102/150279993-4963d765-6a89-4d5e-8ff0-951183f059ef.jpg)
