@@ -1,0 +1,89 @@
+# joint-type : rot_x = 0, rot_y = 1, rot_z = 2, trans_x = 3, trans_y = 4, trans_z = 5, rot_axis = 6, trans_axis =7, none = 8
+# Machine 0, 5 axis cnc gantry
+
+setp skynet.0.machine-maxvel-cart 500
+setp skynet.0.machine-maxacc-cart 350
+setp skynet.0.machine-jerk-cart 200
+
+setp skynet.0.machine-maxvel-euler 3
+setp skynet.0.machine-maxacc-euler 3
+setp skynet.0.machine-jerk-euler 3
+
+# Joint 0, x
+setp skynet.0.0.joint-setup-x 0
+setp skynet.0.0.joint-setup-y 0
+setp skynet.0.0.joint-setup-z 0
+setp skynet.0.0.joint-init 0
+setp skynet.0.0.joint-min -4500
+setp skynet.0.0.joint-max 4500
+setp skynet.0.0.joint-type 3
+
+setp skynet.0.0.joint-maxvel 400
+setp skynet.0.0.joint-maxacc 400
+setp skynet.0.0.joint-jerk 200
+
+# Joint 1, y
+setp skynet.0.1.joint-setup-x 410
+setp skynet.0.1.joint-setup-y 700
+setp skynet.0.1.joint-setup-z 0
+setp skynet.0.1.joint-init 0
+setp skynet.0.1.joint-min -4500
+setp skynet.0.1.joint-max 4500
+setp skynet.0.1.joint-type 4
+
+setp skynet.0.1.joint-maxvel 400
+setp skynet.0.1.joint-maxacc 400
+setp skynet.0.1.joint-jerk 200
+
+# Joint 2, z
+setp skynet.0.2.joint-setup-x 0
+setp skynet.0.2.joint-setup-y 0
+setp skynet.0.2.joint-setup-z 500
+setp skynet.0.2.joint-init 0
+setp skynet.0.2.joint-min -4500
+setp skynet.0.2.joint-max 4500
+setp skynet.0.2.joint-type 5
+
+setp skynet.0.2.joint-maxvel 400
+setp skynet.0.2.joint-maxacc 400
+setp skynet.0.2.joint-jerk 200
+
+# Joint 3, a
+setp skynet.0.3.joint-setup-x 0
+setp skynet.0.3.joint-setup-y 0
+setp skynet.0.3.joint-setup-z 0
+setp skynet.0.3.joint-init 0
+setp skynet.0.3.joint-min -360
+setp skynet.0.3.joint-max 360
+setp skynet.0.3.joint-type 0
+
+setp skynet.0.3.joint-maxvel 3
+setp skynet.0.3.joint-maxacc 3
+setp skynet.0.3.joint-jerk 3
+
+# Joint 4, b
+setp skynet.0.4.joint-setup-x 225
+setp skynet.0.4.joint-setup-y 0
+setp skynet.0.4.joint-setup-z 75
+setp skynet.0.4.joint-init 0
+setp skynet.0.4.joint-min -360
+setp skynet.0.4.joint-max 360
+setp skynet.0.4.joint-type 1
+
+setp skynet.0.4.joint-maxvel 3
+setp skynet.0.4.joint-maxacc 3
+setp skynet.0.4.joint-jerk 3
+
+# Joint 5, tool
+setp skynet.0.5.joint-setup-x 0
+setp skynet.0.5.joint-setup-y -35
+setp skynet.0.5.joint-setup-z -375
+setp skynet.0.5.joint-init 0
+setp skynet.0.5.joint-min -360
+setp skynet.0.5.joint-max 360
+setp skynet.0.5.joint-type 2
+
+setp skynet.0.5.joint-maxvel 3
+setp skynet.0.5.joint-maxacc 3
+setp skynet.0.5.joint-jerk 3
+
