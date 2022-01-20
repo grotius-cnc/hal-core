@@ -1,0 +1,52 @@
+# joint-type : rot_x = 0, rot_y = 1, rot_z = 2, trans_x = 3, trans_y = 4, trans_z = 5, rot_axis = 6, trans_axis =7, none = 8
+# Machine 0, a 6 axis kuka robot
+# Joint 0
+setp skynet.0.0.joint-setup-x 0
+setp skynet.0.0.joint-setup-y 0
+setp skynet.0.0.joint-setup-z 0
+setp skynet.0.0.joint-init 0
+setp skynet.0.0.joint-min -170
+setp skynet.0.0.joint-max 170
+setp skynet.0.0.joint-type 2
+# Joint 1
+setp skynet.0.1.joint-setup-x 25
+setp skynet.0.1.joint-setup-y 0
+setp skynet.0.1.joint-setup-z 400
+setp skynet.0.1.joint-init 0
+setp skynet.0.1.joint-min -100
+setp skynet.0.1.joint-max 135
+setp skynet.0.1.joint-type 1
+# Joint 2
+setp skynet.0.2.joint-setup-x 0
+setp skynet.0.2.joint-setup-y 0
+setp skynet.0.2.joint-setup-z 455
+setp skynet.0.2.joint-init 0
+setp skynet.0.2.joint-min -210
+setp skynet.0.2.joint-max 66
+setp skynet.0.2.joint-type 1
+# Joint 3
+setp skynet.0.3.joint-setup-x 0
+setp skynet.0.3.joint-setup-y 0
+setp skynet.0.3.joint-setup-z 35
+setp skynet.0.3.joint-init 0
+setp skynet.0.3.joint-min -185
+setp skynet.0.3.joint-max 185
+setp skynet.0.3.joint-type 0
+# Joint 4
+setp skynet.0.4.joint-setup-x 420
+setp skynet.0.4.joint-setup-y 0
+setp skynet.0.4.joint-setup-z 0
+setp skynet.0.4.joint-init 0
+setp skynet.0.4.joint-min -120
+setp skynet.0.4.joint-max 120
+setp skynet.0.4.joint-type 1
+# Joint 5
+setp skynet.0.5.joint-setup-x 80
+setp skynet.0.5.joint-setup-y 0
+setp skynet.0.5.joint-setup-z 0
+setp skynet.0.5.joint-init 0
+setp skynet.0.5.joint-min -350
+setp skynet.0.5.joint-max 350
+setp skynet.0.5.joint-type 0
+
+
