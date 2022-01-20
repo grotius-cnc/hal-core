@@ -13,3 +13,5 @@ To clean the gui app :
 To run the app : 
 
     ~/hal/./runtest
+    
+![halcore_picture](https://user-images.githubusercontent.com/44880102/150311471-a83901c7-d88b-457f-b202-64741f897e92.jpg)
