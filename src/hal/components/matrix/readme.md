@@ -27,6 +27,7 @@ Specs :
     9. Load a different kinematic model.
     10. Code your own user tab.
     11. It can rotate and translate the gcode workframe in any position.
+    12. This is a realtime program, driven by a kernel module.
     
 ![screen0](https://user-images.githubusercontent.com/44880102/150279993-4963d765-6a89-4d5e-8ff0-951183f059ef.jpg)
     
