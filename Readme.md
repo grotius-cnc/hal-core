@@ -13,7 +13,7 @@ Hal-core is written as a universal program where all kind of kinematic models ar
 
 Multiple machines can be controlled at the same time. Every machine may load a gcode file.
 
-Matrix project examples: https://github.com/grotius-cnc/hal-core/edit/main/src/hal/components/matrix/readme.md
+Matrix project examples: https://github.com/grotius-cnc/hal-core/blob/main/src/hal/components/matrix/readme.md
 ![screen0](https://user-images.githubusercontent.com/44880102/150279993-4963d765-6a89-4d5e-8ff0-951183f059ef.jpg)
 
 Skynet project examples: https://github.com/grotius-cnc/hal-core/blob/main/src/hal/components/skynet/readme.md
