@@ -5,6 +5,11 @@ You need to build the ruckig lib first:
     cd build
     cmake -DCMAKE_BUILD_TYPE=Release ..
     make
+    
+ Build the kernel module & gui app:
+ 
+    cd /opt/hal-core/src/hal/components/skynet/hal
+    make
 
 Skynet project examples:
 - skynet cyberdyne 6 axis gantry cnc (5 axis xyzab + 1 c axis tool drill rotation)
