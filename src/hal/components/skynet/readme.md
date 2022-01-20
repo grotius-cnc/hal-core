@@ -1,3 +1,11 @@
+You need to build the ruckig lib first:
+
+    cd /opt/hal-core/src/hal/components/skynet/cpp_interface/libruckig/
+    mkdir -p build
+    cd build
+    cmake -DCMAKE_BUILD_TYPE=Release ..
+    make
+
 Skynet project examples:
 - skynet cyberdyne 6 axis gantry cnc (5 axis xyzab + 1 c axis tool drill rotation)
 ![skynet_cyberdyne_5axiscnc](https://user-images.githubusercontent.com/44880102/141767852-eba6eab5-252b-49d7-9844-b5945201f2b1.jpg)
