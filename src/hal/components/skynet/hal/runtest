@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Let linux know where to find libraries.
+sudo ldconfig /opt/hal-core/rtlib/
+
+# Copy module to /rtlib
+rm -rf /opt/hal-core/rtlib/skynet.so
+cp -rf /opt/hal-core/src/hal/components/skynet/hal/skynet.so /opt/hal-core/rtlib/
+
+# Copy c++ libraries to /rtlib
+cp -rf /opt/hal-core/src/hal/components/skynet/cpp_interface/libcyberdyne.so /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/skynet/cpp_interface/libcyberdyne.so.1 /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/skynet/cpp_interface/libcyberdyne.so.1.0 /opt/hal-core/rtlib
+cp -rf /opt/hal-core/src/hal/components/skynet/cpp_interface/libcyberdyne.so.1.0.0 /opt/hal-core/rtlib
+
+# Clean previous hal-core sessions
+/opt/hal-core/scripts/./halrun -U
+
+# Start hal-core
+cd /opt/hal-core/scripts && . ./rip-environment
+
+cd /opt/hal-core/bin/
+
+        ./halcmd stop
+
+        ./halcmd loadrt threads name1=base-thread fp1=0 period1=25000 name2=servo-thread period2=1000000
+
+        #./halcmd loadrt skynet machines=1 joints=6 iterations=100 screen_update_ms=200 stepfilepath=/opt/hal-core/src/hal/components/skynet/machines/kuka_kr_6_10_agilus/ debug=0
+        #./halcmd loadrt skynet machines=1 joints=6 iterations=100 screen_update_ms=200 stepfilepath=/opt/hal-core/src/hal/components/skynet/machines/nachi_MZ07/ debug=0
+        #./halcmd loadrt skynet machines=1 joints=6 iterations=100 screen_update_ms=200 stepfilepath=/opt/hal-core/src/hal/components/skynet/machines/fanuc_arcmate_100i/ debug=0
+        #./halcmd loadrt skynet machines=1 joints=6 iterations=100 screen_update_ms=200 stepfilepath=/opt/hal-core/src/hal/components/skynet/machines/staubli_tx90l_hb/ debug=0
+        ./halcmd loadrt skynet machines=1 joints=6 iterations=100 screen_update_ms=200 stepfilepath=/opt/hal-core/src/hal/components/skynet/machines/novabot/ debug=0
+        ./halcmd addf skynet servo-thread
+
+        #./halcmd \-f /opt/hal-core/src/hal/components/skynet/machines/kuka_kr_6_10_agilus/0/kuka_kr_6_10_agilus.hal
+        #./halcmd \-f /opt/hal-core/src/hal/components/skynet/machines/nachi_MZ07/0/nachi_MZ07.hal
+        #./halcmd \-f /opt/hal-core/src/hal/components/skynet/machines/fanuc_arcmate_100i/0/fanuc_arcmate_100i.hal
+        #./halcmd \-f /opt/hal-core/src/hal/components/skynet/machines/staubli_tx90l_hb/0/staubli_tx90l_hb.hal
+        ./halcmd \-f /opt/hal-core/src/hal/components/skynet/machines/novabot/0/novabot.hal
+
+        ./halcmd setp skynet.enable 1
+
+        # Check output joint values in halview.
+
+        ./halcmd start
+
+# Start halview
+# /opt/halview/./halview &
+
+
+

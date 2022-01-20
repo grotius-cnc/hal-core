@@ -1,0 +1,4 @@
+.
+/opt/hal-core/src/rtapi
+/opt/hal-core/src/hal
+../machines/skynet_5axis_cnc

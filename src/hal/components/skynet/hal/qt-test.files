@@ -1,0 +1,4 @@
+../machines/skynet_5axis_cnc/runtest
+../machines/skynet_5axis_cnc/skynet_5axis_cnc.hal
+halmodule.c
+halmodule.h

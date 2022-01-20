@@ -1,0 +1,2 @@
+reset the origin of the items by "make compound"
+then export the compound to step.
