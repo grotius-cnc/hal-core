@@ -13,10 +13,8 @@ Hal-core is written as a universal program where all kind of kinematic models ar
 
 Multiple machines can be controlled at the same time. Every machine may load a gcode file.
 
-Git clone up to date. ~/opt/hal-core/src/hal/components/matrix/
+Matrix project examples: ~/opt/hal-core/src/hal/components/matrix/
 ![screen0](https://user-images.githubusercontent.com/44880102/150279993-4963d765-6a89-4d5e-8ff0-951183f059ef.jpg)
-![screen1](https://user-images.githubusercontent.com/44880102/150280000-0dbd5131-46e8-41b7-a1cd-31d0172e6f1d.jpg)
-
 Skynet project examples:
 - skynet cyberdyne 6 axis gantry cnc (5 axis xyzab + 1 c axis tool drill rotation)
 ![skynet_cyberdyne_5axiscnc](https://user-images.githubusercontent.com/44880102/141767852-eba6eab5-252b-49d7-9844-b5945201f2b1.jpg)
