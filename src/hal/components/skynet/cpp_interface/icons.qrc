@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>libicons/arrow-up.png</file>
+        <file>libicons/arrow-up-double.png</file>
+        <file>libicons/arrow-right.png</file>
+        <file>libicons/arrow-right-double.png</file>
+        <file>libicons/arrow-left.png</file>
+        <file>libicons/arrow-left-double.png</file>
+        <file>libicons/arrow-down.png</file>
+        <file>libicons/arrow-down-double.png</file>
+        <file>libicons/applications-system.png</file>
+        <file>libicons/system-shutdown.png</file>
+    </qresource>
+</RCC>
