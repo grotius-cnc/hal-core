@@ -17,6 +17,8 @@ Matrix project examples: https://github.com/grotius-cnc/hal-core/blob/main/src/h
 
 3d Printing a model of 30.000 gcode lines, used strategy opencascade linewire :
 
+![new_gcode_parser](https://user-images.githubusercontent.com/44880102/150699178-48e660f0-0369-4772-9843-d500ff9c4fbc.jpg)
+
 https://user-images.githubusercontent.com/44880102/150698778-b65a6f5a-653b-49ad-9368-a46931bd0c28.mp4
 
 Skynet project examples: https://github.com/grotius-cnc/hal-core/blob/main/src/hal/components/skynet/readme.md
