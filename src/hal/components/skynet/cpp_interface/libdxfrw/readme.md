@@ -1,6 +1,6 @@
 If you never used this dxfrw lib. You are lucky.
 
-A example to write a dxf file :
+A example to write a dxf file, this took me quite a while to figur out, the dxfrw has a cruel documentaton lack :
 
     #include <libdxfrw/libdxfrw.h>
     #include "examplewriter.h"
